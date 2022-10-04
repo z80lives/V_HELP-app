@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'V_HELP-app';
+  title = 'This is my title now';
+  firstParagraph = "there are things i need to put here"
+
 }
