@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./Administrator.component.scss'],
 })
 export class AdministratorComponent implements OnInit {
- 
+  goBack = (): String => {
+    return '/AdministratorMenuComponent';
+  };
 
   constructor() {}
 

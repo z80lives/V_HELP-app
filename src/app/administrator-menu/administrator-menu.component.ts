@@ -10,7 +10,7 @@ export class AdministratorMenuComponent implements OnInit {
     return '/AdministratorComponent_component';
   };
   goToNewAdmin = (): String => {
-    return '/AdministratorMenuComponent';
+    return '/AddAdminComponent';
   };
   goBack = (): String => {
     return '/';

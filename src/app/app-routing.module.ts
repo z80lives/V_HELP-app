@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LogInComponent } from './log-in/log-in.component';
 import { AdministratorComponent } from './Administrator/Administrator.component';
 import { AdministratorMenuComponent } from "./administrator-menu/administrator-menu.component";
+import { AddAdminComponent } from "./add-admin/add-admin.component";
 
 const routes: Routes = [
   { path: '', component: LogInComponent },
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'AdministratorMenuComponent',
     component: AdministratorMenuComponent,
+  },
+  {
+    path: 'AddAdminComponent',
+    component: AddAdminComponent,
   },
 ];
 
