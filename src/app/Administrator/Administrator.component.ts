@@ -6,9 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./Administrator.component.scss'],
 })
 export class AdministratorComponent implements OnInit {
-  Submit = (): void => {
-    // router
-  };
+ 
 
   constructor() {}
 
