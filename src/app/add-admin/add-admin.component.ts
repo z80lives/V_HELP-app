@@ -3,15 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-add-admin',
   templateUrl: './add-admin.component.html',
-  styleUrls: ['./add-admin.component.scss']
+  styleUrls: ['./add-admin.component.scss'],
 })
 export class AddAdminComponent implements OnInit {
+  goBack = (): String => {
+    return '/AdministratorMenuComponent';
+  };
 
-  
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

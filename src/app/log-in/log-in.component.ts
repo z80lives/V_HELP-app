@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogInComponent implements OnInit {
   Submit = (): String => {
-    return "/AdministratorMenuComponent"
+    return "/AdminMenuComponent"
   };
 
   title = 'HELP_V Log In';

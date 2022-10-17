@@ -7,9 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdministratorComponent } from './Administrator/Administrator.component';
 import { AdministratorMenuComponent } from './administrator-menu/administrator-menu.component';
 import { AddAdminComponent } from './add-admin/add-admin.component';
+import { AdminMenuComponent } from './admin-menu/admin-menu.component';
+import { AdminDetailsComponent } from './admin-details/admin-details.component';
 
 @NgModule({
-  declarations: [AppComponent, LogInComponent, AdministratorComponent, AdministratorMenuComponent, AddAdminComponent],
+  declarations: [AppComponent, LogInComponent, AdministratorComponent, AdministratorMenuComponent, AddAdminComponent, AdminMenuComponent, AdminDetailsComponent],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
