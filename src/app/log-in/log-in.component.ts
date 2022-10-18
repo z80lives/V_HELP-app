@@ -45,19 +45,15 @@ export class LogInComponent implements OnInit {
         this.router.navigate(['/AdministratorMenuComponent']);
       } else {
         this._adminData.fetch().forEach((admins) => {
-          admins.every((admin: LogInModel, index) => {
-            console.log(index);
-            if (
-              admin.email == values.email &&
-              admin.password == values.password
-            ) {
-              this.router.navigate(['/AdministratorComponent_component']);
-              return false;
-            } else if (index == admins.length - 1) {
-              alert('email not found');
-            }
-            return true;
-          });
+          let currentUser: LogInModel | undefined = admins.find(
+            (admin) =>
+              admin.email == values.email && admin.password == values.password
+          );
+          if (currentUser) {
+            this.router.navigate(['/AdministratorComponent_component']);
+          } else {
+            alert('administrator not found');
+          }
         });
       }
     } else {
