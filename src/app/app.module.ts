@@ -9,11 +9,26 @@ import { AdministratorMenuComponent } from './administrator-menu/administrator-m
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 import { AdminDetailsComponent } from './admin-details/admin-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LogInDataServiceService } from './core/services/log-in-data-service.service';
 
 @NgModule({
-  declarations: [AppComponent, LogInComponent, AdministratorComponent, AdministratorMenuComponent, AddAdminComponent, AdminMenuComponent, AdminDetailsComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
-  providers: [],
+  declarations: [
+    AppComponent,
+    LogInComponent,
+    AdministratorComponent,
+    AdministratorMenuComponent,
+    AddAdminComponent,
+    AdminMenuComponent,
+    AdminDetailsComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+  ],
+  providers: [LogInDataServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,6 +1,8 @@
 <div class="container">
-  <div class="title">{{ title }}</div>
-  <input placeholder="Email" />
-  <input placeholder="Password" />
-  <button routerLink="{{ Submit() }}">Log In</button>
+  <form class="container" [formGroup]="loginForm" (submit)="onSubmit()">
+    <div class="title">{{ title }}</div>
+    <input placeholder="Email" formControlName="email" name="email" />
+    <input placeholder="Password" formControlName="password" name="password" />
+    <button type="submit">Log In</button>
+  </form>
 </div>
