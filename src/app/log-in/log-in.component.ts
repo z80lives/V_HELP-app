@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthenticationServiceService } from '../core/services/authentication-service.service';
 import { LogInDataServiceService } from '../core/services/log-in-data-service.service';
 
 interface LogInModel {
@@ -21,6 +22,7 @@ interface FormModel {
 export class LogInComponent implements OnInit {
   constructor(
     private router: Router,
+    private auth: AuthenticationServiceService,
     private _fb: FormBuilder,
     private readonly _adminData: LogInDataServiceService
   ) {}
@@ -44,13 +46,9 @@ export class LogInComponent implements OnInit {
       if (values.email == 'Admin@gmail.com' && values.password == 'admin') {
         this.router.navigate(['/AdministratorMenuComponent']);
       } else {
-        this._adminData.fetch().forEach((admins) => {
-          let currentUser: LogInModel | undefined = admins.find(
-            (admin) =>
-              admin.email == values.email && admin.password == values.password
-          );
+        this.auth.login(values.email, values.password).then((currentUser) => {
           if (currentUser) {
-            this.router.navigate(['/AdministratorComponent_component']);
+            this.router.navigate(['/AdministratorMenuComponent']);
           } else {
             alert('administrator not found');
           }
