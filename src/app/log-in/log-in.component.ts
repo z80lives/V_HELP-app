@@ -4,11 +4,7 @@ import { Router } from '@angular/router';
 import { AuthenticationServiceService } from '../core/services/authentication-service.service';
 import { LogInDataServiceService } from '../core/services/log-in-data-service.service';
 
-interface LogInModel {
-  username: string;
-  email: string;
-  password: string;
-}
+
 interface FormModel {
   email: string;
   password: string;
@@ -30,9 +26,7 @@ export class LogInComponent implements OnInit {
   ngOnInit(): void {
     this._adminData.fetch();
   }
-  Submit = (): String => {
-    return '/AdminMenuComponent';
-  };
+  
   title = 'HELP_V Log In';
 
   loginForm = this._fb.group({
@@ -48,7 +42,7 @@ export class LogInComponent implements OnInit {
       } else {
         this.auth.login(values.email, values.password).then((currentUser) => {
           if (currentUser) {
-            this.router.navigate(['/AdministratorMenuComponent']);
+            this.router.navigate(['/AdminMenuComponent']);
           } else {
             alert('administrator not found');
           }

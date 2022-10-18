@@ -11,6 +11,7 @@ import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 import { AdminDetailsComponent } from './admin-details/admin-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LogInDataServiceService } from './core/services/log-in-data-service.service';
+import { AuthenticationServiceService } from './core/services/authentication-service.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { LogInDataServiceService } from './core/services/log-in-data-service.ser
     BrowserAnimationsModule,
     ReactiveFormsModule,
   ],
-  providers: [LogInDataServiceService],
+  providers: [LogInDataServiceService, AuthenticationServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

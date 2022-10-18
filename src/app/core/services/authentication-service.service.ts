@@ -21,7 +21,7 @@ export class AuthenticationServiceService {
     const adminList = await this.adminDataService.fetch().toPromise();
     const foundAdmin = adminList?.find((user) => user.email === email);
     if (foundAdmin) {
-      console.log(foundAdmin);
+      // console.log(foundAdmin);
       this.currentUser.next(foundAdmin);
       return this.currentUser.value;
     }

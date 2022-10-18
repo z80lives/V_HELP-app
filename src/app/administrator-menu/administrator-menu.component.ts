@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationServiceService } from '../core/services/authentication-service.service';
+import { LogInDataServiceService } from '../core/services/log-in-data-service.service';
 
 @Component({
   selector: 'app-administrator-menu',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./administrator-menu.component.scss'],
 })
 export class AdministratorMenuComponent implements OnInit {
+  constructor() {}
+
   goToSchool = (): String => {
     return '/AdministratorComponent_component';
   };
@@ -16,10 +20,11 @@ export class AdministratorMenuComponent implements OnInit {
     return '/';
   };
   goToAddSchool = (): String => {
+    // console.log(this.auth.getCurrentUser());
     return '/AdministratorMenuComponent';
   };
 
-  constructor() {}
+  // console.log(this.auth.getcurrentUser());
 
   ngOnInit(): void {}
 }
