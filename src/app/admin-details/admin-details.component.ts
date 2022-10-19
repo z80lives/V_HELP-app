@@ -34,14 +34,14 @@ export class AdminDetailsComponent implements OnInit {
     $event.preventDefault();
     const formData = this.detailsForm.value;
     if (
-      formData.email.length !== 0 ||
-      formData.fullname.length !== 0 ||
-      formData.password.length !== 0 ||
-      formData.phonenumber.length !== 0 ||
-      formData.position.length !== 0 ||
-      formData.school.length !== 0 ||
-      formData.staffID.length !== 0 ||
-      formData.username.length !== 0
+      formData.email?.length !== 0 ||
+      formData.fullname?.length !== 0 ||
+      formData.password?.length !== 0 ||
+      formData.phonenumber?.length !== 0 ||
+      formData.position?.length !== 0 ||
+      formData.school?.length !== 0 ||
+      formData.staffID?.length !== 0 ||
+      formData.username?.length !== 0
     ) {
       this._adminService
         .updateByUsername(this._auth.currentUser.value.username, formData)

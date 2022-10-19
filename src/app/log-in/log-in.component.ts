@@ -26,7 +26,7 @@ export class LogInComponent implements OnInit {
   ngOnInit(): void {
     this._adminData.fetch();
   }
-  
+
   title = 'HELP_V Log In';
 
   loginForm = this._fb.group({
@@ -35,7 +35,7 @@ export class LogInComponent implements OnInit {
   });
 
   onSubmit() {
-    const values: FormModel = this.loginForm.value;
+    const values: FormModel = this.loginForm.value as any;
     if (values.email != '' || values.password != '') {
       if (values.email == 'Admin@gmail.com' && values.password == 'admin') {
         this.router.navigate(['/AdministratorMenuComponent']);

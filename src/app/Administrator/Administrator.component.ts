@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { NewSchoolService } from '../core/services/new-school.service';
+import {NewSchoolService, SchoolModel} from '../core/services/new-school.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -19,16 +19,16 @@ export class AdministratorComponent implements OnInit {
     private readonly _schoolService: NewSchoolService
   ) {}
   addSchoolForm = this._fb.group({
-    schoolName: [''],
-    address: [''],
-    city: [''],
+    schoolName: '',
+    address: '',
+    city: '',
   });
 
   ngOnInit(): void {}
 
   onClickSubmit($event: SubmitEvent) {
     $event.preventDefault();
-    const formData = this.addSchoolForm.value;
+    const formData : Partial<SchoolModel> = this.addSchoolForm.value as any;
 
     this._schoolService.create(formData).subscribe((result) => {
       if (result) {

@@ -50,7 +50,7 @@ export class AddAdminComponent implements OnInit {
   }
 
   onClickSubmit() {
-    const formData: adminForm = this.addAdminForm.value;
+    const formData: adminForm = this.addAdminForm.value as any;
     if (
       formData.email.length !== 0 ||
       formData.fullname.length !== 0 ||

@@ -2,7 +2,7 @@ import { LogInDataServiceService } from './log-in-data-service.service';
 import { Injectable } from '@angular/core';
 import { of, map } from 'rxjs';
 
-interface schoolsModel {
+export interface SchoolModel {
   schoolID: string;
   schoolName: string;
 }
@@ -11,16 +11,16 @@ interface schoolsModel {
   providedIn: 'root',
 })
 export class NewSchoolService {
-  Schools: schoolsModel[] = [
+  Schools: SchoolModel[] = [
     { schoolID: 'S1', schoolName: 'school1' },
     { schoolID: 'S2', schoolName: 'school2' },
     { schoolID: 'S3', schoolName: 'school3' },
   ];
   constructor(private readonly _adminService: LogInDataServiceService) {}
 
-  create(data: Partial<schoolsModel>) {
+  create(data: Partial<SchoolModel>) {
     data.schoolID = 'S' + this.Schools.length;
-    this.Schools.push(data as schoolsModel);
+    this.Schools.push(data as SchoolModel);
     return of(data);
   }
 
