@@ -4,7 +4,7 @@ import { LogInComponent } from './log-in/log-in.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AdministratorComponent } from './Administrator/Administrator.component';
+import { ManageSchoolComponent } from './manage-school/manage-school.component';
 import { AdministratorMenuComponent } from './administrator-menu/administrator-menu.component';
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
@@ -18,9 +18,18 @@ import {MatNativeDateModule} from "@angular/material/core";
 import {FormlyMaterialModule} from "@ngx-formly/material";
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {TokenInterceptor} from "./auth/interceptors/token.interceptor";
+import {LogInDataServiceService} from "./core/services/log-in-data-service.service";
 
 @NgModule({
-  declarations: [AppComponent, LogInComponent, AdministratorComponent, AdministratorMenuComponent, AddAdminComponent, AdminMenuComponent, AdminDetailsComponent],
+  declarations: [
+    AppComponent,
+    LogInComponent,
+    ManageSchoolComponent,
+    // AdministratorMenuComponent,
+    AddAdminComponent,
+    AdminMenuComponent,
+    AdminDetailsComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -40,7 +49,13 @@ import {TokenInterceptor} from "./auth/interceptors/token.interceptor";
       useClass: TokenInterceptor,
       multi: true,
     },
+
+    //refactor to Admin MOdule
+    LogInDataServiceService
   ],
   bootstrap: [AppComponent],
+  exports: [
+    // AdministratorMenuComponent
+  ]
 })
 export class AppModule {}

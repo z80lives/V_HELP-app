@@ -11,6 +11,7 @@ export interface SchoolAdminPartial {
   password?: string;
   phone?: string;
   position?: string;
+  schoolId?: string;
   staffID?: string;
   username?: string;
 

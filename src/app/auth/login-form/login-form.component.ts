@@ -32,8 +32,10 @@ export class LoginFormComponent implements OnInit {
   loginForm = new UntypedFormGroup({});
   options : FormlyFormOptions = {};
   model = {
-    username: 'volunteer1',
-    password: '123456789'
+    username: 'root',
+    password: 'root1234'
+    // username: 'volunteer1',
+    // password: '123456789'
   }
 
   constructor(
@@ -47,9 +49,11 @@ export class LoginFormComponent implements OnInit {
   onSubmit($event: SubmitEvent) {
     $event.preventDefault();
     const formVals = this.loginForm.value;
-    this._user.login(formVals).subscribe( (val) => {
+    const rootLogin = (formVals.username === 'root')
+    this._user.login(formVals, rootLogin)
+      .subscribe( (val) => {
       console.log("Loggin in...", val);
       this._core.fetchRouter().navigate(['', 'dashboard']);
-    });
+    }, this._core.handleError);
   }
 }

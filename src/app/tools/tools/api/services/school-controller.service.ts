@@ -9,16 +9,16 @@ import { RequestBuilder } from '../request-builder';
 import { Observable } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 
-import { NewSchoolAdmin } from '../models/new-school-admin';
-import { SchoolAdmin } from '../models/school-admin';
-import { SchoolAdminPartial } from '../models/school-admin-partial';
-import { SchoolAdminWithRelations } from '../models/school-admin-with-relations';
+import { NewSchool } from '../models/new-school';
+import { School } from '../models/school';
+import { SchoolPartial } from '../models/school-partial';
+import { SchoolWithRelations } from '../models/school-with-relations';
 import { Count as LoopbackCount } from '../models/loopback/count';
 
 @Injectable({
   providedIn: 'root',
 })
-export class SchoolAdminControllerService extends BaseService {
+export class SchoolControllerService extends BaseService {
   constructor(
     config: ApiConfiguration,
     http: HttpClient
@@ -27,9 +27,9 @@ export class SchoolAdminControllerService extends BaseService {
   }
 
   /**
-   * Path part for operation schoolAdminControllerCount
+   * Path part for operation schoolControllerCount
    */
-  static readonly SchoolAdminControllerCountPath = '/school-admins/count';
+  static readonly SchoolControllerCountPath = '/schools/count';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
@@ -43,7 +43,7 @@ export class SchoolAdminControllerService extends BaseService {
   }
 ): Observable<StrictHttpResponse<LoopbackCount>> {
 
-    const rb = new RequestBuilder(this.rootUrl, SchoolAdminControllerService.SchoolAdminControllerCountPath, 'get');
+    const rb = new RequestBuilder(this.rootUrl, SchoolControllerService.SchoolControllerCountPath, 'get');
     if (params) {
       rb.query('where', params.where, {});
     }
@@ -78,9 +78,9 @@ export class SchoolAdminControllerService extends BaseService {
   }
 
   /**
-   * Path part for operation schoolAdminControllerFindById
+   * Path part for operation schoolControllerFindById
    */
-  static readonly SchoolAdminControllerFindByIdPath = '/school-admins/{id}';
+  static readonly SchoolControllerFindByIdPath = '/schools/{id}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
@@ -93,9 +93,9 @@ export class SchoolAdminControllerService extends BaseService {
     filter?: any;
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<SchoolAdminWithRelations>> {
+): Observable<StrictHttpResponse<SchoolWithRelations>> {
 
-    const rb = new RequestBuilder(this.rootUrl, SchoolAdminControllerService.SchoolAdminControllerFindByIdPath, 'get');
+    const rb = new RequestBuilder(this.rootUrl, SchoolControllerService.SchoolControllerFindByIdPath, 'get');
     if (params) {
       rb.path('id', params.id, {});
       rb.query('filter', params.filter, {});
@@ -108,7 +108,7 @@ export class SchoolAdminControllerService extends BaseService {
     })).pipe(
       filter((r: any) => r instanceof HttpResponse),
       map((r: HttpResponse<any>) => {
-        return r as StrictHttpResponse<SchoolAdminWithRelations>;
+        return r as StrictHttpResponse<SchoolWithRelations>;
       })
     );
   }
@@ -124,17 +124,17 @@ export class SchoolAdminControllerService extends BaseService {
     filter?: any;
     context?: HttpContext
   }
-): Observable<SchoolAdminWithRelations> {
+): Observable<SchoolWithRelations> {
 
     return this.findById$Response(params).pipe(
-      map((r: StrictHttpResponse<SchoolAdminWithRelations>) => r.body as SchoolAdminWithRelations)
+      map((r: StrictHttpResponse<SchoolWithRelations>) => r.body as SchoolWithRelations)
     );
   }
 
   /**
-   * Path part for operation schoolAdminControllerReplaceById
+   * Path part for operation schoolControllerReplaceById
    */
-  static readonly SchoolAdminControllerReplaceByIdPath = '/school-admins/{id}';
+  static readonly SchoolControllerReplaceByIdPath = '/schools/{id}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
@@ -145,11 +145,11 @@ export class SchoolAdminControllerService extends BaseService {
   replaceById$Response(params: {
     id: string;
     context?: HttpContext
-    body?: SchoolAdmin
+    body?: School
   }
 ): Observable<StrictHttpResponse<any>> {
 
-    const rb = new RequestBuilder(this.rootUrl, SchoolAdminControllerService.SchoolAdminControllerReplaceByIdPath, 'put');
+    const rb = new RequestBuilder(this.rootUrl, SchoolControllerService.SchoolControllerReplaceByIdPath, 'put');
     if (params) {
       rb.path('id', params.id, {});
       rb.body(params.body, 'application/json');
@@ -176,7 +176,7 @@ export class SchoolAdminControllerService extends BaseService {
   replaceById(params: {
     id: string;
     context?: HttpContext
-    body?: SchoolAdmin
+    body?: School
   }
 ): Observable<any> {
 
@@ -186,9 +186,9 @@ export class SchoolAdminControllerService extends BaseService {
   }
 
   /**
-   * Path part for operation schoolAdminControllerDeleteById
+   * Path part for operation schoolControllerDeleteById
    */
-  static readonly SchoolAdminControllerDeleteByIdPath = '/school-admins/{id}';
+  static readonly SchoolControllerDeleteByIdPath = '/schools/{id}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
@@ -202,7 +202,7 @@ export class SchoolAdminControllerService extends BaseService {
   }
 ): Observable<StrictHttpResponse<any>> {
 
-    const rb = new RequestBuilder(this.rootUrl, SchoolAdminControllerService.SchoolAdminControllerDeleteByIdPath, 'delete');
+    const rb = new RequestBuilder(this.rootUrl, SchoolControllerService.SchoolControllerDeleteByIdPath, 'delete');
     if (params) {
       rb.path('id', params.id, {});
     }
@@ -237,9 +237,9 @@ export class SchoolAdminControllerService extends BaseService {
   }
 
   /**
-   * Path part for operation schoolAdminControllerUpdateById
+   * Path part for operation schoolControllerUpdateById
    */
-  static readonly SchoolAdminControllerUpdateByIdPath = '/school-admins/{id}';
+  static readonly SchoolControllerUpdateByIdPath = '/schools/{id}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
@@ -250,11 +250,11 @@ export class SchoolAdminControllerService extends BaseService {
   updateById$Response(params: {
     id: string;
     context?: HttpContext
-    body?: SchoolAdminPartial
+    body?: SchoolPartial
   }
 ): Observable<StrictHttpResponse<any>> {
 
-    const rb = new RequestBuilder(this.rootUrl, SchoolAdminControllerService.SchoolAdminControllerUpdateByIdPath, 'patch');
+    const rb = new RequestBuilder(this.rootUrl, SchoolControllerService.SchoolControllerUpdateByIdPath, 'patch');
     if (params) {
       rb.path('id', params.id, {});
       rb.body(params.body, 'application/json');
@@ -281,7 +281,7 @@ export class SchoolAdminControllerService extends BaseService {
   updateById(params: {
     id: string;
     context?: HttpContext
-    body?: SchoolAdminPartial
+    body?: SchoolPartial
   }
 ): Observable<any> {
 
@@ -291,9 +291,9 @@ export class SchoolAdminControllerService extends BaseService {
   }
 
   /**
-   * Path part for operation schoolAdminControllerFind
+   * Path part for operation schoolControllerFind
    */
-  static readonly SchoolAdminControllerFindPath = '/school-admins';
+  static readonly SchoolControllerFindPath = '/schools';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
@@ -305,9 +305,9 @@ export class SchoolAdminControllerService extends BaseService {
     filter?: any;
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<Array<SchoolAdminWithRelations>>> {
+): Observable<StrictHttpResponse<Array<SchoolWithRelations>>> {
 
-    const rb = new RequestBuilder(this.rootUrl, SchoolAdminControllerService.SchoolAdminControllerFindPath, 'get');
+    const rb = new RequestBuilder(this.rootUrl, SchoolControllerService.SchoolControllerFindPath, 'get');
     if (params) {
       rb.query('filter', params.filter, {});
     }
@@ -319,7 +319,7 @@ export class SchoolAdminControllerService extends BaseService {
     })).pipe(
       filter((r: any) => r instanceof HttpResponse),
       map((r: HttpResponse<any>) => {
-        return r as StrictHttpResponse<Array<SchoolAdminWithRelations>>;
+        return r as StrictHttpResponse<Array<SchoolWithRelations>>;
       })
     );
   }
@@ -334,17 +334,17 @@ export class SchoolAdminControllerService extends BaseService {
     filter?: any;
     context?: HttpContext
   }
-): Observable<Array<SchoolAdminWithRelations>> {
+): Observable<Array<SchoolWithRelations>> {
 
     return this.find$Response(params).pipe(
-      map((r: StrictHttpResponse<Array<SchoolAdminWithRelations>>) => r.body as Array<SchoolAdminWithRelations>)
+      map((r: StrictHttpResponse<Array<SchoolWithRelations>>) => r.body as Array<SchoolWithRelations>)
     );
   }
 
   /**
-   * Path part for operation schoolAdminControllerCreate
+   * Path part for operation schoolControllerCreate
    */
-  static readonly SchoolAdminControllerCreatePath = '/school-admins';
+  static readonly SchoolControllerCreatePath = '/schools';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
@@ -354,11 +354,11 @@ export class SchoolAdminControllerService extends BaseService {
    */
   create$Response(params?: {
     context?: HttpContext
-    body?: NewSchoolAdmin
+    body?: NewSchool
   }
-): Observable<StrictHttpResponse<SchoolAdmin>> {
+): Observable<StrictHttpResponse<School>> {
 
-    const rb = new RequestBuilder(this.rootUrl, SchoolAdminControllerService.SchoolAdminControllerCreatePath, 'post');
+    const rb = new RequestBuilder(this.rootUrl, SchoolControllerService.SchoolControllerCreatePath, 'post');
     if (params) {
       rb.body(params.body, 'application/json');
     }
@@ -370,7 +370,7 @@ export class SchoolAdminControllerService extends BaseService {
     })).pipe(
       filter((r: any) => r instanceof HttpResponse),
       map((r: HttpResponse<any>) => {
-        return r as StrictHttpResponse<SchoolAdmin>;
+        return r as StrictHttpResponse<School>;
       })
     );
   }
@@ -383,19 +383,19 @@ export class SchoolAdminControllerService extends BaseService {
    */
   create(params?: {
     context?: HttpContext
-    body?: NewSchoolAdmin
+    body?: NewSchool
   }
-): Observable<SchoolAdmin> {
+): Observable<School> {
 
     return this.create$Response(params).pipe(
-      map((r: StrictHttpResponse<SchoolAdmin>) => r.body as SchoolAdmin)
+      map((r: StrictHttpResponse<School>) => r.body as School)
     );
   }
 
   /**
-   * Path part for operation schoolAdminControllerUpdateAll
+   * Path part for operation schoolControllerUpdateAll
    */
-  static readonly SchoolAdminControllerUpdateAllPath = '/school-admins';
+  static readonly SchoolControllerUpdateAllPath = '/schools';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
@@ -406,11 +406,11 @@ export class SchoolAdminControllerService extends BaseService {
   updateAll$Response(params?: {
     where?: any;
     context?: HttpContext
-    body?: SchoolAdminPartial
+    body?: SchoolPartial
   }
 ): Observable<StrictHttpResponse<LoopbackCount>> {
 
-    const rb = new RequestBuilder(this.rootUrl, SchoolAdminControllerService.SchoolAdminControllerUpdateAllPath, 'patch');
+    const rb = new RequestBuilder(this.rootUrl, SchoolControllerService.SchoolControllerUpdateAllPath, 'patch');
     if (params) {
       rb.query('where', params.where, {});
       rb.body(params.body, 'application/json');
@@ -437,7 +437,7 @@ export class SchoolAdminControllerService extends BaseService {
   updateAll(params?: {
     where?: any;
     context?: HttpContext
-    body?: SchoolAdminPartial
+    body?: SchoolPartial
   }
 ): Observable<LoopbackCount> {
 

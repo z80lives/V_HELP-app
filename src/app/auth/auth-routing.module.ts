@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {AuthViewComponent} from "./auth-view/auth-view.component";
 import {RegisterFormComponent} from "./register-form/register-form.component";
 import {LoginFormComponent} from "./login-form/login-form.component";
+import {LogInComponent} from "../log-in/log-in.component";
 
 const routes: Routes = [
   {
@@ -10,7 +11,8 @@ const routes: Routes = [
     component: AuthViewComponent,
     children:[
       {path: 'login', component: LoginFormComponent},
-      {path: 'register', component: RegisterFormComponent}
+      {path: 'register', component: RegisterFormComponent},
+      // {path: 'register/admin', component: LogInComponent},
     ]
   }
 ];

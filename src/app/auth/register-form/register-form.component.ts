@@ -85,16 +85,16 @@ export class RegisterFormComponent implements OnInit {
   ]
   registerForm = new UntypedFormGroup({});
   options = {};
-  model = {
-    dateOfBirth: new Date(),
-    email: "test@mail.com",
-    username: "volunteer1",
-    password: "123456789",
-    phone: "123456789",
-    occupation: "Student",
-    fullname: "Ibrahim Shaatha"
-  }
-
+  // model = {
+  //   dateOfBirth: new Date(),
+  //   email: "test@mail.com",
+  //   username: "volunteer1",
+  //   password: "123456789",
+  //   phone: "123456789",
+  //   occupation: "Student",
+  //   fullname: "Ibrahim Shaatha"
+  // }
+model={}
   constructor(
     private readonly _userData : UserDataService,
     private readonly _coreData : CoreDataService
@@ -114,7 +114,14 @@ export class RegisterFormComponent implements OnInit {
           "Volunteer created",
           `Volunteer ${user.username} was successfully created`
         )
+        this._coreData.fetchRouter().navigate(["", "auth", "register"])
       }
+    }, (err) => {
+      this._coreData.notify({
+        severity: 'error',
+        summary: "Unable to register",
+        detail: "Username or email already exists"
+      })
     }).add( () => {
       this.loading = false;
     });

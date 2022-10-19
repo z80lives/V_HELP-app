@@ -3,16 +3,19 @@ import { Router } from '@angular/router';
 import { LogInDataServiceService } from '../core/services/log-in-data-service.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { NewSchoolService } from '../core/services/new-school.service';
+import {SchoolWithRelations} from "../tools/tools/api/models/school-with-relations";
+import {School} from "../tools/tools/api/models/school";
+import {CoreDataService} from "../core/services/core-data.service";
 
 interface adminForm {
   username: string;
   email: string;
   password: string;
   fullname: string;
-  phonenumber: string;
+  phone: string;
   position: string;
   staffID: string;
-  school: string;
+  schoolID: string;
 }
 
 @Component({
@@ -22,7 +25,8 @@ interface adminForm {
 })
 export class AddAdminComponent implements OnInit {
   goBack = (): String => {
-    return '/AdministratorMenuComponent';
+    // return '/AdministratorMenuComponent';
+    return '/dashboard/root';
   };
 
   addAdminForm = this._fb.group({
@@ -30,23 +34,26 @@ export class AddAdminComponent implements OnInit {
     email: ['', [Validators.email]],
     password: [''],
     fullname: [''],
-    phonenumber: [''],
+    phone: [''],
     position: [''],
     staffID: [''],
-    school: [''],
+    schoolID: [''],
   });
 
   constructor(
     private readonly _router: Router,
     private readonly _fb: FormBuilder,
     private readonly _adminService: LogInDataServiceService,
-    private readonly _schools: NewSchoolService
+    private readonly _schools: NewSchoolService,
+    private readonly _core : CoreDataService
   ) {}
 
-  schools = this._schools.fetch();
+  schools : School[] = [];
 
   ngOnInit(): void {
-    this._schools.fetch();
+    this._schools.fetch().subscribe((schools) => {
+      this.schools = schools;
+    });
   }
 
   onClickSubmit() {
@@ -55,9 +62,9 @@ export class AddAdminComponent implements OnInit {
       formData.email.length !== 0 ||
       formData.fullname.length !== 0 ||
       formData.password.length !== 0 ||
-      formData.phonenumber.length !== 0 ||
+      formData.phone.length !== 0 ||
       formData.position.length !== 0 ||
-      formData.school.length !== 0 ||
+      formData.schoolID.length !== 0 ||
       formData.staffID.length !== 0 ||
       formData.username.length !== 0
     ) {
@@ -66,8 +73,18 @@ export class AddAdminComponent implements OnInit {
 
         if (result) {
           alert('New School administrator created!');
-          this._router.navigate(['/AdministratorMenuComponent']);
+          console.debug(result);
+          this._router.navigate([
+            '', 'dashboard', 'root'
+            // '/AdministratorMenuComponent'
+          ]);
         }
+      }, (err : Error) => {
+        this._core.notify({
+          severity: 'error',
+          summary: err.name,
+          detail: err.message
+        })
       });
     } else {
       alert('inputs cannot be empty');

@@ -12,7 +12,7 @@ import {Menu} from "primeng/menu";
 export class NavComponent {
   @Input('menu') menu!: Menu;
 
-  navItems = [
+  @Input('navItems') navItems : {label: string; routerLink: string}[] = [
     {label: "Home", routerLink: '/dashboard/'},
     {label: "Schools", routerLink: "/dashboard/schools"},
     {label: "Admin", routerLink: "/dashboard/admin"},

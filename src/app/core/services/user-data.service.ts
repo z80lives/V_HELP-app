@@ -32,13 +32,14 @@ export class UserDataService {
     });
   }
 
-  login(formVals: any) {
-    return this._authController.login({
-      body: formVals
-    }).pipe( map( async (token) => {
+  login(body: any, root = false) {
+    const action = root ? this._authController.rootLogin({body}) : this._authController.login({body});
+
+    return action.pipe( map( async (token) => {
+      console.log("Token ", token);
       this._localAuth.storeSession(token);
       const info : any = await this._authController.info().toPromise();
-      const user : User = info?.user;
+      const user : User = info;
       // const type = user['type'];
       console.log("Type", info)
       user &&

@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import {NewSchoolService, SchoolModel} from '../core/services/new-school.service';
+import {NewSchoolService} from '../core/services/new-school.service';
 import { Router } from '@angular/router';
+import {NewSchool} from "../tools/tools/api/models/new-school";
 
 @Component({
-  selector: 'app-Administrator',
-  templateUrl: './Administrator.component.html',
-  styleUrls: ['./Administrator.component.scss'],
+  selector: 'app-school-manage',
+  templateUrl: './manage-school.component.html',
+  styleUrls: ['./manage-school.component.scss'],
 })
-export class AdministratorComponent implements OnInit {
+export class ManageSchoolComponent implements OnInit {
   goBack = (): String => {
-    return '/AdministratorMenuComponent';
+    return '/dashboard/root';
   };
 
   constructor(
@@ -28,13 +29,15 @@ export class AdministratorComponent implements OnInit {
 
   onClickSubmit($event: SubmitEvent) {
     $event.preventDefault();
-    const formData : Partial<SchoolModel> = this.addSchoolForm.value as any;
+    const formData : NewSchool = this.addSchoolForm.value as any;
 
     this._schoolService.create(formData).subscribe((result) => {
       if (result) {
         alert('Successfully created');
         this.addSchoolForm.reset();
-        this._router.navigate(['/AdministratorMenuComponent']);
+        this._router.navigate([
+          '/dashboard/root'
+        ]);
       }
     });
   }

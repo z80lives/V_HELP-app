@@ -1,6 +1,33 @@
 <mat-card class="block" *ngIf="currentUser">
   <mat-card-content>
     <h3>Welcome {{currentUser.username}}</h3>
-    <p>Logged in as a {{currentUser | json}}</p>
+    <p>Logged in as a {{currentUser['type']}}</p>
+  </mat-card-content>
+</mat-card>
+
+
+<mat-card class="block"
+          *ngIf="currentUser && currentUser['type']==='volunteer'">
+  <mat-card-content>
+    <button
+      mat-raised-button
+      routerLink="/dashboard/requests/view"
+      color="primary">
+      View Request
+    </button>
+    <button
+      mat-raised-button
+      [disabled]="true"
+      color="primary">
+      Submit Request
+    </button>
+
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="block" *ngIf="currentUser && currentUser['type']==='root'">
+  <mat-card-content>
+    <app-administrator-menu></app-administrator-menu>
+<!--    <app-administrator-menu></app-administrator-menu>-->
   </mat-card-content>
 </mat-card>

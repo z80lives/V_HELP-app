@@ -15,13 +15,16 @@ import {BadgeModule} from "primeng/badge";
 import {AvatarModule} from "primeng/avatar";
 import {MenuModule} from "primeng/menu";
 import {MatCardModule} from "@angular/material/card";
+import {LogInDataServiceService} from "../core/services/log-in-data-service.service";
+import {AdministratorMenuComponent} from "../administrator-menu/administrator-menu.component";
 
 
 @NgModule({
   declarations: [
     DashboardViewComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    AdministratorMenuComponent
   ],
   imports: [
     CommonModule,
@@ -36,6 +39,10 @@ import {MatCardModule} from "@angular/material/card";
     AvatarModule,
     MenuModule,
     MatCardModule
+  ],
+  providers: [
+    //refactor to SchoolAdmin Module
+    // LogInDataServiceService
   ]
 })
 export class DashboardModule { }
