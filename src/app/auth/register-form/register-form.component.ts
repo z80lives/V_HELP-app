@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormlyFieldConfig} from "@ngx-formly/core";
 import {Volunteer} from "../../tools/tools/api/models/volunteer";
-import {FormGroup} from "@angular/forms";
+import {UntypedFormGroup} from "@angular/forms";
 import {UserDataService} from "../../core/services/user-data.service";
 import {httpErrorHandler} from "../../core/utils/error.helper";
 
@@ -81,7 +81,7 @@ export class RegisterFormComponent implements OnInit {
       }
     }
   ]
-  registerForm = new FormGroup({});
+  registerForm = new UntypedFormGroup({});
   options = {};
   model = {
     dateOfBirth: new Date(),

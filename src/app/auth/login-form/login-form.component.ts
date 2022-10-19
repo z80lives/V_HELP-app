@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormlyFieldConfig, FormlyFormOptions} from "@ngx-formly/core";
-import {FormGroup} from "@angular/forms";
+import {UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-login-form',
@@ -27,7 +27,7 @@ export class LoginFormComponent implements OnInit {
       }
     }
   ];
-  loginForm = new FormGroup({});
+  loginForm = new UntypedFormGroup({});
   options : FormlyFormOptions = {};
 
   constructor() { }

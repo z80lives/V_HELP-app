@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder} from "@angular/forms";
+import {UntypedFormBuilder} from "@angular/forms";
 import {Router} from "@angular/router";
 
 @Component({
@@ -19,7 +19,7 @@ export class LogInComponent implements OnInit {
   });
 
   constructor(
-    private  _fb: FormBuilder,
+    private  _fb: UntypedFormBuilder,
     private _router: Router
   ) {}
 
