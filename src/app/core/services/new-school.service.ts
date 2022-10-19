@@ -19,7 +19,7 @@ export class NewSchoolService {
   constructor(private readonly _adminService: LogInDataServiceService) {}
 
   create(data: Partial<schoolsModel>) {
-    data.schoolID = 'S' + this.Schools.length + 1;
+    data.schoolID = 'S' + (this.Schools.length + 1);
     this.Schools.push(data as schoolsModel);
     return of(data);
   }
@@ -33,6 +33,10 @@ export class NewSchoolService {
     return this._adminService
       .fetch()
       .pipe(map((users) => users.filter((user) => user.schoolID === schoolId)));
+  }
+
+  findSchoolBySchoolID(schoolID: string) {
+    return this.Schools.find((school) => school.schoolID == schoolID);
   }
 
   fetch() {

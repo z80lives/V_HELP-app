@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationServiceService } from '../core/services/authentication-service.service';
+import { NewSchoolService } from '../core/services/new-school.service';
 
 @Component({
   selector: 'app-admin-menu',
@@ -16,12 +17,17 @@ export class AdminMenuComponent implements OnInit {
   schoolName = '';
   schoolID = '';
 
-  constructor(private auth: AuthenticationServiceService) {}
+  constructor(
+    private auth: AuthenticationServiceService,
+    private schools: NewSchoolService
+  ) {}
 
   ngOnInit(): void {
     console.log(this.auth.getCurrentUser().schoolName);
-
-    this.schoolName = this.auth.getCurrentUser().schoolName;
-    this.schoolID = this.auth.getCurrentUser().schoolID;
+    const school = this.schools.findSchoolBySchoolID(
+      this.auth.getCurrentUser().schoolID
+    );
+    this.schoolName = school ? school.schoolName : '';
+    this.schoolID = school ? school.schoolID : '';
   }
 }
