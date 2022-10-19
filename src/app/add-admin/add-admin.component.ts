@@ -1,4 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LogInDataServiceService } from '../core/services/log-in-data-service.service';
+import { FormBuilder, Validators } from '@angular/forms';
+import { NewSchoolService } from '../core/services/new-school.service';
+
+interface adminForm {
+  username: string;
+  email: string;
+  password: string;
+  fullname: string;
+  phonenumber: string;
+  position: string;
+  staffID: string;
+  school: string;
+}
 
 @Component({
   selector: 'app-add-admin',
@@ -10,7 +25,52 @@ export class AddAdminComponent implements OnInit {
     return '/AdministratorMenuComponent';
   };
 
-  constructor() {}
+  addAdminForm = this._fb.group({
+    username: ['', [Validators.minLength(8)]],
+    email: ['', [Validators.email]],
+    password: [''],
+    fullname: [''],
+    phonenumber: [''],
+    position: [''],
+    staffID: [''],
+    school: [''],
+  });
 
-  ngOnInit(): void {}
+  constructor(
+    private readonly _router: Router,
+    private readonly _fb: FormBuilder,
+    private readonly _adminService: LogInDataServiceService,
+    private readonly _schools: NewSchoolService
+  ) {}
+
+  schools = this._schools.fetch();
+
+  ngOnInit(): void {
+    this._schools.fetch();
+  }
+
+  onClickSubmit() {
+    const formData: adminForm = this.addAdminForm.value as any;
+    if (
+      formData.email.length !== 0 ||
+      formData.fullname.length !== 0 ||
+      formData.password.length !== 0 ||
+      formData.phonenumber.length !== 0 ||
+      formData.position.length !== 0 ||
+      formData.school.length !== 0 ||
+      formData.staffID.length !== 0 ||
+      formData.username.length !== 0
+    ) {
+      this._adminService.create(formData).subscribe((result) => {
+        console.log(result);
+
+        if (result) {
+          alert('New School administrator created!');
+          this._router.navigate(['/AdministratorMenuComponent']);
+        }
+      });
+    } else {
+      alert('inputs cannot be empty');
+    }
+  }
 }

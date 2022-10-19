@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="title">{{ title }}</div>
-  <form [formGroup]="loginForm" (submit)="onSubmit()">
-    <input placeholder="Email" formControlName="email" />
-    <input placeholder="Password" formControlName="password"/>
+  <form class="container" [formGroup]="loginForm" (submit)="onSubmit()">
+    <div class="title">{{ title }}</div>
+    <input placeholder="Email" formControlName="email" name="email" />
+    <input placeholder="Password" formControlName="password" name="password" />
     <button type="submit">Log In</button>
   </form>
 </div>

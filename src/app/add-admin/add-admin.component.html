@@ -1,36 +1,44 @@
 <div class="container">
   <div class="title">Add a New Admin</div>
-  <div class="flex myWidth">
-    <div class="input_container">
-      <input placeholder="UserName" />
-      <input placeholder="Password" />
-      <input placeholder="FullName" />
-      <input placeholder="Email" />
+  <form [formGroup]="addAdminForm" (submit)="onClickSubmit()">
+    <div class="flex myWidth">
+      <div class="input_container">
+        <input placeholder="UserName" formControlName="username" />
+        <input placeholder="Password" formControlName="password" />
+        <input placeholder="FullName" formControlName="fullname" />
+        <input placeholder="Email" formControlName="email" />
+      </div>
+      <div class="space"></div>
+      <div class="input_container">
+        <input placeholder="PhoneNumber" formControlName="phonenumber" />
+        <input placeholder="Position" formControlName="position" />
+        <input placeholder="StaffID" formControlName="staffID" />
+      </div>
     </div>
-    <div class="space"></div>
-    <div class="input_container">
-      <input placeholder="PhoneNumber" />
-      <input placeholder="Position" />
-      <input placeholder="StaffID" />
+    <table>
+      <tr>
+        <th class="header"></th>
+        <th>School Name</th>
+        <th>SchoolID</th>
+      </tr>
+      <tr *ngFor="let school of schools">
+        <th class="header">
+          <input
+            class="radio"
+            type="radio"
+            formControlName="school"
+            id="{{ school.schoolID }}"
+            value="{{ school.schoolID }}"
+          />
+        </th>
+        <th>{{ school.schoolName }}</th>
+        <th>{{ school.schoolID }}</th>
+      </tr>
+    </table>
+    <div class="button_container">
+      <button routerLink="{{ goBack() }}">Back</button>
+      <div class="space"></div>
+      <button type="submit">Submit</button>
     </div>
-  </div>
-  <table>
-    <tr>
-      <th class="header"></th>
-      <th>School Name</th>
-      <th>SchoolID</th>
-    </tr>
-    <tr *ngFor="">
-      <th>
-        <input type="radio" name="school" id="" value="" />
-      </th>
-      <th></th>
-      <th></th>
-    </tr>
-  </table>
-  <div class="button_container">
-    <button routerLink="{{ goBack() }}">Back</button>
-    <div class="space"></div>
-    <button>Submit</button>
-  </div>
+  </form>
 </div>

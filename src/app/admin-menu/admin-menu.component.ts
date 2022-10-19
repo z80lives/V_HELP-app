@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationServiceService } from '../core/services/authentication-service.service';
 
 @Component({
   selector: 'app-admin-menu',
@@ -12,8 +13,15 @@ export class AdminMenuComponent implements OnInit {
   goToEdit = (): String => {
     return '/AdminDetailsComponent';
   };
+  schoolName = '';
+  schoolID = '';
 
-  constructor() {}
+  constructor(private auth: AuthenticationServiceService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.auth.getCurrentUser().schoolName);
+
+    this.schoolName = this.auth.getCurrentUser().schoolName;
+    this.schoolID = this.auth.getCurrentUser().schoolID;
+  }
 }

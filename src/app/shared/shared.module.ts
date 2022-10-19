@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {HttpClientModule} from "@angular/common/http";
 import {ToastModule} from "primeng/toast";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -13,9 +14,11 @@ import {ToastModule} from "primeng/toast";
   imports: [
     CommonModule,
     HttpClientModule,
-    ToastModule
+    ToastModule,
+    ReactiveFormsModule,
   ],
   exports: [
+    ReactiveFormsModule,
     HttpClientModule,
     ToastModule
   ]

@@ -1,11 +1,13 @@
 <div class="container">
-  <div class="title">Register a School</div>
-  <input placeholder="name of school" />
-  <input placeholder="school address" />
-  <input placeholder="school city" />
-  <div class="button_container">
-    <button routerLink="{{ goBack() }}">Back</button>
-    <div class="space"></div>
-    <button>Submit</button>
-  </div>
+  <form class="container" [formGroup]="addSchoolForm" (submit)="onClickSubmit($event)">
+    <div class="title">Register a School</div>
+    <input placeholder="name of school" formControlName="schoolName" />
+    <input placeholder="school address" formControlName="address" />
+    <input placeholder="school city" formControlName="city" />
+    <div class="button_container">
+      <button routerLink="{{ goBack() }}">Back</button>
+      <div class="space"></div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
 </div>
