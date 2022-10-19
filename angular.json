@@ -31,9 +31,18 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss",
+              "./node_modules/primeflex/primeflex.css",
+              "./node_modules/primeicons/primeicons.css",
+              "./node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "./node_modules/primeng/resources/primeng.min.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/webfront/src/assets/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -67,6 +76,10 @@
               "namedChunks": true
             }
           },
+          "options": {
+            "port": 4200,
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "defaultConfiguration": "production"
         },
         "serve": {
@@ -78,6 +91,10 @@
             "development": {
               "browserTarget": "V_HELP-app:build:development"
             }
+          },
+          "options": {
+            "port": 4200,
+            "proxyConfig": "src/proxy.conf.json"
           },
           "defaultConfiguration": "development"
         },
@@ -100,9 +117,18 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss",
+              "./node_modules/primeflex/primeflex.css",
+              "./node_modules/primeicons/primeicons.css",
+              "./node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "./node_modules/primeng/resources/primeng.min.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/webfront/src/assets/styles"
+              ]
+            },
             "scripts": []
           }
         }

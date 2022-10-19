@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-log-in',
@@ -9,10 +11,24 @@ export class LogInComponent implements OnInit {
   Submit = (): String => {
     return "/AdminMenuComponent"
   };
-
   title = 'HELP_V Log In';
 
-  constructor() {}
+  loginForm = this._fb.group({
+    email: '',
+    password: ''
+  });
 
-  ngOnInit(): void {}
+  constructor(
+    private  _fb: FormBuilder,
+    private _router: Router
+  ) {}
+
+  ngOnInit(): void {
+
+  }
+
+  onSubmit(){
+    const values = this.loginForm.value;
+    this._router.navigate(['/AdminMenuComponent']);
+  }
 }

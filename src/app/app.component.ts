@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MessageService} from "primeng/api";
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'This is my title now';
-  firstParagraph = "there are things i need to put here"
 
+  constructor(
+    private messageService : MessageService,  //required by child components
+  ) {
+  }
 }
