@@ -19,7 +19,7 @@ export class NewSchoolService {
   constructor(private readonly _adminService: LogInDataServiceService) {}
 
   create(data: Partial<schoolsModel>) {
-    data.schoolID = 'S' + this.Schools.length;
+    data.schoolID = 'S' + this.Schools.length + 1;
     this.Schools.push(data as schoolsModel);
     return of(data);
   }
