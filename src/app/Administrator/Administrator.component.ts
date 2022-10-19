@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { NewSchoolService } from '../core/services/new-school.service';
-import {Router} from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-Administrator',
@@ -14,27 +14,28 @@ export class AdministratorComponent implements OnInit {
   };
 
   constructor(
-    private readonly _router : Router,
+    private readonly _router: Router,
     private readonly _fb: FormBuilder,
-    private readonly _schoolService : NewSchoolService,
-    ) {}
+    private readonly _schoolService: NewSchoolService
+  ) {}
   addSchoolForm = this._fb.group({
-    name: [''],
+    schoolName: [''],
     address: [''],
     city: [''],
   });
 
   ngOnInit(): void {}
 
-  onClickSubmit($event : SubmitEvent){
+  onClickSubmit($event: SubmitEvent) {
     $event.preventDefault();
     const formData = this.addSchoolForm.value;
 
-    this._schoolService.create(formData).subscribe( (result) => {
-      if(result){
-        alert("Successfully created");
+    this._schoolService.create(formData).subscribe((result) => {
+      if (result) {
+        alert('Successfully created');
         this.addSchoolForm.reset();
+        this._router.navigate(['/AdministratorMenuComponent']);
       }
-    })
+    });
   }
 }
