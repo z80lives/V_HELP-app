@@ -76,10 +76,6 @@
               "namedChunks": true
             }
           },
-          "options": {
-            "port": 4200,
-            "proxyConfig": "src/proxy.conf.json"
-          },
           "defaultConfiguration": "production"
         },
         "serve": {
@@ -134,5 +130,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
