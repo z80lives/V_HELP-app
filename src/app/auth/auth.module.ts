@@ -11,6 +11,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {FormlyModule} from "@ngx-formly/core";
 import {UserDataService} from "../core/services/user-data.service";
 import {AuthControllerService} from "../tools/tools/api/services";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 
 @NgModule({
@@ -19,14 +20,15 @@ import {AuthControllerService} from "../tools/tools/api/services";
     RegisterFormComponent,
     AuthViewComponent
   ],
-  imports: [
-    CommonModule,
-    AuthRoutingModule,
-    MatCardModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-    FormlyModule
-  ],
+    imports: [
+        CommonModule,
+        AuthRoutingModule,
+        MatCardModule,
+        MatButtonModule,
+        ReactiveFormsModule,
+        FormlyModule,
+        MatProgressBarModule
+    ],
   providers: [
     AuthControllerService
   ]

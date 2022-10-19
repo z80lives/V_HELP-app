@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dl-all": "git submodule update --init --recursive",
-    "update-tools": "cp -r V-Help-BE/tools src/app/tools && cp src/app/tools/api-configuration.copy.ts src/app/tools/api/api-configuration.ts"
+    "update-tools": "cp -r V-Help-BE/tools src/app/tools && cp src/app/tools/api-configuration.copy.ts src/app/tools/tools/api/api-configuration.ts"
   },
   "private": true,
   "dependencies": {

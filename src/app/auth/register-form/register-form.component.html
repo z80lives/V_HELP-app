@@ -1,4 +1,5 @@
 <form [formGroup]="registerForm" (submit)="onSubmit($event)">
+  <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
   <formly-form
     [form]="registerForm"
     [fields]="fieldCfg"
@@ -8,5 +9,6 @@
   <button type="submit"
           mat-raised-button
           color="primary"
+          [disabled]="!registerForm.valid || loading"
           >Submit</button>
 </form>

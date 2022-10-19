@@ -4,6 +4,7 @@ import {Volunteer} from "../../tools/tools/api/models/volunteer";
 import {UntypedFormGroup} from "@angular/forms";
 import {UserDataService} from "../../core/services/user-data.service";
 import {httpErrorHandler} from "../../core/utils/error.helper";
+import {CoreDataService} from "../../core/services/core-data.service";
 
 @Component({
   selector: 'app-register-form',
@@ -11,6 +12,7 @@ import {httpErrorHandler} from "../../core/utils/error.helper";
   styleUrls: ['./register-form.component.scss']
 })
 export class RegisterFormComponent implements OnInit {
+  loading = false;
 
   fieldCfg : FormlyFieldConfig[] = [
     {
@@ -94,7 +96,8 @@ export class RegisterFormComponent implements OnInit {
   }
 
   constructor(
-    private readonly _userData : UserDataService
+    private readonly _userData : UserDataService,
+    private readonly _coreData : CoreDataService
   ) { }
 
   ngOnInit(): void {
@@ -102,10 +105,19 @@ export class RegisterFormComponent implements OnInit {
 
   onSubmit($event: SubmitEvent) {
     $event.preventDefault();
+    this.loading = true;
     this._userData.registerVolunteer(
       this.registerForm.value
     ).subscribe( (user) => {
-      console.debug(user);
+      if(user){
+        this._coreData.notifyInfo(
+          "Volunteer created",
+          `Volunteer ${user.username} was successfully created`
+        )
+      }
+    }).add( () => {
+      this.loading = false;
     });
   }
+
 }

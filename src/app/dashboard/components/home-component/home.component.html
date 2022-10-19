@@ -1,0 +1,6 @@
+<mat-card class="block" *ngIf="currentUser">
+  <mat-card-content>
+    <h3>Welcome {{currentUser.username}}</h3>
+    <p>Logged in as a {{currentUser | json}}</p>
+  </mat-card-content>
+</mat-card>
