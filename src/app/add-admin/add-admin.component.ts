@@ -12,7 +12,7 @@ interface adminForm {
   phonenumber: string;
   position: string;
   staffID: string;
-  school: string;
+  schoolID: string;
 }
 
 @Component({
@@ -33,7 +33,7 @@ export class AddAdminComponent implements OnInit {
     phonenumber: [''],
     position: [''],
     staffID: [''],
-    school: [''],
+    schoolID: [''],
   });
 
   constructor(
@@ -57,9 +57,9 @@ export class AddAdminComponent implements OnInit {
       formData.password.length !== 0 ||
       formData.phonenumber.length !== 0 ||
       formData.position.length !== 0 ||
-      formData.school.length !== 0 ||
       formData.staffID.length !== 0 ||
-      formData.username.length !== 0
+      formData.username.length !== 0 ||
+      formData.schoolID.length !== 0
     ) {
       this._adminService.create(formData).subscribe((result) => {
         console.log(result);
