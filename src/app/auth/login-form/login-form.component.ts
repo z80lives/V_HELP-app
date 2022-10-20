@@ -32,8 +32,8 @@ export class LoginFormComponent implements OnInit {
   loginForm = new UntypedFormGroup({});
   options : FormlyFormOptions = {};
   model = {
-    username: 'root',
-    password: 'root1234'
+    username: '',
+    password: ''
     // username: 'volunteer1',
     // password: '123456789'
   }
