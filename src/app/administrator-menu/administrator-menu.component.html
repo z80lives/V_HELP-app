@@ -1,8 +1,18 @@
-<div class="container">
-  <div class="button_container">
-    <button routerLink="{{ goToSchool() }}">Register a School</button>
+<!-- <div class="button_container">
+    <button mat-raised-button color="primary" routerLink="{{ goToSchool() }}">
+      Register a School
+    </button>
     <div class="space"></div>
 
-    <button routerLink="{{ goToNewAdmin() }}">Add an Admin</button>
-  </div>
-</div>
+    <button mat-raised-button color="primary" routerLink="{{ goToNewAdmin() }}">
+      Add an Admin
+    </button>
+  </div> -->
+<p-accordion>
+  <p-accordionTab header="Register a school">
+    <app-school-manage></app-school-manage>
+  </p-accordionTab>
+  <p-accordionTab header="Add an Admin">
+    <app-add-admin></app-add-admin>
+  </p-accordionTab>
+</p-accordion>

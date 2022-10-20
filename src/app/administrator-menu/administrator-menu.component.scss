@@ -13,16 +13,14 @@
   }
   button {
     font-size: 20px;
-
   }
   .button_container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 500px;
-    margin-bottom: 50px;
     button {
-        align-self: flex-start;
+      align-self: flex-start;
     }
   }
 }
@@ -33,7 +31,6 @@
   margin-bottom: 50px;
 }
 
-
 .space {
-    flex: 1;
+  flex: 1;
 }

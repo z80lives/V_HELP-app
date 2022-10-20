@@ -1,13 +1,41 @@
 <div class="container">
-  <form class="container" [formGroup]="addSchoolForm" (submit)="onClickSubmit($event)">
+  <form
+    class="container"
+    [formGroup]="addSchoolForm"
+    (submit)="onClickSubmit($event)"
+  >
     <div class="title">Register a School</div>
-    <input placeholder="name of school" formControlName="schoolName" />
-    <input placeholder="school address" formControlName="address" />
-    <input placeholder="school city" formControlName="city" />
+    <mat-form-field>
+      <mat-label>School Name</mat-label>
+      <input
+        matInput
+        placeholder="name of school"
+        formControlName="schoolName"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>School Address</mat-label>
+      <input
+        matInput
+        placeholder="school address"
+        formControlName="address"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>school city</mat-label>
+      <input
+        matInput
+        placeholder="school city"
+        formControlName="city"
+        required
+      />
+    </mat-form-field>
+    <!-- <input placeholder="school address" formControlName="address" />
+    <input placeholder="school city" formControlName="city" /> -->
     <div class="button_container">
-      <button routerLink="{{ goBack() }}">Back</button>
-      <div class="space"></div>
-      <button type="submit">Submit</button>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
     </div>
   </form>
 </div>

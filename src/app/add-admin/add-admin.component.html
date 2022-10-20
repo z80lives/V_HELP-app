@@ -1,44 +1,19 @@
 <div class="container">
   <div class="title">Add a New Admin</div>
   <form [formGroup]="addAdminForm" (submit)="onClickSubmit()">
-    <div class="flex myWidth">
-      <div class="input_container">
-        <input placeholder="UserName" formControlName="username" />
-        <input placeholder="Password" formControlName="password" />
-        <input placeholder="FullName" formControlName="fullname" />
-        <input placeholder="Email" formControlName="email" />
-      </div>
-      <div class="space"></div>
-      <div class="input_container">
-        <input placeholder="PhoneNumber" formControlName="phone" />
-        <input placeholder="Position" formControlName="position" />
-        <input placeholder="StaffID" formControlName="staffID" />
-      </div>
-    </div>
-    <table>
-      <tr>
-        <th class="header"></th>
-        <th>School Name</th>
-        <th>SchoolID</th>
-      </tr>
-      <tr *ngFor="let school of schools">
-        <th class="header">
-          <input
-            class="radio"
-            type="radio"
-            formControlName="schoolId"
-            id="{{ school.schoolId }}"
-            value="{{ school.schoolId }}"
-          />
-        </th>
-        <th>{{ school.schoolName }}</th>
-        <th>{{ school.schoolId }}</th>
-      </tr>
-    </table>
-    <div class="button_container">
-      <button routerLink="{{ goBack() }}">Back</button>
-      <div class="space"></div>
-      <button type="submit" [disabled]="!addAdminForm.valid">Submit</button>
-    </div>
+    <formly-form
+      [form]="addAdminForm"
+      [fields]="fieldConfig"
+      [options]="option"
+    >
+    </formly-form>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!addAdminForm.valid"
+    >
+      Submit
+    </button>
   </form>
 </div>

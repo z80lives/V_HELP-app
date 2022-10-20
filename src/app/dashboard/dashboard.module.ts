@@ -11,15 +11,22 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './components/home-component/home.component';
-import {BadgeModule} from "primeng/badge";
-import {AvatarModule} from "primeng/avatar";
-import {MenuModule} from "primeng/menu";
-import {MatCardModule} from "@angular/material/card";
-import {LogInDataServiceService} from "../core/services/log-in-data-service.service";
-import {AdministratorMenuComponent} from "../administrator-menu/administrator-menu.component";
-import {AdminDetailsComponent} from "../admin-details/admin-details.component";
-import {AdminMenuComponent} from "../admin-menu/admin-menu.component";
-
+import { BadgeModule } from 'primeng/badge';
+import { AvatarModule } from 'primeng/avatar';
+import { MenuModule } from 'primeng/menu';
+import { MatCardModule } from '@angular/material/card';
+import { LogInDataServiceService } from '../core/services/log-in-data-service.service';
+import { AdministratorMenuComponent } from '../administrator-menu/administrator-menu.component';
+import { AdminDetailsComponent } from '../admin-details/admin-details.component';
+import { AdminMenuComponent } from '../admin-menu/admin-menu.component';
+import { AccordionModule } from 'primeng/accordion';
+import { ManageSchoolComponent } from '../manage-school/manage-school.component';
+import { SharedModule } from 'primeng/api';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddAdminComponent } from '../add-admin/add-admin.component';
+import { FormlyModule } from '@ngx-formly/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -27,7 +34,9 @@ import {AdminMenuComponent} from "../admin-menu/admin-menu.component";
     NavComponent,
     HomeComponent,
     AdministratorMenuComponent,
-    AdminMenuComponent
+    AdminMenuComponent,
+    ManageSchoolComponent,
+    AddAdminComponent,
   ],
   imports: [
     CommonModule,
@@ -41,11 +50,17 @@ import {AdminMenuComponent} from "../admin-menu/admin-menu.component";
     BadgeModule,
     AvatarModule,
     MenuModule,
-    MatCardModule
+    MatCardModule,
+    AccordionModule,
+    SharedModule,
+    ReactiveFormsModule,
+    FormlyModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [
     //refactor to SchoolAdmin Module
     // LogInDataServiceService
-  ]
+  ],
 })
-export class DashboardModule { }
+export class DashboardModule {}
