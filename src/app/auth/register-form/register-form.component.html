@@ -1,1 +1,14 @@
-<p>register-form works!</p>
+<form [formGroup]="registerForm" (submit)="onSubmit($event)">
+  <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+  <formly-form
+    [form]="registerForm"
+    [fields]="fieldCfg"
+    [options]="options"
+    [model]="model"
+  ></formly-form>
+  <button type="submit"
+          mat-raised-button
+          color="primary"
+          [disabled]="!registerForm.valid || loading"
+          >Submit</button>
+</form>

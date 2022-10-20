@@ -11,14 +11,16 @@ export class AdministratorMenuComponent implements OnInit {
   constructor() {}
 
   goToSchool = (): String => {
-    return '/AdministratorComponent_component';
+    return '/dashboard/school/add';
+    // return '/AdministratorComponent_component';
   };
   goToNewAdmin = (): String => {
-    return '/AddAdminComponent';
+    return '/dashboard/admin/add';
   };
   goBack = (): String => {
-    return '/';
+    return '/dashboard/root';
   };
+
   goToAddSchool = (): String => {
     // console.log(this.auth.getCurrentUser());
     return '/AdministratorMenuComponent';

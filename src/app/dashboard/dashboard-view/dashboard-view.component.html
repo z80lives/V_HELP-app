@@ -1,4 +1,9 @@
-<p>dashboard-view works!</p>
-<ul>
- <li *ngFor="let d of data" >{{d}}</li>
-</ul>
+<p-menu #menu [model]="cornerMenu" [popup]="true"></p-menu>
+<app-nav
+ [menu]="menu"
+ [navItems]="sideMenu"
+></app-nav>
+<!--<p>dashboard-view works!</p>-->
+<!--<ul>-->
+<!-- <li *ngFor="let d of data" >{{d}}</li>-->
+<!--</ul>-->

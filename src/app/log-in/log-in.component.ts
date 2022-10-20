@@ -3,6 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationServiceService } from '../core/services/authentication-service.service';
 import { LogInDataServiceService } from '../core/services/log-in-data-service.service';
+import {CoreDataService} from "../core/services/core-data.service";
 
 
 interface FormModel {
@@ -26,7 +27,7 @@ export class LogInComponent implements OnInit {
   ngOnInit(): void {
     this._adminData.fetch();
   }
-  
+
   title = 'HELP_V Log In';
 
   loginForm = this._fb.group({
@@ -35,7 +36,7 @@ export class LogInComponent implements OnInit {
   });
 
   onSubmit() {
-    const values: FormModel = this.loginForm.value;
+    const values: FormModel = this.loginForm.value as any;
     if (values.email != '' || values.password != '') {
       if (values.email == 'Admin@gmail.com' && values.password == 'admin') {
         this.router.navigate(['/AdministratorMenuComponent']);

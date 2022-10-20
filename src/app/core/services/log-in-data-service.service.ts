@@ -5,14 +5,14 @@ interface LogInModel {
   email: string;
   password: string;
   schoolName: string;
-  schoolID: string;
+  schoolId: string;
 }
 
 export class LogInDataServiceService {
   private admin: LogInModel[] = [
-    { username: 'user1', email: 'user1@gmail.com', password: 'user1', schoolID: "S1", schoolName:"school1" },
-    { username: 'user2', email: 'user2@gmail.com', password: 'user2', schoolID: "S2", schoolName:"school2" },
-    { username: 'user3', email: 'user3@gmail.com', password: 'user3', schoolID: "S3", schoolName:"school3" },
+    { username: 'user1', email: 'user1@gmail.com', password: 'user1', schoolId: "S1", schoolName:"school1" },
+    { username: 'user2', email: 'user2@gmail.com', password: 'user2', schoolId: "S2", schoolName:"school2" },
+    { username: 'user3', email: 'user3@gmail.com', password: 'user3', schoolId: "S3", schoolName:"school3" },
   ];
 
   create(data: Partial<LogInModel>) {
