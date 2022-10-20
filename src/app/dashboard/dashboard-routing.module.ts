@@ -9,6 +9,7 @@ import {AddAdminComponent} from "../add-admin/add-admin.component";
 import {AdminMenuComponent} from "../admin-menu/admin-menu.component";
 import {AdminDetailsComponent} from "../admin-details/admin-details.component";
 import {RequestsModule} from "../requests/requests.module";
+import {SchoolAdminListComponent} from "../school-admin-list/school-admin-list.component";
 
 const routes: Routes = [
   {
@@ -38,6 +39,10 @@ const routes: Routes = [
       {
         path: 'schoolAdmin/edit',
         component: AdminDetailsComponent
+      },
+      {
+        path: 'schoolAdmins/list',
+        component: SchoolAdminListComponent
       },
       {
         path: 'requests',

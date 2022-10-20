@@ -17,6 +17,8 @@ import {MenuModule} from "primeng/menu";
 import {MatCardModule} from "@angular/material/card";
 import {LogInDataServiceService} from "../core/services/log-in-data-service.service";
 import {AdministratorMenuComponent} from "../administrator-menu/administrator-menu.component";
+import {AdminDetailsComponent} from "../admin-details/admin-details.component";
+import {AdminMenuComponent} from "../admin-menu/admin-menu.component";
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import {AdministratorMenuComponent} from "../administrator-menu/administrator-me
     DashboardViewComponent,
     NavComponent,
     HomeComponent,
-    AdministratorMenuComponent
+    AdministratorMenuComponent,
+    AdminMenuComponent
   ],
   imports: [
     CommonModule,

@@ -6,6 +6,8 @@ import { NewSchoolService } from '../core/services/new-school.service';
 import {SchoolWithRelations} from "../tools/tools/api/models/school-with-relations";
 import {School} from "../tools/tools/api/models/school";
 import {CoreDataService} from "../core/services/core-data.service";
+import {AuthService} from "../auth/guards/auth.service";
+import {UserDataService} from "../core/services/user-data.service";
 
 interface adminForm {
   username: string;
@@ -15,7 +17,7 @@ interface adminForm {
   phone: string;
   position: string;
   staffID: string;
-  schoolID: string;
+  schoolId: string;
 }
 
 @Component({
@@ -30,20 +32,21 @@ export class AddAdminComponent implements OnInit {
   };
 
   addAdminForm = this._fb.group({
-    username: ['', [Validators.minLength(8)]],
-    email: ['', [Validators.email]],
-    password: [''],
-    fullname: [''],
-    phone: [''],
-    position: [''],
-    staffID: [''],
-    schoolID: [''],
+    username: ['', [Validators.minLength(2), Validators.required]],
+    email: ['', [Validators.email, Validators.required]],
+    password: ['', [Validators.minLength(8), Validators.required]],
+    fullname: ['', [Validators.required]],
+    phone: ['', [Validators.required]],
+    position: ['', [Validators.required]],
+    staffID: ['', [Validators.required]],
+    schoolId: ['', [Validators.required]],
   });
 
   constructor(
     private readonly _router: Router,
     private readonly _fb: FormBuilder,
-    private readonly _adminService: LogInDataServiceService,
+    // private readonly _adminService: LogInDataServiceService,
+    private readonly _adminService : UserDataService,
     private readonly _schools: NewSchoolService,
     private readonly _core : CoreDataService
   ) {}
@@ -59,17 +62,17 @@ export class AddAdminComponent implements OnInit {
   onClickSubmit() {
     const formData: adminForm = this.addAdminForm.value as any;
     if (
-      formData.email.length !== 0 ||
-      formData.fullname.length !== 0 ||
-      formData.password.length !== 0 ||
-      formData.phone.length !== 0 ||
-      formData.position.length !== 0 ||
-      formData.schoolID.length !== 0 ||
-      formData.staffID.length !== 0 ||
-      formData.username.length !== 0
+     // ( formData.email.length !== 0 ||
+     //  formData.fullname.length !== 0 ||
+     //  formData.password.length !== 0 ||
+     //  formData.phone.length !== 0 ||
+     //  formData.position.length !== 0 ||
+     //  formData.schoolId.length !== 0 ||
+     //  formData.staffID.length !== 0 ||
+     //  formData.username.length !== 0) && this.addAdminForm.valid
+      this.addAdminForm.valid
     ) {
-      this._adminService.create(formData).subscribe((result) => {
-        console.log(result);
+      this._adminService.registerSchoolAdmin(formData).subscribe((result) => {
 
         if (result) {
           alert('New School administrator created!');
@@ -88,6 +91,7 @@ export class AddAdminComponent implements OnInit {
       });
     } else {
       alert('inputs cannot be empty');
+      console.log("data", formData)
     }
   }
 }

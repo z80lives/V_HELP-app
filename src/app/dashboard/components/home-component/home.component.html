@@ -6,7 +6,7 @@
 </mat-card>
 
 
-<mat-card class="block"
+<mat-card class="block home"
           *ngIf="currentUser && currentUser['type']==='volunteer'">
   <mat-card-content>
     <button
@@ -25,9 +25,15 @@
   </mat-card-content>
 </mat-card>
 
-<mat-card class="block" *ngIf="currentUser && currentUser['type']==='root'">
+<mat-card class="block home" *ngIf="currentUser && currentUser['type']==='root'">
   <mat-card-content>
     <app-administrator-menu></app-administrator-menu>
-<!--    <app-administrator-menu></app-administrator-menu>-->
   </mat-card-content>
 </mat-card>
+
+<mat-card class="block home" *ngIf="currentUser && currentUser['type']==='admin'">
+  <mat-card-content>
+    <app-admin-menu></app-admin-menu>
+  </mat-card-content>
+</mat-card>
+

@@ -3,6 +3,6 @@
 export interface School {
   address: string;
   city: string;
-  schoolID?: string;
+  schoolId?: string;
   schoolName: string;
 }

@@ -19,6 +19,8 @@ import {FormlyMaterialModule} from "@ngx-formly/material";
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {TokenInterceptor} from "./auth/interceptors/token.interceptor";
 import {LogInDataServiceService} from "./core/services/log-in-data-service.service";
+import { SchoolAdminListComponent } from './school-admin-list/school-admin-list.component';
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
   declarations: [
@@ -27,8 +29,9 @@ import {LogInDataServiceService} from "./core/services/log-in-data-service.servi
     ManageSchoolComponent,
     // AdministratorMenuComponent,
     AddAdminComponent,
-    AdminMenuComponent,
-    AdminDetailsComponent
+    // AdminMenuComponent,
+    AdminDetailsComponent,
+    SchoolAdminListComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import {LogInDataServiceService} from "./core/services/log-in-data-service.servi
     FormlyMaterialModule,
     MatNativeDateModule,
     FormlyMatDatepickerModule,
-    SharedModule
+    SharedModule,
+    MatProgressBarModule
   ],
   providers: [
     MessageService,

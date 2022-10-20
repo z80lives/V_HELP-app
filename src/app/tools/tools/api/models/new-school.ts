@@ -2,7 +2,7 @@
 /* eslint-disable */
 
 /**
- * (tsType: Omit<School, 'schoolID'>, schemaOptions: { title: 'NewSchool', exclude: [ 'schoolID' ] })
+ * (tsType: Omit<School, 'schoolId'>, schemaOptions: { title: 'NewSchool', exclude: [ 'schoolId' ] })
  */
 export interface NewSchool {
   address: string;
