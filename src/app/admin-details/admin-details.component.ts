@@ -50,15 +50,14 @@ export class AdminDetailsComponent implements OnInit {
     const formData = this.detailsForm.value;
 
     if (
-      // formData.email?.length !== 0 ||
-      // formData.fullname?.length !== 0 ||
-      // formData.password?.length !== 0 ||
-      // formData.phonenumber?.length !== 0 ||
-      // formData.position?.length !== 0 ||
-      // formData.school?.length !== 0 ||
-      // formData.staffID?.length !== 0 ||
-      // formData.username?.length !== 0
-      this.detailsForm.valid
+      formData.email?.length !== 0 ||
+      formData.fullname?.length !== 0 ||
+      formData.password?.length !== 0 ||
+      formData.phonenumber?.length !== 0 ||
+      formData.position?.length !== 0 ||
+      formData.school?.length !== 0 ||
+      formData.staffID?.length !== 0 ||
+      formData.username?.length !== 0
     ) {
       if(this.currentAdmin && this.currentAdmin._id){
         this.user

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import {NewSchoolService} from '../core/services/new-school.service';
+import {NewSchoolService, SchoolModel} from '../core/services/new-school.service';
 import { Router } from '@angular/router';
 import {NewSchool} from "../tools/tools/api/models/new-school";
 
@@ -29,7 +29,7 @@ export class ManageSchoolComponent implements OnInit {
 
   onClickSubmit($event: SubmitEvent) {
     $event.preventDefault();
-    const formData : NewSchool = this.addSchoolForm.value as any;
+    const formData : Partial<SchoolModel> = this.addSchoolForm.value as any;
 
     this._schoolService.create(formData).subscribe((result) => {
       if (result) {
