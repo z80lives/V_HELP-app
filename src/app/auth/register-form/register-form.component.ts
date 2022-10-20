@@ -22,7 +22,8 @@ export class RegisterFormComponent implements OnInit {
         label: "Username",
         placeholder: "Enter your username",
         pattern: "^(?=[a-zA-Z0-9._]{4,20}$)(?!.*[_.]{2})[^_.].*[^_.]$",
-        required: true
+        required: true,
+        autocomplete: "off"
       }
     },
     {
@@ -108,13 +109,13 @@ model={}
     this.loading = true;
     this._userData.registerVolunteer(
       this.registerForm.value
-    ).subscribe( (user) => {
+    ).subscribe( async (user) => {
       if(user){
         this._coreData.notifyInfo(
           "Volunteer created",
           `Volunteer ${user.username} was successfully created`
         )
-        this._coreData.fetchRouter().navigate(["", "auth", "register"])
+        await this._coreData.fetchRouter().navigate(["", "auth", "login"])
       }
     }, (err) => {
       this._coreData.notify({
