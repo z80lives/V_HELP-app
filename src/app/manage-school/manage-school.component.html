@@ -6,14 +6,7 @@
   >
     <div class="title">Register a School</div>
 
-    <formly-form
-    [form]="addSchoolForm"
-    [fields]="fieldConfig"
-    >
-
-    </formly-form>
-    <!-- <input placeholder="school address" formControlName="address" />
-    <input placeholder="school city" formControlName="city" /> -->
+    <formly-form [form]="addSchoolForm" [fields]="fieldConfig"> </formly-form>
     <div class="button_container">
       <button
         [disabled]="!addSchoolForm.valid"

@@ -33,13 +33,7 @@ export class PanelDataService {
               ];
               break;
             case 'admin':
-              navMenu = [
-                { label: 'Home', routerLink: '/dashboard' },
-                {
-                  label: 'Edit School',
-                  routerLink: '/dashboard/schoolAdmin/edit',
-                },
-              ];
+              navMenu = [{ label: 'Home', routerLink: '/dashboard' }];
               break;
             case 'root':
               {

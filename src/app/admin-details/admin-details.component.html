@@ -6,20 +6,6 @@
     (submit)="onClickSubmit($event)"
     *ngIf="!loading"
   >
-    <!-- <div class="flex myWidth">
-      <div class="input_container">
-        <input placeholder="UserName" formControlName="username" />
-        <input placeholder="Password" formControlName="password" />
-        <input placeholder="FullName" formControlName="fullname" />
-        <input placeholder="Email" formControlName="email" />
-      </div>
-      <div class="space"></div>
-      <div class="input_container">
-        <input placeholder="PhoneNumber" formControlName="phone" />
-        <input placeholder="Position" formControlName="position" />
-        <input placeholder="StaffID" formControlName="staffID" />
-      </div>
-    </div> -->
     <formly-form [form]="detailsForm" [fields]="fieldConfig"> </formly-form>
     <div class="button_container">
       <button
