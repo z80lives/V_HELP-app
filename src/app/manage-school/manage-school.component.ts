@@ -4,6 +4,7 @@ import { NewSchoolService } from '../core/services/new-school.service';
 import { Router } from '@angular/router';
 import { NewSchool } from '../tools/tools/api/models/new-school';
 import { CoreDataService } from '../core/services/core-data.service';
+import { FormlyFieldConfig } from '@ngx-formly/core';
 
 @Component({
   selector: 'app-school-manage',
@@ -26,6 +27,37 @@ export class ManageSchoolComponent implements OnInit {
     address: '',
     city: '',
   });
+
+  fieldConfig: FormlyFieldConfig[] = [
+    {
+      key: 'schoolName',
+      type: 'input',
+      props: {
+        label: 'School Name',
+        placeholder: 'School Name',
+        required: true,
+      },
+    },
+    {
+      key: 'address',
+      type: 'input',
+      props: {
+        label: 'Address',
+        placeholder: 'Address',
+        required: true,
+      },
+    },
+    {
+      key: 'city',
+      type: 'input',
+      props: {
+        label: 'City',
+        placeholder: 'City',
+        required: true,
+      },
+    },
+
+  ];
 
   ngOnInit(): void {}
 

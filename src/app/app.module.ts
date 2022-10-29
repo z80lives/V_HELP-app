@@ -24,7 +24,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     LogInComponent,
     // AdministratorMenuComponent,
     // AdminMenuComponent,
-    AdminDetailsComponent,
+    // AdminDetailsComponent,
     SchoolAdminListComponent,
   ],
   imports: [

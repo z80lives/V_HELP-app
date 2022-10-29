@@ -27,6 +27,10 @@ import { AddAdminComponent } from '../add-admin/add-admin.component';
 import { FormlyModule } from '@ngx-formly/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {
+  MatProgressBar,
+  MatProgressBarModule,
+} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,7 @@ import { MatInputModule } from '@angular/material/input';
     AdminMenuComponent,
     ManageSchoolComponent,
     AddAdminComponent,
+    AdminDetailsComponent,
   ],
   imports: [
     CommonModule,
@@ -57,6 +62,7 @@ import { MatInputModule } from '@angular/material/input';
     FormlyModule,
     MatFormFieldModule,
     MatInputModule,
+    MatProgressBarModule,
   ],
   providers: [
     //refactor to SchoolAdmin Module
