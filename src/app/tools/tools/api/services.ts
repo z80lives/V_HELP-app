@@ -1,6 +1,13 @@
 export { AuthControllerService } from './services/auth-controller.service';
 export { PingControllerService } from './services/ping-controller.service';
+export { RequestsControllerService } from './services/requests-controller.service';
+export { RequestOfferControllerService } from './services/request-offer-controller.service';
+export { ResourceRequestsControllerService } from './services/resource-requests-controller.service';
 export { SchoolAdminControllerService } from './services/school-admin-controller.service';
 export { SchoolAdminSchoolControllerService } from './services/school-admin-school-controller.service';
 export { SchoolControllerService } from './services/school-controller.service';
+export { SchoolResourceRequestControllerService } from './services/school-resource-request-controller.service';
+export { SchoolTutorialRequestControllerService } from './services/school-tutorial-request-controller.service';
+export { TutorialsRequestsControllerService } from './services/tutorials-requests-controller.service';
 export { VolunteerControllerService } from './services/volunteer-controller.service';
+export { VolunteerOfferControllerService } from './services/volunteer-offer-controller.service';

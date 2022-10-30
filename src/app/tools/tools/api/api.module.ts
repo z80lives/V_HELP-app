@@ -6,10 +6,17 @@ import { ApiConfiguration, ApiConfigurationParams } from './api-configuration';
 
 import { AuthControllerService } from './services/auth-controller.service';
 import { PingControllerService } from './services/ping-controller.service';
+import { RequestsControllerService } from './services/requests-controller.service';
+import { RequestOfferControllerService } from './services/request-offer-controller.service';
+import { ResourceRequestsControllerService } from './services/resource-requests-controller.service';
 import { SchoolAdminControllerService } from './services/school-admin-controller.service';
 import { SchoolAdminSchoolControllerService } from './services/school-admin-school-controller.service';
 import { SchoolControllerService } from './services/school-controller.service';
+import { SchoolResourceRequestControllerService } from './services/school-resource-request-controller.service';
+import { SchoolTutorialRequestControllerService } from './services/school-tutorial-request-controller.service';
+import { TutorialsRequestsControllerService } from './services/tutorials-requests-controller.service';
 import { VolunteerControllerService } from './services/volunteer-controller.service';
+import { VolunteerOfferControllerService } from './services/volunteer-offer-controller.service';
 
 /**
  * Module that provides all services and configuration.
@@ -21,10 +28,17 @@ import { VolunteerControllerService } from './services/volunteer-controller.serv
   providers: [
     AuthControllerService,
     PingControllerService,
+    RequestsControllerService,
+    RequestOfferControllerService,
+    ResourceRequestsControllerService,
     SchoolAdminControllerService,
     SchoolAdminSchoolControllerService,
     SchoolControllerService,
+    SchoolResourceRequestControllerService,
+    SchoolTutorialRequestControllerService,
+    TutorialsRequestsControllerService,
     VolunteerControllerService,
+    VolunteerOfferControllerService,
     ApiConfiguration
   ],
 })
