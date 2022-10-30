@@ -18,10 +18,7 @@ import { Count as LoopbackCount } from '../models/loopback/count';
   providedIn: 'root',
 })
 export class VolunteerOfferControllerService extends BaseService {
-  constructor(
-    config: ApiConfiguration,
-    http: HttpClient
-  ) {
+  constructor(config: ApiConfiguration, http: HttpClient) {
     super(config, http);
   }
 
@@ -30,7 +27,9 @@ export class VolunteerOfferControllerService extends BaseService {
    */
   static readonly VolunteerOfferControllerFindPath = '/volunteers/{id}/offers';
 
+
   /**
+   *
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
    * To access only the response body, use `find()` instead.
    *
@@ -39,26 +38,32 @@ export class VolunteerOfferControllerService extends BaseService {
   find$Response(params: {
     id: string;
     filter?: any;
-    context?: HttpContext
-  }
-): Observable<StrictHttpResponse<Array<Offer>>> {
-
-    const rb = new RequestBuilder(this.rootUrl, VolunteerOfferControllerService.VolunteerOfferControllerFindPath, 'get');
+    context?: HttpContext;
+  }): Observable<StrictHttpResponse<Array<Offer>>> {
+    const rb = new RequestBuilder(
+      this.rootUrl,
+      VolunteerOfferControllerService.VolunteerOfferControllerFindPath,
+      'get'
+    );
     if (params) {
       rb.path('id', params.id, {});
       rb.query('filter', params.filter, {});
     }
 
-    return this.http.request(rb.build({
-      responseType: 'json',
-      accept: 'application/json',
-      context: params?.context
-    })).pipe(
-      filter((r: any) => r instanceof HttpResponse),
-      map((r: HttpResponse<any>) => {
-        return r as StrictHttpResponse<Array<Offer>>;
-      })
-    );
+    return this.http
+      .request(
+        rb.build({
+          responseType: 'json',
+          accept: 'application/json',
+          context: params?.context,
+        })
+      )
+      .pipe(
+        filter((r: any) => r instanceof HttpResponse),
+        map((r: HttpResponse<any>) => {
+          return r as StrictHttpResponse<Array<Offer>>;
+        })
+      );
   }
 
   /**
@@ -70,10 +75,8 @@ export class VolunteerOfferControllerService extends BaseService {
   find(params: {
     id: string;
     filter?: any;
-    context?: HttpContext
-  }
-): Observable<Array<Offer>> {
-
+    context?: HttpContext;
+  }): Observable<Array<Offer>> {
     return this.find$Response(params).pipe(
       map((r: StrictHttpResponse<Array<Offer>>) => r.body as Array<Offer>)
     );
@@ -82,7 +85,8 @@ export class VolunteerOfferControllerService extends BaseService {
   /**
    * Path part for operation volunteerOfferControllerCreate
    */
-  static readonly VolunteerOfferControllerCreatePath = '/volunteers/{id}/offers';
+  static readonly VolunteerOfferControllerCreatePath =
+    '/volunteers/{id}/offers';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
@@ -92,27 +96,33 @@ export class VolunteerOfferControllerService extends BaseService {
    */
   create$Response(params: {
     id: string;
-    context?: HttpContext
-    body?: NewOfferInVolunteer
-  }
-): Observable<StrictHttpResponse<Offer>> {
-
-    const rb = new RequestBuilder(this.rootUrl, VolunteerOfferControllerService.VolunteerOfferControllerCreatePath, 'post');
+    context?: HttpContext;
+    body?: NewOfferInVolunteer;
+  }): Observable<StrictHttpResponse<Offer>> {
+    const rb = new RequestBuilder(
+      this.rootUrl,
+      VolunteerOfferControllerService.VolunteerOfferControllerCreatePath,
+      'post'
+    );
     if (params) {
       rb.path('id', params.id, {});
       rb.body(params.body, 'application/json');
     }
 
-    return this.http.request(rb.build({
-      responseType: 'json',
-      accept: 'application/json',
-      context: params?.context
-    })).pipe(
-      filter((r: any) => r instanceof HttpResponse),
-      map((r: HttpResponse<any>) => {
-        return r as StrictHttpResponse<Offer>;
-      })
-    );
+    return this.http
+      .request(
+        rb.build({
+          responseType: 'json',
+          accept: 'application/json',
+          context: params?.context,
+        })
+      )
+      .pipe(
+        filter((r: any) => r instanceof HttpResponse),
+        map((r: HttpResponse<any>) => {
+          return r as StrictHttpResponse<Offer>;
+        })
+      );
   }
 
   /**
@@ -123,11 +133,9 @@ export class VolunteerOfferControllerService extends BaseService {
    */
   create(params: {
     id: string;
-    context?: HttpContext
-    body?: NewOfferInVolunteer
-  }
-): Observable<Offer> {
-
+    context?: HttpContext;
+    body?: NewOfferInVolunteer;
+  }): Observable<Offer> {
     return this.create$Response(params).pipe(
       map((r: StrictHttpResponse<Offer>) => r.body as Offer)
     );
@@ -136,7 +144,8 @@ export class VolunteerOfferControllerService extends BaseService {
   /**
    * Path part for operation volunteerOfferControllerDelete
    */
-  static readonly VolunteerOfferControllerDeletePath = '/volunteers/{id}/offers';
+  static readonly VolunteerOfferControllerDeletePath =
+    '/volunteers/{id}/offers';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
@@ -147,26 +156,32 @@ export class VolunteerOfferControllerService extends BaseService {
   delete$Response(params: {
     id: string;
     where?: any;
-    context?: HttpContext
-  }
-): Observable<StrictHttpResponse<LoopbackCount>> {
-
-    const rb = new RequestBuilder(this.rootUrl, VolunteerOfferControllerService.VolunteerOfferControllerDeletePath, 'delete');
+    context?: HttpContext;
+  }): Observable<StrictHttpResponse<LoopbackCount>> {
+    const rb = new RequestBuilder(
+      this.rootUrl,
+      VolunteerOfferControllerService.VolunteerOfferControllerDeletePath,
+      'delete'
+    );
     if (params) {
       rb.path('id', params.id, {});
       rb.query('where', params.where, {});
     }
 
-    return this.http.request(rb.build({
-      responseType: 'json',
-      accept: 'application/json',
-      context: params?.context
-    })).pipe(
-      filter((r: any) => r instanceof HttpResponse),
-      map((r: HttpResponse<any>) => {
-        return r as StrictHttpResponse<LoopbackCount>;
-      })
-    );
+    return this.http
+      .request(
+        rb.build({
+          responseType: 'json',
+          accept: 'application/json',
+          context: params?.context,
+        })
+      )
+      .pipe(
+        filter((r: any) => r instanceof HttpResponse),
+        map((r: HttpResponse<any>) => {
+          return r as StrictHttpResponse<LoopbackCount>;
+        })
+      );
   }
 
   /**
@@ -178,10 +193,8 @@ export class VolunteerOfferControllerService extends BaseService {
   delete(params: {
     id: string;
     where?: any;
-    context?: HttpContext
-  }
-): Observable<LoopbackCount> {
-
+    context?: HttpContext;
+  }): Observable<LoopbackCount> {
     return this.delete$Response(params).pipe(
       map((r: StrictHttpResponse<LoopbackCount>) => r.body as LoopbackCount)
     );
@@ -201,28 +214,34 @@ export class VolunteerOfferControllerService extends BaseService {
   patch$Response(params: {
     id: string;
     where?: any;
-    context?: HttpContext
-    body?: OfferPartial
-  }
-): Observable<StrictHttpResponse<LoopbackCount>> {
-
-    const rb = new RequestBuilder(this.rootUrl, VolunteerOfferControllerService.VolunteerOfferControllerPatchPath, 'patch');
+    context?: HttpContext;
+    body?: OfferPartial;
+  }): Observable<StrictHttpResponse<LoopbackCount>> {
+    const rb = new RequestBuilder(
+      this.rootUrl,
+      VolunteerOfferControllerService.VolunteerOfferControllerPatchPath,
+      'patch'
+    );
     if (params) {
       rb.path('id', params.id, {});
       rb.query('where', params.where, {});
       rb.body(params.body, 'application/json');
     }
 
-    return this.http.request(rb.build({
-      responseType: 'json',
-      accept: 'application/json',
-      context: params?.context
-    })).pipe(
-      filter((r: any) => r instanceof HttpResponse),
-      map((r: HttpResponse<any>) => {
-        return r as StrictHttpResponse<LoopbackCount>;
-      })
-    );
+    return this.http
+      .request(
+        rb.build({
+          responseType: 'json',
+          accept: 'application/json',
+          context: params?.context,
+        })
+      )
+      .pipe(
+        filter((r: any) => r instanceof HttpResponse),
+        map((r: HttpResponse<any>) => {
+          return r as StrictHttpResponse<LoopbackCount>;
+        })
+      );
   }
 
   /**
@@ -234,14 +253,11 @@ export class VolunteerOfferControllerService extends BaseService {
   patch(params: {
     id: string;
     where?: any;
-    context?: HttpContext
-    body?: OfferPartial
-  }
-): Observable<LoopbackCount> {
-
+    context?: HttpContext;
+    body?: OfferPartial;
+  }): Observable<LoopbackCount> {
     return this.patch$Response(params).pipe(
       map((r: StrictHttpResponse<LoopbackCount>) => r.body as LoopbackCount)
     );
   }
-
 }

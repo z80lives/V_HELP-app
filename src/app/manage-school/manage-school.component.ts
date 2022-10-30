@@ -20,7 +20,7 @@ export class ManageSchoolComponent implements OnInit {
     private readonly _router: Router,
     private readonly _fb: FormBuilder,
     private readonly _schoolService: NewSchoolService,
-    private readonly _core: CoreDataService
+    private readonly _core: CoreDataService,
   ) {}
   addSchoolForm = this._fb.group({
     schoolName: '',
@@ -56,10 +56,10 @@ export class ManageSchoolComponent implements OnInit {
         required: true,
       },
     },
-
   ];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   onClickSubmit($event: SubmitEvent) {
     $event.preventDefault();
