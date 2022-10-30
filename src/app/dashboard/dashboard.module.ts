@@ -31,6 +31,8 @@ import {
   MatProgressBar,
   MatProgressBarModule,
 } from '@angular/material/progress-bar';
+import { ManageRequestsComponent } from '../manage-requests/manage-requests.component';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import {
     ManageSchoolComponent,
     AddAdminComponent,
     AdminDetailsComponent,
+    ManageRequestsComponent,
   ],
   imports: [
     CommonModule,
@@ -63,6 +66,7 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatProgressBarModule,
+    TableModule,
   ],
   providers: [
     //refactor to SchoolAdmin Module
