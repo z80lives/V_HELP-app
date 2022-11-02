@@ -5,37 +5,18 @@
     (submit)="onClickSubmit($event)"
   >
     <div class="title">Register a School</div>
-    <mat-form-field>
-      <mat-label>School Name</mat-label>
-      <input
-        matInput
-        placeholder="name of school"
-        formControlName="schoolName"
-        required
-      />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>School Address</mat-label>
-      <input
-        matInput
-        placeholder="school address"
-        formControlName="address"
-        required
-      />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>school city</mat-label>
-      <input
-        matInput
-        placeholder="school city"
-        formControlName="city"
-        required
-      />
-    </mat-form-field>
-    <!-- <input placeholder="school address" formControlName="address" />
-    <input placeholder="school city" formControlName="city" /> -->
+
+    <formly-form [form]="addSchoolForm" [fields]="fieldConfig"> </formly-form>
     <div class="button_container">
-      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button
+        [disabled]="!addSchoolForm.valid"
+        mat-raised-button
+        color="primary"
+        type="submit"
+      >
+        Submit
+      </button>
+      <div class="space"></div>
     </div>
   </form>
 </div>

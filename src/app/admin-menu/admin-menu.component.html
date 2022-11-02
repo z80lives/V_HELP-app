@@ -1,10 +1,9 @@
-<div class="container">
-  <div class="button_container">
-    <div>School name:  {{ schoolName }}</div>
-    <div class="space"></div>
-    <div>School ID:  {{ schoolId }}</div>
-</div>
-  <div class="button_container">
-    <button routerLink="{{ goToEdit() }}">Edit Details</button>
-  </div>
-</div>
+<p-accordion>
+  <p-accordionTab header="Edit Details">
+    <app-admin-details></app-admin-details>
+  </p-accordionTab>
+  <br />
+  <p-accordionTab header="View Offers For Requests">
+    <app-manage-requests></app-manage-requests>
+  </p-accordionTab>
+</p-accordion>
