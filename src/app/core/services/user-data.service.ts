@@ -92,7 +92,7 @@ export class UserDataService {
           // filter: {filter: {where: {username: authUserData.username }}}
           // For now, we're going to manually filter the result from front end
         })
-          .pipe( map((users) => users.filter(user => user.email === authUserData.email)))
+          .pipe( map((users) => users.filter(user => user.username === authUserData.username)))
           .pipe( map( (el) => {
           return el[0];
         }));

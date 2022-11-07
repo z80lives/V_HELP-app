@@ -98,12 +98,20 @@ export class ManageRequestsComponent implements OnInit {
     const obsR = (await this._Rrequests.find({ id: '1' }).toPromise()) ?? [];
     const obsT = (await this._Trequests.find({ id: '1' }).toPromise()) ?? [];
     const result = [...obsR, ...obsT];
+    if (this.selectedReqID) {
+      this._requestOffer
+        .find({ id: this.selectedReqID, filter: JSON.stringify(this.filter) })
+        .subscribe((r) => {
+          this.offers = r;
+          console.table(r);
+        });
+    }
     this.data = result;
     console.table(result);
   }
 
   async ngOnInit() {
-    const tempDate = new Date('2020-01-10');
+    const tempDate = new Date('2010-04-15');
     this.fetchRequestData();
 
     // this._CRrequests
@@ -138,18 +146,18 @@ export class ManageRequestsComponent implements OnInit {
     //   .subscribe((r) => {
     //     console.log(r);
     //   });
-    // await this._requestOffer
-    //   .create({
-    //     id: '2',
-    //     body: {
-    //       offerDate: tempDate.toISOString(),
-    //       offerStatus: 'pending',
-    //       remarks: 'this is my remark',
-    //       volunteerId: '1',
-    //     },
-    //   })
-    //   .subscribe((r) => {
-    //     console.log(r);
-    //   });
+    //   await this._requestOffer
+    //     .create({
+    //       id: '10',
+    //       body: {
+    //         offerDate: tempDate.toISOString(),
+    //         offerStatus: 'pending',
+    //         remarks: 'this is my remark',
+    //         volunteerId: '1',
+    //       },
+    //     })
+    //     .subscribe((r) => {
+    //       console.log(r);
+    //     });
   }
 }
