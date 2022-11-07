@@ -22,6 +22,7 @@ export class ManageRequestsComponent implements OnInit {
   data: Request[] = [];
   selectedRequest: any = '';
   selectedOffers = [];
+  offersValid = false;
   constructor(
     private readonly _schoolService: NewSchoolService,
     private readonly _requestOffer: RequestOfferControllerService,
@@ -52,6 +53,29 @@ export class ManageRequestsComponent implements OnInit {
     console.log('all promises done');
   }
 
+  buttonOffer() {
+    let valid = true;
+    this.selectedOffers.map((i: string) => {
+      if (!i.includes('ACCEPTED')) {
+        valid = false;
+      }
+    });
+
+    return valid;
+  }
+  buttonRequest() {
+    let valid = true;
+
+    if (
+      this.selectedRequest.requestStatus !== 'CLOSED' &&
+      this.selectedRequest
+    ) {
+      valid = false;
+    }
+
+    return valid;
+  }
+
   onCloseRequest() {
     this.loadingRequest = true;
     const service = this.selectedRequest.numStudents
@@ -80,14 +104,7 @@ export class ManageRequestsComponent implements OnInit {
   onReqSelect($event: any) {
     this.description = $event.data.description;
     this.selectedReqID = $event.data.id;
-    if (this.selectedReqID) {
-      this._requestOffer
-        .find({ id: this.selectedReqID, filter: JSON.stringify(this.filter) })
-        .subscribe((r) => {
-          this.offers = r;
-          console.table(r);
-        });
-    }
+    this.fetchRequestData();
   }
 
   calAge(date: any) {
@@ -103,6 +120,8 @@ export class ManageRequestsComponent implements OnInit {
         .find({ id: this.selectedReqID, filter: JSON.stringify(this.filter) })
         .subscribe((r) => {
           this.offers = r;
+          if (this.selectedOffers.length !== 0) {
+          }
           console.table(r);
         });
     }
@@ -146,18 +165,18 @@ export class ManageRequestsComponent implements OnInit {
     //   .subscribe((r) => {
     //     console.log(r);
     //   });
-    //   await this._requestOffer
-    //     .create({
-    //       id: '10',
-    //       body: {
-    //         offerDate: tempDate.toISOString(),
-    //         offerStatus: 'pending',
-    //         remarks: 'this is my remark',
-    //         volunteerId: '1',
-    //       },
-    //     })
-    //     .subscribe((r) => {
-    //       console.log(r);
-    //     });
+    // await this._requestOffer
+    //   .create({
+    //     id: '3',
+    //     body: {
+    //       offerDate: tempDate.toISOString(),
+    //       offerStatus: 'pending',
+    //       remarks: 'this is my remark',
+    //       volunteerId: '1',
+    //     },
+    //   })
+    //   .subscribe((r) => {
+    //     console.log(r);
+    //   });
   }
 }
