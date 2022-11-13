@@ -34,6 +34,7 @@ import {
 import { ManageRequestsComponent } from '../manage-requests/manage-requests.component';
 import { TableModule } from 'primeng/table';
 import { ToolbarModule } from 'primeng/toolbar';
+import { SubmitRequestComponent } from '../requests/components/submit-request/submit-request.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ToolbarModule } from 'primeng/toolbar';
     AddAdminComponent,
     AdminDetailsComponent,
     ManageRequestsComponent,
+    SubmitRequestComponent
   ],
   imports: [
     CommonModule,

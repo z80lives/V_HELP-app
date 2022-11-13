@@ -21,7 +21,6 @@ import { FormlyModule } from '@ngx-formly/core';
     TableModule,
     MatInputModule,
     MatFormFieldModule,
-    FormlyModule.forRoot(),
   ],
   exports: [
     ReactiveFormsModule,
