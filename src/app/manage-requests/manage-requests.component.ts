@@ -7,9 +7,10 @@ import {
   ResourceRequestsControllerService,
   SchoolResourceRequestControllerService,
   SchoolTutorialRequestControllerService,
-  TutorialsRequestsControllerService,
+  TutorialsRequestsControllerService, VolunteerControllerService,
   VolunteerOfferControllerService,
 } from '../tools/tools/api/services';
+import {concatMap, flatMap, mergeMap} from "rxjs";
 
 @Component({
   selector: 'app-manage-requests',
@@ -33,7 +34,8 @@ export class ManageRequestsComponent implements OnInit {
     private readonly _CTrequests: TutorialsRequestsControllerService,
     private readonly _CRrequests: ResourceRequestsControllerService,
     private readonly _Rrequests: SchoolResourceRequestControllerService,
-    private readonly _Trequests: SchoolTutorialRequestControllerService
+    private readonly _Trequests: SchoolTutorialRequestControllerService,
+    private readonly _volunteerService : VolunteerControllerService
   ) {}
   offers: Offer[] = [];
   async onAcceptOffer() {
@@ -123,11 +125,14 @@ export class ManageRequestsComponent implements OnInit {
         const obsT = (await this._Trequests.find({id: schoolId}).toPromise()) ?? [];
         const result = [...obsR, ...obsT];
         this.data = result;
-          console.log("Resullt", result)
+          // console.log("Resullt", result)
           if (this.selectedReqID) {
+            const filter = {include: ['volunteer']}
             this._requestOffer
-              .find({id: this.selectedReqID, filter: JSON.stringify(this.filter)})
-              .subscribe((r) => {
+              .find({id: this.selectedReqID,
+                filter: JSON.stringify(filter)
+              })
+              .subscribe( (r) => {
                 this.offers = r;
                 if (this.selectedOffers.length !== 0) {
                 }
