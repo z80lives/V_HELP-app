@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   ) {}
   schoolName = '';
   schoolId = '';
+  Position = '';
   async ngOnInit() {
     this._userService.fetchCurrentUser().subscribe((user) => {
       console.log('User was', user);
@@ -24,14 +25,15 @@ export class HomeComponent implements OnInit {
         this.currentUser = user;
       }
     });
-    const adminUser = await this._userService.fetchUser().toPromise();
+    const adminUser: any = await this._userService.fetchUser().toPromise();
     // console.log('Admin id', adminUser?._id);
     if (adminUser?._id && this.currentUser['type'] === 'admin') {
       this.schools.fetchCurrentUserSchool(adminUser._id).subscribe((school) => {
-        console.debug("School Data", school);
+        console.debug('School Data', school);
         this.schoolName = school.schoolName ?? '';
         this.schoolId = school.schoolId ?? '';
-        this.schools.currentSchoolId.next(this.schoolId)
+        this.Position = adminUser.position ?? '';
+        this.schools.currentSchoolId.next(this.schoolId);
       });
     }
   }
