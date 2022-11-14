@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
         console.debug(school);
         this.schoolName = school.schoolName ?? '';
         this.schoolId = school.schoolId ?? '';
+        this.schools.currentSchoolId.next(this.schoolId)
       });
     }
   }

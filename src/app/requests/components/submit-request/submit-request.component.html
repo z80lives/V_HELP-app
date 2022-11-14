@@ -1,8 +1,18 @@
 <mat-card>
-<form [formGroup]="submitForm" (submit)="onClickSubmit($event)">
+  <form 
+  [formGroup]="resourceTypeForm">
+  <formly-form
+    [form]="resourceTypeForm"
+    [fields]="resourceTypeFormSchema">
+  </formly-form>
+</form>
+<div *ngIf="!selectedForm">Please Select the Resource Type</div>
+<form 
+ *ngIf="selectedForm"
+ [formGroup]="submitForm" (submit)="onClickSubmit($event)">
     <formly-form 
       [form]="submitForm" 
-      [fields]="tutorialFields"> 
+      [fields]="selectedSchema"> 
     </formly-form>
     <div class="button_container">
       <button
