@@ -5,7 +5,8 @@ import {VolunteerOfferControllerService} from "../../../tools/tools/api/services
 import {UserDataService} from "../../../core/services/user-data.service";
 import {AuthService} from "../../../auth/guards/auth.service";
 import {CoreDataService} from "../../../core/services/core-data.service";
-import {catchError} from "rxjs";
+import {catchError, map} from "rxjs";
+import {OfferWithRelations} from "../../../tools/tools/api/models/offer-with-relations";
 
 @Component({
   selector: 'app-review-offer-form',
@@ -16,6 +17,9 @@ export class ReviewOfferFormComponent implements OnInit {
   sending = false;
 
   form = new FormGroup({})
+
+  sentOffers : OfferWithRelations[] | undefined;
+
   fields : FormlyFieldConfig[] = [
     {
       key: 'remarks',
@@ -31,6 +35,7 @@ export class ReviewOfferFormComponent implements OnInit {
 
   @Output() onSubmit = new EventEmitter<any>();
   @Input() requestId!: string;
+  @Input() existingOffers : OfferWithRelations[] = [];
 
   constructor(
     private offerService : VolunteerOfferControllerService,
@@ -39,6 +44,7 @@ export class ReviewOfferFormComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.fetchOffers();
   }
 
   onClickSubmit($event : SubmitEvent){
@@ -50,7 +56,7 @@ export class ReviewOfferFormComponent implements OnInit {
       this.offerService.create({
         id: volunteerId,
         body: {
-          offerDate: (new Date()).toDateString(),
+          offerDate: (new Date()).toISOString(),
           offerStatus: "PENDING",
           remarks,
           requestId: this.requestId
@@ -69,4 +75,19 @@ export class ReviewOfferFormComponent implements OnInit {
         })
     }
   }
+
+  fetchOffers() {
+    // const volunteerId = this.userService.currentUser.value?.id;
+    // if(volunteerId){
+    //   this.sentOffers = undefined;
+    //   this.offerService.find({id: volunteerId} ) //, filter: {where: {requestId: this.requestId}}})
+    //     .pipe(map((els) => els.filter(el => el.requestId === this.requestId)))
+    //     .subscribe(result => {
+    //     console.log("Found results", result)
+    //     console.log("Request id", this.requestId)
+    //     this.sentOffers = result;
+    //   });
+    // }
+  }
 }
+
