@@ -7,6 +7,7 @@ import {AuthService} from "../../../auth/guards/auth.service";
 import {CoreDataService} from "../../../core/services/core-data.service";
 import {catchError, map} from "rxjs";
 import {OfferWithRelations} from "../../../tools/tools/api/models/offer-with-relations";
+import {VolunteerServiceService} from "../../../core/services/volunteer-service.service";
 
 @Component({
   selector: 'app-review-offer-form',
@@ -39,7 +40,8 @@ export class ReviewOfferFormComponent implements OnInit {
 
   constructor(
     private offerService : VolunteerOfferControllerService,
-    private userService : AuthService,
+    // private userService : AuthService,
+    private volunteerService: VolunteerServiceService,
     private core : CoreDataService
   ) { }
 
@@ -47,9 +49,10 @@ export class ReviewOfferFormComponent implements OnInit {
     this.fetchOffers();
   }
 
-  onClickSubmit($event : SubmitEvent){
+  async onClickSubmit($event : SubmitEvent){
     $event.preventDefault();
-    const volunteerId = this.userService.currentUser.value?.id;
+    // const volunteerId = this.userService.currentUser.value?.id;
+    const volunteerId = (await this.volunteerService.fetchCurrentVolunteer().toPromise())?._id;
     const remarks : string = (this.form.value as any).remarks;
     if(volunteerId) {
       this.sending = true;
@@ -59,7 +62,8 @@ export class ReviewOfferFormComponent implements OnInit {
           offerDate: (new Date()).toISOString(),
           offerStatus: "PENDING",
           remarks,
-          requestId: this.requestId
+          requestId: this.requestId,
+          volunteerId: volunteerId
         }
       })
         .subscribe( () => {

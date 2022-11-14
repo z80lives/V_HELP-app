@@ -10,6 +10,7 @@ import {TutorialRequestWithRelations} from "../../../tools/tools/api/models/tuto
 import {MenuItem} from "primeng/api";
 import {AuthService} from "../../../auth/guards/auth.service";
 import {OfferWithRelations} from "../../../tools/tools/api/models/offer-with-relations";
+import {VolunteerServiceService} from "../../../core/services/volunteer-service.service";
 
 @Component({
   selector: 'app-view-requests',
@@ -46,7 +47,8 @@ export class ViewRequestsComponent implements OnInit {
     private readonly _tutorialRequests : TutorialsRequestsControllerService,
     private readonly _resourceRequests : ResourceRequestsControllerService,
     private readonly _userService : AuthService,
-    private readonly _offerService : VolunteerOfferControllerService
+    private readonly _offerService : VolunteerOfferControllerService,
+    private readonly _volunteerService : VolunteerServiceService
   ) { }
 
   ngOnInit(): void {
@@ -65,6 +67,7 @@ export class ViewRequestsComponent implements OnInit {
 
       forkJoin([$tutorials, $resources])
         .pipe(map(([tut, res]) => [...tut, ...res]))
+        .pipe(map((els) => els.filter(el => el.requestStatus !== "CLOSED")))
       .subscribe( (results) => {
         this.data = results
         console.debug("Data", results)
@@ -84,6 +87,7 @@ export class ViewRequestsComponent implements OnInit {
       // this.sentOffers = undefined;
       return this._offerService.find({id: volunteerId} ) //, filter: {where: {requestId: this.requestId}}})
         .pipe(map((els) => els.filter(el => el.requestId === this.selectedItem.id)))
+        // .pipe(map((els) => els.filter(el => el.offerStatus !== "CLOSED")))
         .pipe(map(result => {
           console.log("Found results", result)
           // console.log("Request id", this.selectedItem.id)
