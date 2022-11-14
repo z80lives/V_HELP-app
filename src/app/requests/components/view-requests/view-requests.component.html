@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-content>
     <p-table [value]="data" responsiveLayout="scroll"
-    
+
     [columns]="cols"
     [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,25,50]">
       <ng-template pTemplate="caption">
@@ -34,7 +34,7 @@
           <td>{{item.type}}</td>
           <td>{{item.description}}</td>
           <td style="text-align: center">
-            <button pButton type="button" class="p-button-secondary" icon="pi pi-cog" (click)="menu.toggle($event)">
+            <button pButton type="button" class="p-button-secondary" icon="pi pi-cog" (click)="onClickSelectRequest($event, menu, item)">
 
             </button>
           </td>
@@ -44,7 +44,7 @@
       <ng-template pTemplate="emptymessage" let-columns>
         <tr>
           <td [attr.colspan]="columns.length">
-             No records found 
+             No records found
             </td>
         </tr>
       </ng-template>
@@ -54,4 +54,47 @@
   </mat-card-content>
 </mat-card>
 
-<p-menu #menu [popup]="true" [model]="menuItems"></p-menu>
+
+<p-dialog header="Details" [(visible)]="showDetailPopup" [modal]="true" [style]="{width: '50vw'}"
+          [draggable]="false" [resizable]="false">
+  <div class="m-0" *ngIf="selectedItem && selectedItem.type==='tutorial'">
+    <ul>
+      <li><b>Description:</b> {{selectedItem.description}}</li>
+      <li><b>Date Required:</b> {{selectedItem.proposedDate | date}}</li>
+      <li><b>Time Required:</b> {{selectedItem.proposedTime}}</li>
+      <li><b>Student Level:</b>{{selectedItem.studentLevel}}</li>
+      <li><b>Num Students: </b>{{selectedItem.numStudents}}</li>
+    </ul>
+  </div>
+
+  <div class="m-0" *ngIf="selectedItem && selectedItem.type==='resource'">
+    <ul>
+      <li><b>Description:</b> {{selectedItem.description}}</li>
+      <li><b>Resource Type:</b> {{selectedItem.resourceType}}</li>
+      <li><b>Number Required:</b> {{selectedItem.numRequired}}</li>
+      <li><b>Date Required:</b> {{selectedItem.requestDate | date}}</li>
+      <li><b>Status:</b> {{selectedItem.requestStatus}}</li>
+    </ul>
+  </div>
+
+  <ng-template pTemplate="footer">
+    <p-button icon="pi pi-check" (click)="showDetailPopup=false" label="Ok" styleClass="p-button-text"></p-button>
+  </ng-template>
+</p-dialog>
+
+
+
+<p-dialog header="Make Offer" [(visible)]="showReviewPopup" [modal]="true" [style]="{width: '50vw'}"
+          [draggable]="false" [resizable]="false">
+  <app-review-offer-form
+    *ngIf="selectedItem"
+    [requestId]="selectedItem.id"
+  ></app-review-offer-form>
+<!--  <ng-template pTemplate="footer">-->
+<!--    <p-button icon="pi pi-check" (click)="showReviewPopup=false" label="Ok" styleClass="p-button-text">-->
+
+<!--    </p-button>-->
+<!--  </ng-template>-->
+</p-dialog>
+
+<p-menu #menu [popup]="true" [model]="menuItems" appendTo="body"></p-menu>

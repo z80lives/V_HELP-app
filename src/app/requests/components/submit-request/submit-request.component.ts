@@ -4,6 +4,11 @@ import { FormlyField, FormlyFieldConfig } from '@ngx-formly/core';
 import { CoreDataService } from 'src/app/core/services/core-data.service';
 import { NewSchoolService } from 'src/app/core/services/new-school.service';
 import { SchoolResourceRequestControllerService, SchoolTutorialRequestControllerService } from 'src/app/tools/tools/api/services';
+import {Observable} from "rxjs";
+import {ResourceRequestWithRelations} from "../../../tools/tools/api/models/resource-request-with-relations";
+import {RequestWithRelations} from "../../../tools/tools/api/models/request-with-relations";
+import {TutorialRequest} from "../../../tools/tools/api/models/tutorial-request";
+import {ResourceRequest} from "../../../tools/tools/api/models/resource-request";
 
 @Component({
   selector: 'app-submit-request',
@@ -39,7 +44,7 @@ export class SubmitRequestComponent implements OnInit {
           { value: 'resource', label: 'Resource' },
         ],
       },
-    },  
+    },
   ];
   selectedForm : string | undefined = undefined;
 
@@ -70,8 +75,9 @@ export class SubmitRequestComponent implements OnInit {
       props: {
         label: "Enter numRequired",
         placeholder:"numRequired",
-         required: true,
-        description: "Write the Number Required"
+        required: true,
+        description: "Write the Number Required",
+        min: 1
       }
     },
     {
@@ -84,7 +90,7 @@ export class SubmitRequestComponent implements OnInit {
         required: true,
       },
     },
-    
+
   ]
 
   tutorialFields : FormlyFieldConfig[] = [
@@ -143,23 +149,14 @@ export class SubmitRequestComponent implements OnInit {
           description: '',
            required: true
         }
-      },
-      {
-        key: 'requestStatus',
-        type: 'input',
-        props: {
-          label: "Status",
-          placeholder:"Enter the status of the request",
-           required: true
-        }
       }
   ];
 
   constructor(
     private readonly _fb: FormBuilder,
-    private readonly _tutorialRequest : 
+    private readonly _tutorialRequest :
       SchoolTutorialRequestControllerService,
-    private readonly _resourceService : 
+    private readonly _resourceService :
       SchoolResourceRequestControllerService,
       private schoolService: NewSchoolService,
       private core : CoreDataService
@@ -177,26 +174,39 @@ export class SubmitRequestComponent implements OnInit {
         this.selectedSchema = this.resourceRequestFields;
       }
     })
-  
+
   }
 
   onClickSubmit ($event : SubmitEvent){
      $event.preventDefault();
      const schoolId = this.schoolService.currentSchoolId.value;
-console.log(schoolId, this.selectedForm)
-    
-     if (schoolId && this.selectedForm==="tutorial"){
-      this._tutorialRequest.create({
-        id: schoolId,
-        body: this.submitForm.value as any 
-      }).subscribe((values) => {
-         this.core.notifyInfo("Success", " Yes")
-      }, this.core.handleError)
 
+     //pick a backend service based on the type
+    let $requestService :SchoolTutorialRequestControllerService | SchoolResourceRequestControllerService;
+     if (schoolId && this.selectedForm==="tutorial") {
+       $requestService = this._tutorialRequest
+     }else{
+       $requestService = this._resourceService
+     }
+
+     //create the request and notify
+    if(schoolId) {
+      const $createObs : Observable<any> = $requestService.create({
+        id: schoolId,
+        body: {
+          ...(this.submitForm.value as any),
+          requestStatus: "NEW"
+        }
+      })
+      $createObs
+        // .pipe( this.core.$handleError)
+        .subscribe((values ) => {
+        this.core.notifyInfo("Success", "Successfully created the request")
+      }, this.core.handleError)
     }
-    
+
   }
- 
+
 
 
 }
