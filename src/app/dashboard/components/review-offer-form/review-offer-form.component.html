@@ -1,3 +1,7 @@
+<div *ngIf="existingOffers && existingOffers.length !== 0">
+  <p>You have already sent {{existingOffers.length}} offers to this request.</p>
+  <p>You can still submit additional offers</p>
+</div>
 <form [formGroup]="form" (submit)="onClickSubmit($event)">
   <formly-form
     [fields]="fields"

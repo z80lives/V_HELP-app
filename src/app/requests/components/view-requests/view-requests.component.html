@@ -89,6 +89,8 @@
   <app-review-offer-form
     *ngIf="selectedItem"
     [requestId]="selectedItem.id"
+    [existingOffers]="selectedItemOffers"
+    (onSubmit)="showReviewPopup=false"
   ></app-review-offer-form>
 <!--  <ng-template pTemplate="footer">-->
 <!--    <p-button icon="pi pi-check" (click)="showReviewPopup=false" label="Ok" styleClass="p-button-text">-->
