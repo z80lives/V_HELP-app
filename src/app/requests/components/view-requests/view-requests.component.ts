@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { TutorialsRequestsControllerService } from 'src/app/tools/tools/api/services';
+import {ResourceRequestsControllerService, TutorialsRequestsControllerService} from 'src/app/tools/tools/api/services';
+import {concatMap, forkJoin, map, mergeMap, Observable, of} from "rxjs";
+import {ResourceRequestWithRelations} from "../../../tools/tools/api/models/resource-request-with-relations";
+import {TutorialRequestWithRelations} from "../../../tools/tools/api/models/tutorial-request-with-relations";
 
 @Component({
   selector: 'app-view-requests',
@@ -13,7 +16,7 @@ export class ViewRequestsComponent implements OnInit {
   ];
 
 cols = ["id", "requestType", "Description", "Action"]
-  
+
   data : any []= [
     // {
     //   _id: "r01",
@@ -28,13 +31,30 @@ cols = ["id", "requestType", "Description", "Action"]
   ];
 
   constructor(
-    private readonly _tutorialRequests : TutorialsRequestsControllerService
+    private readonly _tutorialRequests : TutorialsRequestsControllerService,
+    private readonly _resourceRequests : ResourceRequestsControllerService
   ) { }
 
   ngOnInit(): void {
-    this._tutorialRequests.find({}).subscribe( (results) => {
-      this.data = results
-    })
+    const $tutorials : Observable<TutorialRequestWithRelations[]> = this._tutorialRequests.find({})
+      .pipe(map((el) => el.map(val => ({
+        ...val,
+        type: 'tutorial'
+      }))))
+
+    const $resources : Observable<ResourceRequestWithRelations[]> = this._resourceRequests.find({})
+      .pipe(map((el) => el.map((val) => ({
+          ...val,
+        type: 'tutorial'
+        })
+      )))
+
+      forkJoin([$tutorials, $resources])
+        .pipe(map(([tut, res]) => [...tut, ...res]))
+      .subscribe( (results) => {
+        this.data = results
+        console.debug("Data", results)
+      })
   }
 
 }
