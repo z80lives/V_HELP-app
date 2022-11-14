@@ -25,10 +25,10 @@ export class HomeComponent implements OnInit {
       }
     });
     const adminUser = await this._userService.fetchUser().toPromise();
-    console.log('Admin id', adminUser?._id);
-    if (adminUser?._id) {
+    // console.log('Admin id', adminUser?._id);
+    if (adminUser?._id && this.currentUser['type'] === 'admin') {
       this.schools.fetchCurrentUserSchool(adminUser._id).subscribe((school) => {
-        console.debug(school);
+        console.debug("School Data", school);
         this.schoolName = school.schoolName ?? '';
         this.schoolId = school.schoolId ?? '';
         this.schools.currentSchoolId.next(this.schoolId)

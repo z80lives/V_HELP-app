@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { NewSchoolService } from '../core/services/new-school.service';
 import { Offer, Request, SchoolAdmin } from '../tools/tools/api/models';
 import {
@@ -22,6 +22,9 @@ export class ManageRequestsComponent implements OnInit {
   data: Request[] = [];
   selectedRequest: any = '';
   selectedOffers = [];
+
+  @Input() schoolId! : string;
+
   offersValid = false;
   constructor(
     private readonly _schoolService: NewSchoolService,
@@ -111,22 +114,33 @@ export class ManageRequestsComponent implements OnInit {
     return new Date().getFullYear() - new Date(date).getFullYear();
   }
 
-  async fetchRequestData() {
-    const obsR = (await this._Rrequests.find({ id: '1' }).toPromise()) ?? [];
-    const obsT = (await this._Trequests.find({ id: '1' }).toPromise()) ?? [];
-    const result = [...obsR, ...obsT];
-    if (this.selectedReqID) {
-      this._requestOffer
-        .find({ id: this.selectedReqID, filter: JSON.stringify(this.filter) })
-        .subscribe((r) => {
-          this.offers = r;
-          if (this.selectedOffers.length !== 0) {
+  fetchRequestData() {
+    // const schoolId = this.schoolId;
+    this._schoolService.currentSchoolId.subscribe(async (schoolId) => {
+      if(schoolId){
+
+        const obsR = (await this._Rrequests.find({id: schoolId}).toPromise()) ?? [];
+        const obsT = (await this._Trequests.find({id: schoolId}).toPromise()) ?? [];
+        const result = [...obsR, ...obsT];
+        this.data = result;
+          console.log("Resullt", result)
+          if (this.selectedReqID) {
+            this._requestOffer
+              .find({id: this.selectedReqID, filter: JSON.stringify(this.filter)})
+              .subscribe((r) => {
+                this.offers = r;
+                if (this.selectedOffers.length !== 0) {
+                }
+                console.table(r);
+              });
           }
-          console.table(r);
-        });
-    }
-    this.data = result;
-    console.table(result);
+          // this.data = result;
+          // console.table(result);
+        // }
+      }
+    })
+
+
   }
 
   async ngOnInit() {

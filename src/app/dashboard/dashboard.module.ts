@@ -35,6 +35,9 @@ import { ManageRequestsComponent } from '../manage-requests/manage-requests.comp
 import { TableModule } from 'primeng/table';
 import { ToolbarModule } from 'primeng/toolbar';
 import { SubmitRequestComponent } from '../requests/components/submit-request/submit-request.component';
+import {AppModule} from "../app.module";
+import {VolunteerMenuComponent} from "../volunteer-menu/volunteer-menu.component";
+import {RequestsModule} from "../requests/requests.module";
 
 @NgModule({
   declarations: [
@@ -47,7 +50,8 @@ import { SubmitRequestComponent } from '../requests/components/submit-request/su
     AddAdminComponent,
     AdminDetailsComponent,
     ManageRequestsComponent,
-    SubmitRequestComponent
+    SubmitRequestComponent,
+    VolunteerMenuComponent
   ],
   imports: [
     CommonModule,
@@ -71,6 +75,8 @@ import { SubmitRequestComponent } from '../requests/components/submit-request/su
     MatProgressBarModule,
     TableModule,
     ToolbarModule,
+    RequestsModule,
+    // AppModule,
   ],
   providers: [
     //refactor to SchoolAdmin Module

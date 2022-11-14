@@ -3,6 +3,7 @@ import {ResourceRequestsControllerService, TutorialsRequestsControllerService} f
 import {concatMap, forkJoin, map, mergeMap, Observable, of} from "rxjs";
 import {ResourceRequestWithRelations} from "../../../tools/tools/api/models/resource-request-with-relations";
 import {TutorialRequestWithRelations} from "../../../tools/tools/api/models/tutorial-request-with-relations";
+import {MenuItem} from "primeng/api";
 
 @Component({
   selector: 'app-view-requests',
@@ -11,11 +12,14 @@ import {TutorialRequestWithRelations} from "../../../tools/tools/api/models/tuto
 })
 export class ViewRequestsComponent implements OnInit {
 
-  menuItems = [
-    {label: 'Details', icon: 'pi pi-fw pi-info-circle'}
+  menuItems : MenuItem[] = [
+    {label: 'Details', icon: 'pi pi-fw pi-info-circle', command: () => this.showDetailPopup=true},
+    {label: 'Make Offer', icon: 'pi pi-fw pi-comments', command: ($event) => this.clickMakeOffer($event)}
   ];
 
-cols = ["id", "requestType", "Description", "Action"]
+  showDetailPopup : boolean = false;
+  showReviewPopup: boolean = false;
+  cols = ["id", "requestType", "Description", "Action"]
 
   data : any []= [
     // {
@@ -29,6 +33,7 @@ cols = ["id", "requestType", "Description", "Action"]
     //   description: "5 Android phone"
     // }
   ];
+  selectedItem: any;
 
   constructor(
     private readonly _tutorialRequests : TutorialsRequestsControllerService,
@@ -45,7 +50,7 @@ cols = ["id", "requestType", "Description", "Action"]
     const $resources : Observable<ResourceRequestWithRelations[]> = this._resourceRequests.find({})
       .pipe(map((el) => el.map((val) => ({
           ...val,
-        type: 'tutorial'
+        type: 'resource'
         })
       )))
 
@@ -57,4 +62,14 @@ cols = ["id", "requestType", "Description", "Action"]
       })
   }
 
+  onClickSelectRequest($event: any, menu: any, item: any){
+    menu.toggle($event);
+    console.log("item", item);
+    this.selectedItem = item;
+  }
+
+  private clickMakeOffer($event: any) {
+    console.log("Clicked", $event)
+    return undefined;
+  }
 }

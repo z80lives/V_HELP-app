@@ -11,16 +11,17 @@
   class="block home"
   *ngIf="currentUser && currentUser['type'] === 'volunteer'"
 >
-  <mat-card-content>
-    <button
-      mat-raised-button
-      routerLink="/dashboard/requests/view"
-      color="primary"
-    >
-      View Request
-    </button>
-    
-  </mat-card-content>
+  <app-volunteer-menu></app-volunteer-menu>
+<!--  <mat-card-content>-->
+<!--    <button-->
+<!--      mat-raised-button-->
+<!--      routerLink="/dashboard/requests/view"-->
+<!--      color="primary"-->
+<!--    >-->
+<!--      View Request-->
+<!--    </button>-->
+
+<!--  </mat-card-content>-->
 </mat-card>
 
 <mat-card
@@ -37,8 +38,7 @@
   *ngIf="currentUser && currentUser['type'] === 'admin'"
 >
   <mat-card-content>
-    <app-admin-menu></app-admin-menu>
-    
-
+    <app-admin-menu
+    ></app-admin-menu>
   </mat-card-content>
 </mat-card>

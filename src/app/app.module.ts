@@ -18,6 +18,8 @@ import { LogInDataServiceService } from './core/services/log-in-data-service.ser
 import { SchoolAdminListComponent } from './school-admin-list/school-admin-list.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SubmitRequestComponent } from './requests/components/submit-request/submit-request.component';
+// import { VolunteerMenuComponent } from './volunteer-menu/volunteer-menu.component';
+// import {AccordionModule} from "primeng/accordion";
 // import { ManageRequestsComponent } from './manage-requests/manage-requests.component';
 
 @NgModule({
@@ -28,7 +30,8 @@ import { SubmitRequestComponent } from './requests/components/submit-request/sub
     // AdminMenuComponent,
     // AdminDetailsComponent,
     SchoolAdminListComponent,
-    
+    // VolunteerMenuComponent,
+
     // ManageRequestsComponent,
   ],
   imports: [
@@ -42,6 +45,7 @@ import { SubmitRequestComponent } from './requests/components/submit-request/sub
     FormlyMatDatepickerModule,
     SharedModule,
     MatProgressBarModule,
+    // AccordionModule,
   ],
   providers: [
     MessageService,
@@ -56,9 +60,10 @@ import { SubmitRequestComponent } from './requests/components/submit-request/sub
     LogInDataServiceService,
   ],
   bootstrap: [AppComponent],
-  exports: [
-    // AdministratorMenuComponent
-  ],
+    exports: [
+        // VolunteerMenuComponent,
+        // AdministratorMenuComponent
+    ],
 })
 export class AppModule {}
 
