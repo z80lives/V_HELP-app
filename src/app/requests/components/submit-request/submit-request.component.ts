@@ -66,7 +66,7 @@ export class SubmitRequestComponent implements OnInit {
     },
     {
       key: 'numRequired',
-      type: 'input',
+      type: 'number',
       props: {
         label: "Enter numRequired",
         placeholder:"numRequired",
@@ -101,9 +101,9 @@ export class SubmitRequestComponent implements OnInit {
         key: 'proposedDate',
         type: 'datepicker',
         props: {
-          label: 'proposedDate',
+          label: 'Proposed Date',
           placeholder: 'Placeholder',
-          description: 'Provide a Date',
+          description: 'Provide the Date',
           required: true,
         },
       },
@@ -111,7 +111,7 @@ export class SubmitRequestComponent implements OnInit {
         key: 'proposedTime',
         type: 'input',
         props: {
-          label: "proposedTime",
+          label: "Proposed Time",
           placeholder:"",
            required: true
         }
@@ -127,10 +127,29 @@ export class SubmitRequestComponent implements OnInit {
       },
       {
         key: 'numStudents',
-        type: 'input',
+        type: 'number',
         props: {
           label: "Expected Number Of Students",
           placeholder:"",
+           required: true
+        }
+      },
+      {
+        key: 'requestDate',
+        type: 'datepicker',
+        props: {
+          label: 'Request Date',
+          placeholder: 'Provide the Request Date',
+          description: '',
+           required: true
+        }
+      },
+      {
+        key: 'requestStatus',
+        type: 'input',
+        props: {
+          label: "Status",
+          placeholder:"Enter the status of the request",
            required: true
         }
       }
