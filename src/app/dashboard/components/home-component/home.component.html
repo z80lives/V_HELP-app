@@ -2,9 +2,9 @@
   <mat-card-content>
     <h3>Welcome {{ currentUser.username }}</h3>
     <p>Logged in as a {{ currentUser["type"] }}</p>
-    <p>Position: {{ Position}}</p>
-    <p>School Name: {{ schoolName}}</p>
-    <p>School ID: {{ schoolId }}</p>
+    <p *ngIf="currentUser['type'] === 'admin'">School Name: {{ schoolName }}</p>
+    <p *ngIf="currentUser['type'] === 'admin'">School ID: {{ schoolId }}</p>
+    <p *ngIf="currentUser['type'] === 'admin'">position: {{ Position }}</p>
   </mat-card-content>
 </mat-card>
 
@@ -19,9 +19,6 @@
       color="primary"
     >
       View Request
-    </button>
-    <button mat-raised-button [disabled]="true" color="primary">
-      Submit Request
     </button>
   </mat-card-content>
 </mat-card>
