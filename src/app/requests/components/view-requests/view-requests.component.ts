@@ -69,7 +69,8 @@ export class ViewRequestsComponent implements OnInit {
   }
 
   private clickMakeOffer($event: any) {
-    console.log("Clicked", $event)
+    // console.log("Clicked", $event)
+    this.showReviewPopup = true;
     return undefined;
   }
 }

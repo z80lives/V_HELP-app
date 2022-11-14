@@ -84,12 +84,17 @@
 
 
 
-<p-dialog header="Details" [(visible)]="showReviewPopup" [modal]="true" [style]="{width: '50vw'}"
+<p-dialog header="Make Offer" [(visible)]="showReviewPopup" [modal]="true" [style]="{width: '50vw'}"
           [draggable]="false" [resizable]="false">
+  <app-review-offer-form
+    *ngIf="selectedItem"
+    [requestId]="selectedItem.id"
+  ></app-review-offer-form>
+<!--  <ng-template pTemplate="footer">-->
+<!--    <p-button icon="pi pi-check" (click)="showReviewPopup=false" label="Ok" styleClass="p-button-text">-->
 
-  <ng-template pTemplate="footer">
-    <p-button icon="pi pi-check" (click)="showDetailPopup=false" label="Ok" styleClass="p-button-text"></p-button>
-  </ng-template>
+<!--    </p-button>-->
+<!--  </ng-template>-->
 </p-dialog>
 
 <p-menu #menu [popup]="true" [model]="menuItems" appendTo="body"></p-menu>

@@ -14,11 +14,13 @@ import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { MatButtonModule } from '@angular/material/button';
 import {DialogModule} from "primeng/dialog";
+import {ReviewOfferFormComponent} from "../dashboard/components/review-offer-form/review-offer-form.component";
 
 
 @NgModule({
   declarations: [
     ViewRequestsComponent,
+    ReviewOfferFormComponent
     // SubmitRequestComponent
   ],
   exports: [
@@ -33,6 +35,7 @@ import {DialogModule} from "primeng/dialog";
     ButtonModule,
     MenuModule,
     DialogModule,
+    FormlyModule,
     // FormlyModule.forRoot(),
     // FormlyMaterialModule,
   ]

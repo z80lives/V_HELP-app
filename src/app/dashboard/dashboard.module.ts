@@ -38,6 +38,7 @@ import { SubmitRequestComponent } from '../requests/components/submit-request/su
 import {AppModule} from "../app.module";
 import {VolunteerMenuComponent} from "../volunteer-menu/volunteer-menu.component";
 import {RequestsModule} from "../requests/requests.module";
+import { ReviewOfferFormComponent } from './components/review-offer-form/review-offer-form.component';
 
 @NgModule({
   declarations: [
@@ -82,5 +83,6 @@ import {RequestsModule} from "../requests/requests.module";
     //refactor to SchoolAdmin Module
     // LogInDataServiceService
   ],
+  exports: []
 })
 export class DashboardModule {}
