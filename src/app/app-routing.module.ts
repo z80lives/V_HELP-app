@@ -20,34 +20,13 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    loadChildren: () => DashboardModule,
+    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
     canActivate: [AuthGuard]
   },
   {
     path: '**',
     component: PageNotFoundComponent,
   }
-  // { path: '', component: LogInComponent },
-  // {
-  //   path: 'AdministratorComponent_component',
-  //   component: AdministratorComponent,
-  // },
-  // {
-  //   path: 'AdministratorMenuComponent',
-  //   component: AdministratorMenuComponent,
-  // },
-  // {
-  //   path: 'AddAdminComponent',
-  //   component: AddAdminComponent,
-  // },
-  // {
-  //   path: 'AdminMenuComponent',
-  //   component: AdminMenuComponent,
-  // },
-  // {
-  //   path: 'AdminDetailsComponent',
-  //   component: AdminDetailsComponent,
-  // },
 ];
 
 @NgModule({
