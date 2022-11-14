@@ -1,6 +1,6 @@
 import { LogInDataServiceService } from './log-in-data-service.service';
 import { Injectable } from '@angular/core';
-import {of, map, switchMap} from 'rxjs';
+import {of, map, switchMap, BehaviorSubject} from 'rxjs';
 import {SchoolControllerService} from "../../tools/tools/api/services/school-controller.service";
 import {School} from "../../tools/tools/api/models/school";
 import {NewSchool} from "../../tools/tools/api/models/new-school";
@@ -33,6 +33,9 @@ export class NewSchoolService {
     private readonly _schoolAdminService : SchoolAdminControllerService,
     private readonly _schoolAdminToSchool : SchoolAdminSchoolControllerService,
   ) {}
+
+
+  currentSchoolId : BehaviorSubject<string|undefined> = new BehaviorSubject<string | undefined>(undefined)
 
   create(data: NewSchool) {
     return this._schoolService.create({

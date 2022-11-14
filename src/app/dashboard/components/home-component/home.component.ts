@@ -38,6 +38,7 @@ export class HomeComponent implements OnInit {
         this.schoolName = school.schoolName ?? '';
         this.schoolId = school.schoolId ?? '';
         this.Position = adminUser.position ?? '';
+        this.schools.currentSchoolId.next(this.schoolId)
       });
     }
   }
