@@ -9,19 +9,27 @@ import {SharedModule} from "../shared/shared.module";
 import {InputTextModule} from "primeng/inputtext";
 import {ButtonModule} from "primeng/button";
 import {MenuModule} from "primeng/menu";
+import { SubmitRequestComponent } from './components/submit-request/submit-request.component';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyMaterialModule } from '@ngx-formly/material';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
   declarations: [
-    ViewRequestsComponent
+    ViewRequestsComponent,
+    // SubmitRequestComponent
   ],
   imports: [
     CommonModule,
     RequestsRoutingModule,
     SharedModule,
+    MatButtonModule,
     InputTextModule,
     ButtonModule,
-    MenuModule
+    MenuModule,
+    // FormlyModule.forRoot(),
+    // FormlyMaterialModule,
   ]
 })
 export class RequestsModule { }
