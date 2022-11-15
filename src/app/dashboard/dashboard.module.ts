@@ -34,6 +34,11 @@ import {
 import { ManageRequestsComponent } from '../manage-requests/manage-requests.component';
 import { TableModule } from 'primeng/table';
 import { ToolbarModule } from 'primeng/toolbar';
+import { SubmitRequestComponent } from '../requests/components/submit-request/submit-request.component';
+import {AppModule} from "../app.module";
+import {VolunteerMenuComponent} from "../volunteer-menu/volunteer-menu.component";
+import {RequestsModule} from "../requests/requests.module";
+import { ReviewOfferFormComponent } from './components/review-offer-form/review-offer-form.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +51,8 @@ import { ToolbarModule } from 'primeng/toolbar';
     AddAdminComponent,
     AdminDetailsComponent,
     ManageRequestsComponent,
+    SubmitRequestComponent,
+    VolunteerMenuComponent
   ],
   imports: [
     CommonModule,
@@ -69,10 +76,13 @@ import { ToolbarModule } from 'primeng/toolbar';
     MatProgressBarModule,
     TableModule,
     ToolbarModule,
+    RequestsModule,
+    // AppModule,
   ],
   providers: [
     //refactor to SchoolAdmin Module
     // LogInDataServiceService
   ],
+  exports: []
 })
 export class DashboardModule {}

@@ -17,6 +17,9 @@ import { TokenInterceptor } from './auth/interceptors/token.interceptor';
 import { LogInDataServiceService } from './core/services/log-in-data-service.service';
 import { SchoolAdminListComponent } from './school-admin-list/school-admin-list.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { SubmitRequestComponent } from './requests/components/submit-request/submit-request.component';
+// import { VolunteerMenuComponent } from './volunteer-menu/volunteer-menu.component';
+// import {AccordionModule} from "primeng/accordion";
 // import { ManageRequestsComponent } from './manage-requests/manage-requests.component';
 
 @NgModule({
@@ -27,6 +30,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     // AdminMenuComponent,
     // AdminDetailsComponent,
     SchoolAdminListComponent,
+    // VolunteerMenuComponent,
+
     // ManageRequestsComponent,
   ],
   imports: [
@@ -40,6 +45,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     FormlyMatDatepickerModule,
     SharedModule,
     MatProgressBarModule,
+    // AccordionModule,
   ],
   providers: [
     MessageService,
@@ -54,9 +60,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     LogInDataServiceService,
   ],
   bootstrap: [AppComponent],
-  exports: [
-    // AdministratorMenuComponent
-  ],
+    exports: [
+        // VolunteerMenuComponent,
+        // AdministratorMenuComponent
+    ],
 })
 export class AppModule {}
 

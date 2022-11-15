@@ -2,9 +2,8 @@
   <mat-card-content>
     <h3>Welcome {{ currentUser.username }}</h3>
     <p>Logged in as a {{ currentUser["type"] }}</p>
-    <p>Position: {{ Position}}</p>
-    <p>School Name: {{ schoolName}}</p>
-    <p>School ID: {{ schoolId }}</p>
+    <p *ngIf="currentUser['type'] === 'admin'">School Name: {{ schoolName}}</p>
+    <p *ngIf="currentUser['type'] === 'admin'">School ID: {{ schoolId }}</p>
   </mat-card-content>
 </mat-card>
 
@@ -12,18 +11,17 @@
   class="block home"
   *ngIf="currentUser && currentUser['type'] === 'volunteer'"
 >
-  <mat-card-content>
-    <button
-      mat-raised-button
-      routerLink="/dashboard/requests/view"
-      color="primary"
-    >
-      View Request
-    </button>
-    <button mat-raised-button [disabled]="true" color="primary">
-      Submit Request
-    </button>
-  </mat-card-content>
+  <app-volunteer-menu></app-volunteer-menu>
+<!--  <mat-card-content>-->
+<!--    <button-->
+<!--      mat-raised-button-->
+<!--      routerLink="/dashboard/requests/view"-->
+<!--      color="primary"-->
+<!--    >-->
+<!--      View Request-->
+<!--    </button>-->
+
+<!--  </mat-card-content>-->
 </mat-card>
 
 <mat-card
@@ -40,6 +38,7 @@
   *ngIf="currentUser && currentUser['type'] === 'admin'"
 >
   <mat-card-content>
-    <app-admin-menu></app-admin-menu>
+    <app-admin-menu
+    ></app-admin-menu>
   </mat-card-content>
 </mat-card>
