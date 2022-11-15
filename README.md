@@ -1,5 +1,9 @@
 # VHELPApp
 
+![nodejs-ci](https://github.com/z80lives/V_HELP-app/actions/workflows/build.yml/badge.svg)
+
+This repository contains the web application we created as part of our coursework. This application will not work properly without the [backend service](https://github.com/z80lives/V_HELP-app). Please refer to the README file of that project in order to set it up. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
 ## Project Scope
