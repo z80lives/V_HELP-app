@@ -47,5 +47,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: z80lives/vhelp-app:$(date +%s)
+        tags: z80lives/vhelp-app:latest
 
