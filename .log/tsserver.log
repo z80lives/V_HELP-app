@@ -1,0 +1,855 @@
+Info 0    [17:14:26.361] Starting TS Server
+Info 1    [17:14:26.368] Version: 4.2.2
+Info 2    [17:14:26.368] Arguments: /home/shath/.nvm/versions/node/v14.16.0/bin/node /home/shath/.nvm/versions/node/v14.16.0/bin/tsserver --logFile /home/shath/projects/V_HELP-app/.log/tsserver.log --logVerbosity info --cancellationPipeName /tmp/efd4d66911984402566cefbc243f24ac/tscancellation*
+Info 3    [17:14:26.368] Platform: linux NodeVersion: 14 CaseSensitive: true
+Info 4    [17:14:26.368] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [17:14:28.431] Search path: /home/shath/projects/V_HELP-app/src/app
+Info 6    [17:14:28.434] For info: /home/shath/projects/V_HELP-app/src/app/app.module.ts :: Config file name: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 7    [17:14:28.435] Opened configuration file /home/shath/projects/V_HELP-app/tsconfig.json
+Info 8    [17:14:28.545] Config: /home/shath/projects/V_HELP-app/tsconfig.json : {
+ "rootNames": [
+  "/home/shath/projects/V_HELP-app/src/main.ts",
+  "/home/shath/projects/V_HELP-app/src/polyfills.ts",
+  "/home/shath/projects/V_HELP-app/src/test.ts",
+  "/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/app.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/app.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/app.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/add-admin/add-admin.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/add-admin/add-admin.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/admin-details/admin-details.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/admin-details/admin-details.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/admin-menu/admin-menu.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/admin-menu/admin-menu.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/administrator-menu/administrator-menu.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/administrator-menu/administrator-menu.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/auth-routing.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/auth.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/auth-view/auth-view.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/auth-view/auth-view.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/guards/auth.guard.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/guards/auth.guard.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/guards/auth.service.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/guards/auth.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/interceptors/token.interceptor.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/interceptors/token.interceptor.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/login-form/login-form.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/login-form/login-form.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/register-form/register-form.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/auth/register-form/register-form.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/core/core.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/core/services/authentication-service.service.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/core/services/authentication-service.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/core/services/core-data.service.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/core/services/core-data.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/core/services/log-in-data-service.service.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/core/services/log-in-data-service.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/core/services/new-school.service.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/core/services/new-school.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/core/services/user-data.service.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/core/services/user-data.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/core/utils/error.helper.ts",
+  "/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/dashboard/components/home-component/home.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/dashboard/components/home-component/home.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/dashboard/components/nav/nav.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/dashboard/components/nav/nav.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-view/dashboard-view.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-view/dashboard-view.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/dashboard/services/panel-data.service.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/dashboard/services/panel-data.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/log-in/log-in.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/log-in/log-in.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/manage-requests/manage-requests.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/manage-requests/manage-requests.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/manage-school/manage-school.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/manage-school/manage-school.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/requests/requests-routing.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/requests/requests.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/requests/components/view-requests/view-requests.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/requests/components/view-requests/view-requests.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/school-admin/school-admin-routing.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/school-admin/school-admin.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/school-admin-list/school-admin-list.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/school-admin-list/school-admin-list.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/shared/shared.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/shared/components/page-not-found/page-not-found.component.spec.ts",
+  "/home/shath/projects/V_HELP-app/src/app/shared/components/page-not-found/page-not-found.component.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/api-configuration.copy.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/api-configuration.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/api.module.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/base-service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/request-builder.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/strict-http-response.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/new-offer-in-request.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/new-offer-in-volunteer.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/new-request.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/new-resource-request-in-school.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/new-resource-request.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/new-school-admin.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/new-school.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/new-tutorial-request-in-school.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/new-tutorial-request.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/new-volunteer.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/offer-partial.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/offer-with-relations.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/offer.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/ping-response.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/request-partial.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/request-with-relations.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/request.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/resource-request-partial.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/resource-request-with-relations.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/resource-request.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/school-admin-partial-excluding-password.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/school-admin-partial.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/school-admin-with-relations.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/school-admin.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/school-partial.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/school-with-relations.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/school.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/tutorial-request-partial.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/tutorial-request-with-relations.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/tutorial-request.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/user.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/volunteer-partial.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/volunteer-with-relations.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/volunteer.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/models/loopback/count.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/auth-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/ping-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/request-offer-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/requests-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/resource-requests-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/school-admin-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/school-admin-school-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/school-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/school-resource-request-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/school-tutorial-request-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/tutorials-requests-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/volunteer-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/app/tools/tools/api/services/volunteer-offer-controller.service.ts",
+  "/home/shath/projects/V_HELP-app/src/environments/environment.prod.ts",
+  "/home/shath/projects/V_HELP-app/src/environments/environment.ts"
+ ],
+ "options": {
+  "baseUrl": "/home/shath/projects/V_HELP-app",
+  "outDir": "/home/shath/projects/V_HELP-app/dist/out-tsc",
+  "forceConsistentCasingInFileNames": true,
+  "strict": true,
+  "noPropertyAccessFromIndexSignature": true,
+  "noImplicitReturns": true,
+  "noFallthroughCasesInSwitch": true,
+  "sourceMap": true,
+  "declaration": false,
+  "downlevelIteration": true,
+  "experimentalDecorators": true,
+  "moduleResolution": 2,
+  "importHelpers": true,
+  "target": 7,
+  "module": 6,
+  "lib": [
+   "lib.es2020.d.ts",
+   "lib.dom.d.ts"
+  ],
+  "configFilePath": "/home/shath/projects/V_HELP-app/tsconfig.json"
+ }
+}
+Info 9    [17:14:38.211] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 10   [17:15:11.068] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 1 structureChanged: true Elapsed: 32856.798078999855ms
+Info 11   [17:15:11.068] Project '/home/shath/projects/V_HELP-app/tsconfig.json' (Configured)
+Info 12   [17:15:11.069] 	Files (613)
+
+Info 13   [17:15:11.069] -----------------------------------------------
+Info 14   [17:15:11.144] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
+Info 15   [17:15:13.236] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 1 structureChanged: true Elapsed: 2092.494529000018ms
+Info 16   [17:15:13.236] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 17   [17:15:13.237] 	Files (194)
+
+Info 18   [17:15:13.237] -----------------------------------------------
+Info 19   [17:15:13.432] Search path: /home/shath/projects/V_HELP-app/src/app
+Info 20   [17:15:13.432] For info: /home/shath/projects/V_HELP-app/src/app/app-routing.module.ts :: Config file name: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 21   [17:15:13.443] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 22   [17:15:13.513] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 2 structureChanged: false Elapsed: 69.45904200011864ms
+Info 23   [17:15:13.513] Different program with same set of files:: structureIsReused:: 2
+Info 24   [17:15:13.545] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 25   [17:15:13.606] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 3 structureChanged: false Elapsed: 61.23358500003815ms
+Info 26   [17:15:13.607] Different program with same set of files:: structureIsReused:: 2
+Info 27   [17:15:13.615] Search path: /home/shath/projects/V_HELP-app/src/app/dashboard
+Info 28   [17:15:13.616] For info: /home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts :: Config file name: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 29   [17:15:13.627] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 30   [17:15:13.689] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 4 structureChanged: false Elapsed: 62.35189299983904ms
+Info 31   [17:15:13.689] Different program with same set of files:: structureIsReused:: 2
+Info 32   [17:15:13.727] FileWatcher:: Triggered with /home/shath/projects/V_HELP-app/src/app/app-routing.module.ts 1:: WatchInfo: /home/shath/projects/V_HELP-app/src/app/app-routing.module.ts 500 undefined Project:  WatchType: Closed Script info
+Info 33   [17:15:13.728] Elapsed:: 0.809235000051558ms FileWatcher:: Triggered with /home/shath/projects/V_HELP-app/src/app/app-routing.module.ts 1:: WatchInfo: /home/shath/projects/V_HELP-app/src/app/app-routing.module.ts 500 undefined Project:  WatchType: Closed Script info
+Info 34   [17:15:50.282] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 35   [17:15:50.283] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_
+Info 36   [17:15:50.283] Elapsed:: 0.9565769997425377ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 37   [17:15:56.321] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 38   [17:15:56.321] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_
+Info 39   [17:15:56.322] Elapsed:: 0.30205100029706955ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 40   [17:15:56.322] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_ 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 41   [17:15:56.322] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_
+Info 42   [17:15:56.322] Elapsed:: 0.20750500028952956ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_ 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 43   [17:15:56.322] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 44   [17:15:56.322] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack
+Info 45   [17:15:56.322] Elapsed:: 0.17123199999332428ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 46   [17:15:56.322] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack.old 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 47   [17:15:56.323] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack.old
+Info 48   [17:15:56.323] Elapsed:: 0.17527400003746152ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack.old 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 49   [17:15:56.323] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_ 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 50   [17:15:56.323] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_
+Info 51   [17:15:56.323] Elapsed:: 0.1972249997779727ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_ 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 52   [17:15:56.323] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 53   [17:15:56.323] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack
+Info 54   [17:15:56.323] Elapsed:: 0.19327200017869473ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 55   [17:15:57.364] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 56   [17:15:57.364] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_
+Info 57   [17:15:57.364] Elapsed:: 0.23408900015056133ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 58   [17:15:57.364] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 59   [17:15:57.364] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack
+Info 60   [17:15:57.364] Elapsed:: 0.17299199989065528ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 61   [17:15:57.364] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 62   [17:15:57.365] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_
+Info 63   [17:15:57.365] Elapsed:: 0.15353199979290366ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 64   [17:15:57.365] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 65   [17:15:57.365] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack
+Info 66   [17:15:57.365] Elapsed:: 0.15548499999567866ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 67   [17:16:13.145] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 68   [17:16:13.220] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 5 structureChanged: false Elapsed: 74.83707799995318ms
+Info 69   [17:16:13.220] Different program with same set of files:: structureIsReused:: 2
+Info 70   [17:16:14.601] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 71   [17:16:14.670] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 6 structureChanged: false Elapsed: 68.89134399965405ms
+Info 72   [17:16:14.671] Different program with same set of files:: structureIsReused:: 2
+Info 73   [17:16:14.917] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 74   [17:16:14.982] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 7 structureChanged: false Elapsed: 65.1898519997485ms
+Info 75   [17:16:14.982] Different program with same set of files:: structureIsReused:: 2
+Info 76   [17:16:14.985] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 77   [17:16:15.050] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 8 structureChanged: false Elapsed: 64.71804299997166ms
+Info 78   [17:16:15.050] Different program with same set of files:: structureIsReused:: 2
+Info 79   [17:16:15.367] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 80   [17:16:15.417] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 9 structureChanged: false Elapsed: 49.518081000074744ms
+Info 81   [17:16:15.417] Different program with same set of files:: structureIsReused:: 2
+Info 82   [17:16:17.097] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 83   [17:16:17.147] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 10 structureChanged: false Elapsed: 49.59210600005463ms
+Info 84   [17:16:17.147] Different program with same set of files:: structureIsReused:: 2
+Info 85   [17:16:18.184] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 86   [17:16:18.250] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 11 structureChanged: false Elapsed: 64.98268399992958ms
+Info 87   [17:16:18.250] Different program with same set of files:: structureIsReused:: 2
+Info 88   [17:16:18.389] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 89   [17:16:18.666] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 12 structureChanged: true Elapsed: 276.9537479998544ms
+Info 90   [17:16:18.666] Different program with same set of files:: structureIsReused:: 1
+Info 91   [17:16:18.708] getCompletionData: Get current token: 0.06753099989145994
+Info 92   [17:16:18.708] getCompletionData: Is inside comment: 0.019870999734848738
+Info 93   [17:16:18.708] getCompletionData: Get previous token 1: 0.10793800000101328
+Info 94   [17:16:18.709] getCompletionsAtPosition: isCompletionListBlocker: 0.44897300004959106
+Info 95   [17:16:18.721] getSymbolsFromOtherSourceFileExports: Recomputing list
+Info 96   [17:16:18.895] forEachExternalModuleToImportFrom: filtered out 23 modules by package.json contents
+Info 97   [17:16:18.956] forEachExternalModuleToImportFrom: filtered out 0 modules by package.json contents
+Info 98   [17:16:18.956] forEachExternalModuleToImportFrom autoImportProvider: 61.29484099987894
+Info 99   [17:16:18.957] getSymbolsFromOtherSourceFileExports: 236.10828300006688
+Info 100  [17:16:18.982] getCompletionData: Semantic work: 272.46232200041413
+Info 101  [17:16:19.189] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 205.64130900008604
+Info 102  [17:16:19.685] getCompletionData: Get current token: 0.04859100002795458
+Info 103  [17:16:19.686] getCompletionData: Is inside comment: 0.016445999965071678
+Info 104  [17:16:19.686] getCompletionData: Get previous token 1: 0.1429590000770986
+Info 105  [17:16:19.686] getCompletionsAtPosition: isCompletionListBlocker: 0.008541000075638294
+Info 106  [17:16:19.705] getSymbolsFromOtherSourceFileExports: Using cached list
+Info 107  [17:16:19.751] getCompletionData: Semantic work: 65.25525799999014
+Info 108  [17:16:19.933] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 181.11430600006133
+Info 109  [17:16:19.976] getCompletionData: Get current token: 0.04885099967941642
+Info 110  [17:16:19.977] getCompletionData: Is inside comment: 0.01397999981418252
+Info 111  [17:16:19.991] getCompletionData: Get previous token 1: 0.12886800011619925
+Info 112  [17:16:19.991] getCompletionsAtPosition: isCompletionListBlocker: 0.013989000115543604
+Info 113  [17:16:20.009] getSymbolsFromOtherSourceFileExports: Using cached list
+Info 114  [17:16:20.024] getCompletionData: Semantic work: 33.38596099987626
+Info 115  [17:16:20.121] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 76.83580800006166
+Info 116  [17:16:20.248] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 117  [17:16:20.638] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 13 structureChanged: true Elapsed: 389.71092600002885ms
+Info 118  [17:16:20.638] Different program with same set of files:: structureIsReused:: 1
+Info 119  [17:16:23.000] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 120  [17:16:23.224] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 14 structureChanged: true Elapsed: 223.83573199994862ms
+Info 121  [17:16:23.224] Different program with same set of files:: structureIsReused:: 1
+Info 122  [17:16:23.228] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 123  [17:16:23.457] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 15 structureChanged: true Elapsed: 228.92886299965903ms
+Info 124  [17:16:23.457] Different program with same set of files:: structureIsReused:: 1
+Info 125  [17:16:23.561] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 126  [17:16:23.742] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 16 structureChanged: true Elapsed: 180.90924800001085ms
+Info 127  [17:16:23.742] Different program with same set of files:: structureIsReused:: 1
+Info 128  [17:16:24.148] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 129  [17:16:24.376] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 17 structureChanged: true Elapsed: 228.34345699986443ms
+Info 130  [17:16:24.376] Different program with same set of files:: structureIsReused:: 1
+Info 131  [17:16:25.446] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 132  [17:16:25.655] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 18 structureChanged: true Elapsed: 208.63163199974224ms
+Info 133  [17:16:25.655] Different program with same set of files:: structureIsReused:: 1
+Info 134  [17:16:27.000] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 135  [17:16:27.184] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 19 structureChanged: true Elapsed: 183.26840499974787ms
+Info 136  [17:16:27.184] Different program with same set of files:: structureIsReused:: 1
+Info 137  [17:16:31.769] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 138  [17:16:31.978] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 20 structureChanged: true Elapsed: 208.72045899974182ms
+Info 139  [17:16:31.978] Different program with same set of files:: structureIsReused:: 1
+Info 140  [17:16:31.980] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 141  [17:16:32.156] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 21 structureChanged: true Elapsed: 175.54679099982604ms
+Info 142  [17:16:32.156] Different program with same set of files:: structureIsReused:: 1
+Info 143  [17:16:32.620] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 144  [17:16:32.803] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 22 structureChanged: true Elapsed: 182.19002400012687ms
+Info 145  [17:16:32.803] Different program with same set of files:: structureIsReused:: 1
+Info 146  [17:16:32.806] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 147  [17:16:33.052] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 23 structureChanged: true Elapsed: 246.08963700011373ms
+Info 148  [17:16:33.053] Different program with same set of files:: structureIsReused:: 1
+Info 149  [17:16:33.121] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 150  [17:16:33.487] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 24 structureChanged: true Elapsed: 357.9907929999754ms
+Info 151  [17:16:33.487] Different program with same set of files:: structureIsReused:: 1
+Info 152  [17:16:33.490] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 153  [17:16:33.687] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 25 structureChanged: true Elapsed: 197.3979199999012ms
+Info 154  [17:16:33.687] Different program with same set of files:: structureIsReused:: 1
+Info 155  [17:16:36.186] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 156  [17:16:36.391] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 26 structureChanged: true Elapsed: 204.6259869998321ms
+Info 157  [17:16:36.391] Different program with same set of files:: structureIsReused:: 1
+Info 158  [17:16:36.739] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 159  [17:16:36.962] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 27 structureChanged: true Elapsed: 223.18625100003555ms
+Info 160  [17:16:36.962] Different program with same set of files:: structureIsReused:: 1
+Info 161  [17:16:36.966] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 162  [17:16:37.136] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 28 structureChanged: true Elapsed: 169.86893699970096ms
+Info 163  [17:16:37.136] Different program with same set of files:: structureIsReused:: 1
+Info 164  [17:16:37.562] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 165  [17:16:37.738] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 29 structureChanged: true Elapsed: 175.55292600020766ms
+Info 166  [17:16:37.738] Different program with same set of files:: structureIsReused:: 1
+Info 167  [17:16:37.890] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 168  [17:16:38.064] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 30 structureChanged: true Elapsed: 174.29510900005698ms
+Info 169  [17:16:38.065] Different program with same set of files:: structureIsReused:: 1
+Info 170  [17:16:41.000] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 171  [17:16:41.038] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 31 structureChanged: false Elapsed: 38.10603699972853ms
+Info 172  [17:16:41.038] Different program with same set of files:: structureIsReused:: 2
+Info 173  [17:16:41.101] getCompletionData: Get current token: 0.03527399990707636
+Info 174  [17:16:41.101] getCompletionData: Is inside comment: 0.01524099987000227
+Info 175  [17:16:41.102] getCompletionData: Get previous token 1: 0.13851300021633506
+Info 176  [17:16:41.102] getCompletionsAtPosition: isCompletionListBlocker: 0.010274000000208616
+Info 177  [17:16:41.106] getCompletionData: Semantic work: 4.333302999846637
+Info 178  [17:16:41.128] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 1.9593059998005629
+Info 179  [17:16:41.721] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 180  [17:16:41.769] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 32 structureChanged: false Elapsed: 47.14182600006461ms
+Info 181  [17:16:41.769] Different program with same set of files:: structureIsReused:: 2
+Info 182  [17:16:41.937] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 183  [17:16:41.972] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 33 structureChanged: false Elapsed: 35.146984999999404ms
+Info 184  [17:16:41.972] Different program with same set of files:: structureIsReused:: 2
+Info 185  [17:16:42.126] getCompletionData: Get current token: 0.03542400011792779
+Info 186  [17:16:42.138] getCompletionData: Is inside comment: 0.03926600003615022
+Info 187  [17:16:42.138] getCompletionData: Get previous token 1: 0.20015500020235777
+Info 188  [17:16:42.139] getCompletionsAtPosition: isCompletionListBlocker: 0.01167100016027689
+Info 189  [17:16:42.170] getSymbolsFromOtherSourceFileExports: Using cached list
+Info 190  [17:16:42.191] getCompletionData: Semantic work: 52.517870999872684
+Info 191  [17:16:42.302] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 109.92007100023329
+Info 192  [17:16:42.463] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 193  [17:16:42.519] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 34 structureChanged: false Elapsed: 55.83791000023484ms
+Info 194  [17:16:42.520] Different program with same set of files:: structureIsReused:: 2
+Info 195  [17:16:42.520] getCompletionData: Get current token: 0.036813999991863966
+Info 196  [17:16:42.521] getCompletionData: Is inside comment: 0.013930000364780426
+Info 197  [17:16:42.521] getCompletionData: Get previous token 1: 0.16620300011709332
+Info 198  [17:16:42.521] getCompletionData: Get previous token 2: 0.1375729995779693
+Info 199  [17:16:42.521] getCompletionsAtPosition: isCompletionListBlocker: 0.009484999813139439
+Info 200  [17:16:42.536] getSymbolsFromOtherSourceFileExports: Using cached list
+Info 201  [17:16:42.563] getCompletionData: Semantic work: 41.40647599985823
+Info 202  [17:16:42.695] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 87.24442500015721
+Info 203  [17:16:42.782] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 204  [17:16:42.829] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 35 structureChanged: false Elapsed: 47.173423000145704ms
+Info 205  [17:16:42.830] Different program with same set of files:: structureIsReused:: 2
+Info 206  [17:16:42.961] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 207  [17:16:43.002] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 36 structureChanged: false Elapsed: 41.473923000041395ms
+Info 208  [17:16:43.002] Different program with same set of files:: structureIsReused:: 2
+Info 209  [17:16:43.054] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 210  [17:16:43.093] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 37 structureChanged: false Elapsed: 38.75281699979678ms
+Info 211  [17:16:43.094] Different program with same set of files:: structureIsReused:: 2
+Info 212  [17:16:43.134] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 213  [17:16:43.168] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 38 structureChanged: false Elapsed: 34.16887600021437ms
+Info 214  [17:16:43.168] Different program with same set of files:: structureIsReused:: 2
+Info 215  [17:16:43.435] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 216  [17:16:43.473] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 39 structureChanged: false Elapsed: 38.45639199996367ms
+Info 217  [17:16:43.474] Different program with same set of files:: structureIsReused:: 2
+Info 218  [17:16:43.746] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 219  [17:16:43.781] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 40 structureChanged: false Elapsed: 34.30183199979365ms
+Info 220  [17:16:43.781] Different program with same set of files:: structureIsReused:: 2
+Info 221  [17:16:44.391] getCompletionData: Get current token: 0.0354009997099638
+Info 222  [17:16:44.392] getCompletionData: Is inside comment: 0.010833000298589468
+Info 223  [17:16:44.392] getCompletionData: Get previous token 1: 0.09269399987533689
+Info 224  [17:16:44.392] getCompletionsAtPosition: isCompletionListBlocker: 0.006852000020444393
+Info 225  [17:16:44.392] getCompletionData: Semantic work: 0.26182599971070886
+Info 226  [17:16:44.403] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 0.09738000016659498
+Info 227  [17:16:45.077] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 228  [17:16:45.129] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 41 structureChanged: false Elapsed: 47.2936149998568ms
+Info 229  [17:16:45.129] Different program with same set of files:: structureIsReused:: 2
+Info 230  [17:16:45.248] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 231  [17:16:45.289] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 42 structureChanged: false Elapsed: 40.40630399994552ms
+Info 232  [17:16:45.289] Different program with same set of files:: structureIsReused:: 2
+Info 233  [17:16:45.477] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 234  [17:16:45.518] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 43 structureChanged: false Elapsed: 40.27728800009936ms
+Info 235  [17:16:45.518] Different program with same set of files:: structureIsReused:: 2
+Info 236  [17:16:45.653] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 237  [17:16:45.687] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 44 structureChanged: false Elapsed: 33.87489099986851ms
+Info 238  [17:16:45.688] Different program with same set of files:: structureIsReused:: 2
+Info 239  [17:16:45.767] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 240  [17:16:45.808] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 45 structureChanged: false Elapsed: 40.31573099968955ms
+Info 241  [17:16:45.808] Different program with same set of files:: structureIsReused:: 2
+Info 242  [17:16:45.809] getCompletionData: Get current token: 0.0882290001027286
+Info 243  [17:16:45.809] getCompletionData: Is inside comment: 0.03326299972832203
+Info 244  [17:16:45.809] getCompletionData: Get previous token 1: 0.12595999985933304
+Info 245  [17:16:45.809] getCompletionsAtPosition: isCompletionListBlocker: 0.006891000084578991
+Info 246  [17:16:45.819] getCompletionData: Semantic work: 9.630253000184894
+Info 247  [17:16:45.825] getCompletionData: Get current token: 0.0706599997356534
+Info 248  [17:16:45.825] getCompletionData: Is inside comment: 0.01497500017285347
+Info 249  [17:16:45.825] getCompletionData: Get previous token 1: 0.10643600020557642
+Info 250  [17:16:45.825] getCompletionsAtPosition: isCompletionListBlocker: 0.00860700011253357
+Info 251  [17:16:45.826] getCompletionData: Semantic work: 0.18881099997088313
+Info 252  [17:17:54.119] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 253  [17:17:54.119] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_
+Info 254  [17:17:54.119] Elapsed:: 0.18364300020039082ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 255  [17:18:01.725] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 256  [17:18:01.749] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_
+Info 257  [17:18:01.749] Elapsed:: 0.24049100000411272ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 258  [17:18:01.750] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_ 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 259  [17:18:01.750] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_
+Info 260  [17:18:01.750] Elapsed:: 0.13090400025248528ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_ 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 261  [17:18:01.750] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 262  [17:18:01.750] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack
+Info 263  [17:18:01.750] Elapsed:: 0.08986900001764297ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 264  [17:18:01.750] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack.old 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 265  [17:18:01.750] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack.old
+Info 266  [17:18:01.750] Elapsed:: 0.20164000010117888ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack.old 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 267  [17:18:02.758] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 268  [17:18:02.759] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_
+Info 269  [17:18:02.759] Elapsed:: 0.16364900022745132ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 270  [17:18:02.759] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 271  [17:18:02.759] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack
+Info 272  [17:18:02.759] Elapsed:: 0.08898500027135015ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 273  [17:18:02.759] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 274  [17:18:02.759] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_
+Info 275  [17:18:02.759] Elapsed:: 0.08552000019699335ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 276  [17:18:02.759] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 277  [17:18:02.759] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack
+Info 278  [17:18:02.759] Elapsed:: 0.08549699978902936ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 279  [17:18:02.759] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_ 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 280  [17:18:02.759] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_
+Info 281  [17:18:02.759] Elapsed:: 0.09037300013005733ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_ 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 282  [17:18:02.759] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 283  [17:18:02.760] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack
+Info 284  [17:18:02.760] Elapsed:: 0.08067099982872605ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 285  [17:18:16.064] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app/primeicons.ba3f916dfb64be8c.woff2 :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 286  [17:18:16.065] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/dist/v-help-app/primeicons.ba3f916dfb64be8c.woff2
+Info 287  [17:18:16.066] Elapsed:: 0.8781500002369285ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app/primeicons.ba3f916dfb64be8c.woff2 :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 288  [17:18:16.066] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app/primeicons.f8b9e8a4e401b603.woff :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 289  [17:18:16.066] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/dist/v-help-app/primeicons.f8b9e8a4e401b603.woff
+Info 290  [17:18:16.067] Elapsed:: 0.41369299963116646ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app/primeicons.f8b9e8a4e401b603.woff :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 291  [17:18:16.067] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app/primeicons.ffecb2549ad1765a.eot :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 292  [17:18:16.067] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/dist/v-help-app/primeicons.ffecb2549ad1765a.eot
+Info 293  [17:18:16.067] Elapsed:: 0.37383300019428134ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app/primeicons.ffecb2549ad1765a.eot :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 294  [17:18:16.068] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app/runtime.2d4d1c2bb6a80fea.js :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 295  [17:18:16.068] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/dist/v-help-app/runtime.2d4d1c2bb6a80fea.js
+Info 296  [17:18:16.068] Elapsed:: 0.37742399983108044ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app/runtime.2d4d1c2bb6a80fea.js :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 297  [17:18:16.068] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app/styles.a694023778a32dc2.css :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 298  [17:18:16.069] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/dist/v-help-app/styles.a694023778a32dc2.css
+Info 299  [17:18:16.069] Elapsed:: 0.3717809999361634ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app/styles.a694023778a32dc2.css :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 300  [17:18:16.069] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 301  [17:18:16.071] Elapsed:: 1.8977040001191199ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 302  [17:18:16.399] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 303  [17:18:16.414] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 46 structureChanged: false Elapsed: 14.897834000177681ms
+Info 304  [17:18:17.078] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 305  [17:18:17.078] Elapsed:: 0.18124800035730004ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 306  [17:18:17.387] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 307  [17:18:17.403] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 47 structureChanged: false Elapsed: 15.96748000010848ms
+Info 308  [17:18:19.580] Before ensureProjectForOpenFiles:
+Info 309  [17:18:19.580] After ensureProjectForOpenFiles:
+Info 310  [17:18:19.581] got projects updated in background, updating diagnostics for /home/shath/projects/V_HELP-app/src/app/app.module.ts,/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts
+Info 311  [17:18:48.691] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/93d1c5334f37d4c5eb1c2ca468a1181d.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 312  [17:18:48.709] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/93d1c5334f37d4c5eb1c2ca468a1181d.json
+Info 313  [17:18:48.709] Elapsed:: 0.26262200018391013ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/93d1c5334f37d4c5eb1c2ca468a1181d.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 314  [17:19:28.096] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 315  [17:19:28.110] Elapsed:: 0.19554600026458502ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 316  [17:19:28.519] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 317  [17:19:28.564] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 48 structureChanged: false Elapsed: 45.24827300012112ms
+Info 318  [17:19:30.610] Before ensureProjectForOpenFiles:
+Info 319  [17:19:30.610] After ensureProjectForOpenFiles:
+Info 320  [17:19:30.611] got projects updated in background, updating diagnostics for /home/shath/projects/V_HELP-app/src/app/app.module.ts,/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts
+Info 321  [17:19:30.851] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/2.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 322  [17:19:30.852] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/2.pack_
+Info 323  [17:19:30.852] Elapsed:: 0.1737359999679029ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/2.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 324  [17:19:30.852] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/0.pack_ 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 325  [17:19:30.852] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/0.pack_
+Info 326  [17:19:30.852] Elapsed:: 0.10274200001731515ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/0.pack_ 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 327  [17:19:30.852] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/3.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 328  [17:19:30.852] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/3.pack_
+Info 329  [17:19:30.852] Elapsed:: 0.0888900002464652ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/3.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 330  [17:19:30.852] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack_ 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 331  [17:19:30.852] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack_
+Info 332  [17:19:30.852] Elapsed:: 0.0867439997382462ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack_ 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 333  [17:19:30.852] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 334  [17:19:30.852] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack
+Info 335  [17:19:30.852] Elapsed:: 0.08460600022226572ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 336  [17:19:30.852] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack.old 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 337  [17:19:30.852] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack.old
+Info 338  [17:19:30.853] Elapsed:: 0.08410599967464805ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack.old 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 339  [17:19:30.853] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/0.pack_ 6:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 340  [17:19:30.853] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/0.pack_
+Info 341  [17:19:30.853] Elapsed:: 0.10600000014528632ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/0.pack_ 6:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 342  [17:19:30.853] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/0.pack 7:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 343  [17:19:30.853] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/0.pack
+Info 344  [17:19:30.853] Elapsed:: 0.08481299970299006ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/0.pack 7:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 345  [17:19:30.853] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/3.pack_ 8:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 346  [17:19:30.853] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/3.pack_
+Info 347  [17:19:30.853] Elapsed:: 0.08197699999436736ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/3.pack_ 8:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 348  [17:19:30.853] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/3.pack 9:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 349  [17:19:30.853] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/3.pack
+Info 350  [17:19:30.853] Elapsed:: 0.08678800007328391ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/3.pack 9:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 351  [17:19:30.854] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/2.pack_ 10:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 352  [17:19:30.854] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/2.pack_
+Info 353  [17:19:30.854] Elapsed:: 0.08870000019669533ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/2.pack_ 10:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 354  [17:19:30.854] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/2.pack 11:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 355  [17:19:30.854] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/2.pack
+Info 356  [17:19:30.854] Elapsed:: 0.0835679997690022ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/2.pack 11:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 357  [17:19:30.854] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack_ 12:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 358  [17:19:30.854] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack_
+Info 359  [17:19:30.854] Elapsed:: 0.08208100032061338ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack_ 12:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 360  [17:19:30.854] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack 13:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 361  [17:19:30.854] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack
+Info 362  [17:19:30.854] Elapsed:: 0.0933740003965795ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/ca41b7f78e3944016962620983d9ea4243620204/index.pack 13:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 363  [17:24:51.405] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 364  [17:24:51.406] Elapsed:: 0.29005099972710013ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 365  [17:24:51.689] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 366  [17:24:51.704] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 49 structureChanged: false Elapsed: 15.5046999999322ms
+Info 367  [17:24:52.082] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 368  [17:24:52.082] Elapsed:: 0.15846299985423684ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 369  [17:24:52.400] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 370  [17:24:52.415] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 50 structureChanged: false Elapsed: 15.171415000222623ms
+Info 371  [17:24:54.582] Before ensureProjectForOpenFiles:
+Info 372  [17:24:54.583] After ensureProjectForOpenFiles:
+Info 373  [17:24:54.583] got projects updated in background, updating diagnostics for /home/shath/projects/V_HELP-app/src/app/app.module.ts,/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts
+Info 374  [17:26:13.927] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 375  [17:26:13.940] Elapsed:: 0.200912999920547ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 376  [17:26:14.323] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 377  [17:26:14.368] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 51 structureChanged: false Elapsed: 44.8776200003922ms
+Info 378  [17:26:16.440] Before ensureProjectForOpenFiles:
+Info 379  [17:26:16.440] After ensureProjectForOpenFiles:
+Info 380  [17:26:16.440] got projects updated in background, updating diagnostics for /home/shath/projects/V_HELP-app/src/app/app.module.ts,/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts
+Info 381  [17:26:18.926] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 382  [17:26:18.926] Elapsed:: 0.1460040002129972ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 383  [17:26:19.244] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 384  [17:26:19.256] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 52 structureChanged: false Elapsed: 11.906666000373662ms
+Info 385  [17:26:21.427] Before ensureProjectForOpenFiles:
+Info 386  [17:26:21.427] After ensureProjectForOpenFiles:
+Info 387  [17:26:21.427] got projects updated in background, updating diagnostics for /home/shath/projects/V_HELP-app/src/app/app.module.ts,/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts
+Info 388  [17:27:01.839] DirectoryWatcher:: Triggered with /home/shath/.nvm/versions/node/v14.16.0/lib/node_modules :: WatchInfo: /home/shath/.nvm/versions/node/v14.16.0/lib/node_modules 1 undefined Project:  WatchType: node_modules for closed script infos in them
+Info 389  [17:27:01.884] Elapsed:: 44.83013299992308ms DirectoryWatcher:: Triggered with /home/shath/.nvm/versions/node/v14.16.0/lib/node_modules :: WatchInfo: /home/shath/.nvm/versions/node/v14.16.0/lib/node_modules 1 undefined Project:  WatchType: node_modules for closed script infos in them
+Info 390  [17:33:53.721] Search path: /home/shath/projects/V_HELP-app/src/app/core
+Info 391  [17:33:53.826] For info: /home/shath/projects/V_HELP-app/src/app/core/core.module.ts :: Config file name: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 392  [17:33:54.949] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 393  [17:33:55.003] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 53 structureChanged: false Elapsed: 53.999272000044584ms
+Info 394  [17:33:55.003] Different program with same set of files:: structureIsReused:: 2
+Info 395  [17:40:24.215] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 396  [17:40:24.273] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 54 structureChanged: false Elapsed: 58.16065299976617ms
+Info 397  [17:40:24.274] Different program with same set of files:: structureIsReused:: 2
+Info 398  [17:40:33.119] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 399  [17:40:33.386] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 55 structureChanged: true Elapsed: 267.31846700049937ms
+Info 400  [17:40:33.386] Different program with same set of files:: structureIsReused:: 1
+Info 401  [17:41:16.722] Search path: /home/shath/projects/V_HELP-app/src/app/shared
+Info 402  [17:41:16.723] For info: /home/shath/projects/V_HELP-app/src/app/shared/shared.module.ts :: Config file name: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 403  [17:41:16.957] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 404  [17:41:17.039] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 56 structureChanged: false Elapsed: 81.70138600002974ms
+Info 405  [17:41:17.039] Different program with same set of files:: structureIsReused:: 2
+Info 406  [17:42:11.731] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 407  [17:42:11.732] Elapsed:: 0.28643999993801117ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 408  [17:42:12.046] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 409  [17:42:12.065] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 57 structureChanged: false Elapsed: 19.310685999691486ms
+Info 410  [17:42:12.692] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 411  [17:42:12.692] Elapsed:: 0.1550859995186329ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 412  [17:42:13.012] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 413  [17:42:13.048] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 58 structureChanged: false Elapsed: 35.45782999973744ms
+Info 414  [17:42:15.193] Before ensureProjectForOpenFiles:
+Info 415  [17:42:15.193] After ensureProjectForOpenFiles:
+Info 416  [17:42:15.193] got projects updated in background, updating diagnostics for /home/shath/projects/V_HELP-app/src/app/app.module.ts,/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/core/core.module.ts,/home/shath/projects/V_HELP-app/src/app/shared/shared.module.ts
+Info 417  [17:42:43.298] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 418  [17:42:43.299] Elapsed:: 0.12450100015848875ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 419  [17:42:43.616] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 420  [17:42:43.628] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 59 structureChanged: false Elapsed: 11.800259000621736ms
+Info 421  [17:42:45.826] Before ensureProjectForOpenFiles:
+Info 422  [17:42:45.826] After ensureProjectForOpenFiles:
+Info 423  [17:42:45.826] got projects updated in background, updating diagnostics for /home/shath/projects/V_HELP-app/src/app/app.module.ts,/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/core/core.module.ts,/home/shath/projects/V_HELP-app/src/app/shared/shared.module.ts
+Info 424  [17:43:45.760] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 425  [17:43:45.760] Elapsed:: 0.27163099963217974ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 426  [17:43:46.077] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 427  [17:43:46.119] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 60 structureChanged: false Elapsed: 41.67003099992871ms
+Info 428  [17:43:46.775] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 429  [17:43:46.775] Elapsed:: 0.13096299953758717ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 430  [17:43:47.119] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 431  [17:43:47.148] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 61 structureChanged: false Elapsed: 29.644419999793172ms
+Info 432  [17:43:49.276] Before ensureProjectForOpenFiles:
+Info 433  [17:43:49.276] After ensureProjectForOpenFiles:
+Info 434  [17:43:49.276] got projects updated in background, updating diagnostics for /home/shath/projects/V_HELP-app/src/app/app.module.ts,/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/core/core.module.ts,/home/shath/projects/V_HELP-app/src/app/shared/shared.module.ts
+Info 435  [17:44:48.612] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 436  [17:44:48.984] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_
+Info 437  [17:44:48.984] Elapsed:: 0.35122299939393997ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 438  [17:44:48.984] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/3.pack_ 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 439  [17:44:48.985] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/3.pack_
+Info 440  [17:44:48.985] Elapsed:: 0.1657289993017912ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/3.pack_ 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 441  [17:44:48.985] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 442  [17:44:48.985] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_
+Info 443  [17:44:48.985] Elapsed:: 0.13566000014543533ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 444  [17:44:48.985] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/4.pack_ 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 445  [17:44:48.985] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/4.pack_
+Info 446  [17:44:49.320] Elapsed:: 0.12682299967855215ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/4.pack_ 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 447  [17:44:49.320] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_ 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 448  [17:44:49.320] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_
+Info 449  [17:44:49.320] Elapsed:: 0.23261400032788515ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_ 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 450  [17:44:52.686] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 451  [17:44:52.686] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack
+Info 452  [17:44:52.687] Elapsed:: 0.21428399998694658ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 453  [17:44:52.687] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack.old 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 454  [17:44:52.687] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack.old
+Info 455  [17:44:52.687] Elapsed:: 0.15803099982440472ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack.old 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 456  [17:44:52.687] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 457  [17:44:52.687] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_
+Info 458  [17:44:52.687] Elapsed:: 0.13102000020444393ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 459  [17:44:52.687] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 460  [17:44:52.687] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack
+Info 461  [17:44:52.687] Elapsed:: 0.12833600025624037ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/2.pack 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 462  [17:44:54.076] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/4.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 463  [17:44:54.076] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/4.pack_
+Info 464  [17:44:54.076] Elapsed:: 0.20239599980413914ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/4.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 465  [17:44:54.076] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/4.pack 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 466  [17:44:54.076] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/4.pack
+Info 467  [17:44:54.076] Elapsed:: 0.13330799993127584ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/4.pack 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 468  [17:44:54.076] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 469  [17:44:54.077] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_
+Info 470  [17:44:54.077] Elapsed:: 0.1281499993056059ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 471  [17:44:54.077] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 472  [17:44:54.077] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack
+Info 473  [17:44:54.077] Elapsed:: 0.14584300015121698ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/0.pack 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 474  [17:44:54.077] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/3.pack_ 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 475  [17:44:54.077] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/3.pack_
+Info 476  [17:44:54.077] Elapsed:: 0.12389899976551533ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/3.pack_ 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 477  [17:44:54.077] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/3.pack 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 478  [17:44:54.077] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/3.pack
+Info 479  [17:44:54.077] Elapsed:: 0.12293099984526634ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/3.pack 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 480  [17:44:54.077] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_ 6:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 481  [17:44:54.078] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_
+Info 482  [17:44:54.456] Elapsed:: 0.1507629994302988ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack_ 6:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 483  [17:44:54.457] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack 7:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 484  [17:44:54.457] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack
+Info 485  [17:44:54.457] Elapsed:: 0.1415360001847148ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/dc370dfd7c99613abe2d0287d1c157276f78f007/index.pack 7:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 486  [17:45:33.086] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 487  [17:45:33.086] Elapsed:: 0.12847699970006943ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 488  [17:45:33.443] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 489  [17:45:33.493] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 62 structureChanged: false Elapsed: 50.33301299996674ms
+Info 490  [17:45:35.586] Before ensureProjectForOpenFiles:
+Info 491  [17:45:35.586] After ensureProjectForOpenFiles:
+Info 492  [17:45:35.586] got projects updated in background, updating diagnostics for /home/shath/projects/V_HELP-app/src/app/app.module.ts,/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/core/core.module.ts,/home/shath/projects/V_HELP-app/src/app/shared/shared.module.ts
+Info 493  [17:45:39.050] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 494  [17:45:39.051] Elapsed:: 0.15292999986559153ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 495  [17:45:39.353] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 496  [17:45:39.368] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 63 structureChanged: false Elapsed: 14.818227000534534ms
+Info 497  [17:45:41.551] Before ensureProjectForOpenFiles:
+Info 498  [17:45:41.551] After ensureProjectForOpenFiles:
+Info 499  [17:45:41.551] got projects updated in background, updating diagnostics for /home/shath/projects/V_HELP-app/src/app/app.module.ts,/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/core/core.module.ts,/home/shath/projects/V_HELP-app/src/app/shared/shared.module.ts
+Info 500  [13:31:27.707] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 501  [13:31:28.516] Elapsed:: 585.4492619931698ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/dist/v-help-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 502  [13:31:29.049] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 503  [13:31:29.099] Elapsed:: 49.69651000201702ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 504  [13:31:30.887] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 505  [13:31:32.482] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 64 structureChanged: false Elapsed: 1556.5085510015488ms
+Info 506  [13:31:33.620] Before ensureProjectForOpenFiles:
+Info 507  [13:31:33.637] After ensureProjectForOpenFiles:
+Info 508  [13:31:33.650] got projects updated in background, updating diagnostics for /home/shath/projects/V_HELP-app/src/app/app.module.ts,/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/core/core.module.ts,/home/shath/projects/V_HELP-app/src/app/shared/shared.module.ts
+Info 509  [13:43:24.968] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/e90f20899e23f9b2b8563176d9d9e6d3.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 510  [13:43:24.983] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/e90f20899e23f9b2b8563176d9d9e6d3.json
+Info 511  [13:43:24.983] Elapsed:: 0.21105900406837463ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/e90f20899e23f9b2b8563176d9d9e6d3.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 512  [13:43:24.983] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f618064c924e0ebfa53f739096ec0f49.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 513  [13:43:24.983] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f618064c924e0ebfa53f739096ec0f49.json
+Info 514  [13:43:24.983] Elapsed:: 0.09289200603961945ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f618064c924e0ebfa53f739096ec0f49.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 515  [13:43:24.983] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f882a27be1ee8004e381f5f946deb051.json 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 516  [13:43:24.983] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f882a27be1ee8004e381f5f946deb051.json
+Info 517  [13:43:24.983] Elapsed:: 0.08479200303554535ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f882a27be1ee8004e381f5f946deb051.json 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 518  [13:43:24.983] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/77eeee893c92fa0d2cd8aa0a1260b60c.json 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 519  [13:43:24.983] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/77eeee893c92fa0d2cd8aa0a1260b60c.json
+Info 520  [13:43:24.983] Elapsed:: 0.08227899670600891ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/77eeee893c92fa0d2cd8aa0a1260b60c.json 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 521  [13:43:24.983] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/2fcbfe7efa1740411563f5e19abecd53.json 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 522  [13:43:24.983] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/2fcbfe7efa1740411563f5e19abecd53.json
+Info 523  [13:43:24.983] Elapsed:: 0.07442200183868408ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/2fcbfe7efa1740411563f5e19abecd53.json 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 524  [13:43:25.013] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/76e08d0b31d7ece3977d3703cd0b2199.json 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 525  [13:43:25.013] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/76e08d0b31d7ece3977d3703cd0b2199.json
+Info 526  [13:43:25.023] Elapsed:: 0.1530420035123825ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/76e08d0b31d7ece3977d3703cd0b2199.json 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 527  [13:43:25.029] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/3b785fbea940328e502867c641b07495.json 6:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 528  [13:43:25.029] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/3b785fbea940328e502867c641b07495.json
+Info 529  [13:43:25.029] Elapsed:: 0.1412069946527481ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/3b785fbea940328e502867c641b07495.json 6:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 530  [13:43:25.029] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/495b26cb520f74eb28517d2fe8e4e540.json 7:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 531  [13:43:25.029] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/495b26cb520f74eb28517d2fe8e4e540.json
+Info 532  [13:43:25.029] Elapsed:: 0.08120699226856232ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/495b26cb520f74eb28517d2fe8e4e540.json 7:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 533  [13:43:25.029] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/42bf81fdbbdefdec8496e104e79f5a86.json 8:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 534  [13:43:25.029] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/42bf81fdbbdefdec8496e104e79f5a86.json
+Info 535  [13:43:25.029] Elapsed:: 0.07857100665569305ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/42bf81fdbbdefdec8496e104e79f5a86.json 8:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 536  [13:43:25.029] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/c9f83df07ba778b331bce42b2ed160cb.json 9:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 537  [13:43:25.029] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/c9f83df07ba778b331bce42b2ed160cb.json
+Info 538  [13:43:25.029] Elapsed:: 0.08177199959754944ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/c9f83df07ba778b331bce42b2ed160cb.json 9:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 539  [13:43:30.361] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/1d51816101b6f1ecdac2298ae3ec8c46.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 540  [13:43:30.361] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/1d51816101b6f1ecdac2298ae3ec8c46.json
+Info 541  [13:43:30.361] Elapsed:: 0.15832200646400452ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/1d51816101b6f1ecdac2298ae3ec8c46.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 542  [13:43:30.361] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/b2b7ba66f8d84d1bf10d592e045f55e0.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 543  [13:43:30.362] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/b2b7ba66f8d84d1bf10d592e045f55e0.json
+Info 544  [13:43:30.388] Elapsed:: 0.1007310003042221ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/b2b7ba66f8d84d1bf10d592e045f55e0.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 545  [13:43:30.388] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/08fe0a6d1aa0973de171ec07d1221589.json 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 546  [13:43:30.388] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/08fe0a6d1aa0973de171ec07d1221589.json
+Info 547  [13:43:30.388] Elapsed:: 0.13500499725341797ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/08fe0a6d1aa0973de171ec07d1221589.json 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 548  [13:43:30.389] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f0746ad1b84da930243ed1b53a923a40.json 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 549  [13:43:30.389] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f0746ad1b84da930243ed1b53a923a40.json
+Info 550  [13:43:30.410] Elapsed:: 0.21966999769210815ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f0746ad1b84da930243ed1b53a923a40.json 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 551  [13:43:30.422] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/06bb4f812eef0c70f7586f485105f5ad.json 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 552  [13:43:30.422] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/06bb4f812eef0c70f7586f485105f5ad.json
+Info 553  [13:43:30.458] Elapsed:: 35.956049010157585ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/06bb4f812eef0c70f7586f485105f5ad.json 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 554  [13:43:30.458] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/216cdcdf59506ce309f19e81bee65325.json 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 555  [13:43:30.458] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/216cdcdf59506ce309f19e81bee65325.json
+Info 556  [13:43:30.458] Elapsed:: 0.1287969946861267ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/216cdcdf59506ce309f19e81bee65325.json 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 557  [13:43:30.458] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/aedf3d0ec5ebf2a9bc67c56e37a1edf3.json 6:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 558  [13:43:30.459] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/aedf3d0ec5ebf2a9bc67c56e37a1edf3.json
+Info 559  [13:43:30.459] Elapsed:: 0.4360650032758713ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/aedf3d0ec5ebf2a9bc67c56e37a1edf3.json 6:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 560  [13:43:30.459] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/2af7b1191c0bd0562b32f6aafb451361.json 7:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 561  [13:43:30.459] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/2af7b1191c0bd0562b32f6aafb451361.json
+Info 562  [13:43:30.473] Elapsed:: 0.08337599039077759ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/2af7b1191c0bd0562b32f6aafb451361.json 7:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 563  [13:43:30.473] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/a794fb561e0dfb5438109f8f76990a24.json 8:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 564  [13:43:30.474] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/a794fb561e0dfb5438109f8f76990a24.json
+Info 565  [13:43:30.475] Elapsed:: 1.1682559996843338ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/a794fb561e0dfb5438109f8f76990a24.json 8:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 566  [13:43:30.475] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/8f4a0c8a96b2c415694f2c9b80ea483d.json 9:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 567  [13:43:30.475] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/8f4a0c8a96b2c415694f2c9b80ea483d.json
+Info 568  [13:43:30.475] Elapsed:: 0.1531749963760376ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/8f4a0c8a96b2c415694f2c9b80ea483d.json 9:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 569  [13:43:30.475] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/83f287203898e7cc0eb3d04cf960efb9.json 10:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 570  [13:43:30.476] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/83f287203898e7cc0eb3d04cf960efb9.json
+Info 571  [13:43:30.476] Elapsed:: 0.4144119918346405ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/83f287203898e7cc0eb3d04cf960efb9.json 10:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 572  [13:43:30.476] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/cb77d04823398d7b65514465f02a86f0.json 11:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 573  [13:43:30.501] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/cb77d04823398d7b65514465f02a86f0.json
+Info 574  [13:43:30.502] Elapsed:: 0.16761599481105804ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/cb77d04823398d7b65514465f02a86f0.json 11:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 575  [13:43:30.502] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/3af24b8bccc26f77bf7cb5a6f6f62417.json 12:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 576  [13:43:30.502] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/3af24b8bccc26f77bf7cb5a6f6f62417.json
+Info 577  [13:43:30.506] Elapsed:: 0.14446699619293213ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/3af24b8bccc26f77bf7cb5a6f6f62417.json 12:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 578  [13:43:30.506] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/aef02c90060e8330acd03fc9321f0d8e.json 13:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 579  [13:43:30.507] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/aef02c90060e8330acd03fc9321f0d8e.json
+Info 580  [13:43:30.508] Elapsed:: 0.3142389953136444ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/aef02c90060e8330acd03fc9321f0d8e.json 13:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 581  [13:43:30.508] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/ec8a18718561ec78656f4ae06b004be4.json 14:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 582  [13:43:30.508] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/ec8a18718561ec78656f4ae06b004be4.json
+Info 583  [13:43:30.508] Elapsed:: 0.1153620034456253ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/ec8a18718561ec78656f4ae06b004be4.json 14:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 584  [13:43:30.536] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/ce3f0b6d660e25c39f74ffeb3c9c4248.json 15:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 585  [13:43:30.536] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/ce3f0b6d660e25c39f74ffeb3c9c4248.json
+Info 586  [13:43:30.546] Elapsed:: 5.5954950004816055ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/ce3f0b6d660e25c39f74ffeb3c9c4248.json 15:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 587  [13:43:30.546] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/50995964bda4f04274ac145b05929b35.json 16:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 588  [13:43:30.547] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/50995964bda4f04274ac145b05929b35.json
+Info 589  [13:43:30.547] Elapsed:: 0.9606910049915314ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/50995964bda4f04274ac145b05929b35.json 16:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 590  [13:43:30.548] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/4f8f922e61ded8962883956d54626dde.json 17:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 591  [13:43:30.548] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/4f8f922e61ded8962883956d54626dde.json
+Info 592  [13:43:30.557] Elapsed:: 0.12611399590969086ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/4f8f922e61ded8962883956d54626dde.json 17:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 593  [13:43:30.557] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/2d5235a2df7a6f85a6bee24b6407eecb.json 18:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 594  [13:43:30.557] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/2d5235a2df7a6f85a6bee24b6407eecb.json
+Info 595  [13:43:30.557] Elapsed:: 0.13499198853969574ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/2d5235a2df7a6f85a6bee24b6407eecb.json 18:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 596  [13:43:30.557] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/5a82ae9ade3e367d9213233ffb9b314f.json 19:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 597  [13:43:30.557] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/5a82ae9ade3e367d9213233ffb9b314f.json
+Info 598  [13:43:30.557] Elapsed:: 0.0878320038318634ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/5a82ae9ade3e367d9213233ffb9b314f.json 19:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 599  [13:43:30.557] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f1abc667ba4a75783616f888f8108965.json 20:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 600  [13:43:30.558] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f1abc667ba4a75783616f888f8108965.json
+Info 601  [13:43:30.558] Elapsed:: 0.08989499509334564ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f1abc667ba4a75783616f888f8108965.json 20:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 602  [13:43:30.558] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f86868b365c132e3ebe20e4eacc38cf3.json 21:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 603  [13:43:30.558] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f86868b365c132e3ebe20e4eacc38cf3.json
+Info 604  [13:43:30.558] Elapsed:: 0.29114900529384613ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f86868b365c132e3ebe20e4eacc38cf3.json 21:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 605  [13:43:31.977] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/e71a6698ef66dc42c9132984ac702ca2.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 606  [13:43:31.978] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/e71a6698ef66dc42c9132984ac702ca2.json
+Info 607  [13:43:31.978] Elapsed:: 0.13902899622917175ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/e71a6698ef66dc42c9132984ac702ca2.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 608  [13:43:31.996] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/441f83c7c8765777b630f9c5273a6723.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 609  [13:43:31.996] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/441f83c7c8765777b630f9c5273a6723.json
+Info 610  [13:43:31.996] Elapsed:: 0.1355390101671219ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/441f83c7c8765777b630f9c5273a6723.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 611  [13:43:34.249] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/b40d681a9b00dff94e88331381a09f44.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 612  [13:43:34.249] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/b40d681a9b00dff94e88331381a09f44.json
+Info 613  [13:43:34.249] Elapsed:: 0.13442499935626984ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/b40d681a9b00dff94e88331381a09f44.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 614  [13:43:34.249] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/9db573ce2df5d46d2829fa007d6ec769.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 615  [13:43:34.249] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/9db573ce2df5d46d2829fa007d6ec769.json
+Info 616  [13:43:34.249] Elapsed:: 0.08322998881340027ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/9db573ce2df5d46d2829fa007d6ec769.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 617  [13:43:35.655] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/093131b42434f226cb876bd7a3a46855.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 618  [13:43:35.655] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/093131b42434f226cb876bd7a3a46855.json
+Info 619  [13:43:35.655] Elapsed:: 0.14061599969863892ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/093131b42434f226cb876bd7a3a46855.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 620  [13:43:35.655] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/68833b5f389622fe29c92f0e15cc37a6.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 621  [13:43:35.655] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/68833b5f389622fe29c92f0e15cc37a6.json
+Info 622  [13:43:35.655] Elapsed:: 0.07701100409030914ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/68833b5f389622fe29c92f0e15cc37a6.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 623  [13:43:40.262] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/39b12bd3b902c348ecb27c43ba1b5db9.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 624  [13:43:40.263] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/39b12bd3b902c348ecb27c43ba1b5db9.json
+Info 625  [13:43:40.263] Elapsed:: 0.13538700342178345ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/39b12bd3b902c348ecb27c43ba1b5db9.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 626  [13:43:40.263] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f01f5abea1509e799dc57c55e1e53b3a.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 627  [13:43:40.263] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f01f5abea1509e799dc57c55e1e53b3a.json
+Info 628  [13:43:40.286] Elapsed:: 0.09355700016021729ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/f01f5abea1509e799dc57c55e1e53b3a.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 629  [13:43:40.286] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/363158622f6e759bea10501cfc97e08e.json 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 630  [13:43:40.286] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/363158622f6e759bea10501cfc97e08e.json
+Info 631  [13:43:40.286] Elapsed:: 0.13686498999595642ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/363158622f6e759bea10501cfc97e08e.json 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 632  [13:43:40.286] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/d1a387e77171097ce7f744ad8d301d07.json 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 633  [13:43:40.286] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/d1a387e77171097ce7f744ad8d301d07.json
+Info 634  [13:43:40.286] Elapsed:: 0.2320919930934906ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/d1a387e77171097ce7f744ad8d301d07.json 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 635  [13:43:40.287] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/1ae6c614f0cb8d12de430ccb6e32f203.json 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 636  [13:43:40.287] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/1ae6c614f0cb8d12de430ccb6e32f203.json
+Info 637  [13:43:40.287] Elapsed:: 0.08682399988174438ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/1ae6c614f0cb8d12de430ccb6e32f203.json 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 638  [13:43:40.287] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/e550d1e47d0da29d4042f76ece477c04.json 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 639  [13:43:40.287] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/e550d1e47d0da29d4042f76ece477c04.json
+Info 640  [13:43:40.287] Elapsed:: 0.07676900923252106ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/e550d1e47d0da29d4042f76ece477c04.json 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 641  [13:43:40.287] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/573522b72be5722823b6a63063a64881.json 6:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 642  [13:43:40.287] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/573522b72be5722823b6a63063a64881.json
+Info 643  [13:43:40.287] Elapsed:: 0.07048100233078003ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/573522b72be5722823b6a63063a64881.json 6:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 644  [13:43:40.287] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/97c7e53f5643315c0fb9b42dbc84287e.json 7:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 645  [13:43:40.287] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/97c7e53f5643315c0fb9b42dbc84287e.json
+Info 646  [13:43:40.287] Elapsed:: 0.08325599133968353ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/97c7e53f5643315c0fb9b42dbc84287e.json 7:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 647  [13:43:40.287] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/a570c336c203e37e0fa4664945c40b29.json 8:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 648  [13:43:40.287] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/a570c336c203e37e0fa4664945c40b29.json
+Info 649  [13:43:40.300] Elapsed:: 0.07387399673461914ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/a570c336c203e37e0fa4664945c40b29.json 8:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 650  [13:43:40.301] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/a1f35fb327edf2887bc66eb82723f5a7.json 9:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 651  [13:43:40.301] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/a1f35fb327edf2887bc66eb82723f5a7.json
+Info 652  [13:43:40.301] Elapsed:: 0.11116500198841095ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/a1f35fb327edf2887bc66eb82723f5a7.json 9:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 653  [13:43:40.301] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/a17a9bdb783f4d0b5b6dc5fe99830796.json 10:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 654  [13:43:40.301] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/a17a9bdb783f4d0b5b6dc5fe99830796.json
+Info 655  [13:43:40.301] Elapsed:: 0.07922899723052979ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/a17a9bdb783f4d0b5b6dc5fe99830796.json 10:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 656  [13:43:42.977] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/d4f3be5a4b7bc79130e5d4d813e35558.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 657  [13:43:42.977] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/d4f3be5a4b7bc79130e5d4d813e35558.json
+Info 658  [13:43:42.977] Elapsed:: 0.13368499279022217ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/d4f3be5a4b7bc79130e5d4d813e35558.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 659  [13:43:46.209] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/90c97afb633bd019c4613dd5f679f4b9.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 660  [13:43:46.209] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/90c97afb633bd019c4613dd5f679f4b9.json
+Info 661  [13:43:46.233] Elapsed:: 0.21368201076984406ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/90c97afb633bd019c4613dd5f679f4b9.json 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 662  [13:43:46.233] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/dd6d7e6649b5c81d09cfb9c334a20747.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 663  [13:43:46.233] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/dd6d7e6649b5c81d09cfb9c334a20747.json
+Info 664  [13:43:46.233] Elapsed:: 0.1400900036096573ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/babel-webpack/dd6d7e6649b5c81d09cfb9c334a20747.json 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 665  [13:43:59.726] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 666  [13:43:59.789] Elapsed:: 0.1617860049009323ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app :: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 667  [13:44:00.084] Starting updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json
+Info 668  [13:44:00.097] Finishing updateGraphWorker: Project: /home/shath/projects/V_HELP-app/tsconfig.json Version: 65 structureChanged: false Elapsed: 13.433290988206863ms
+Info 669  [13:44:02.290] Before ensureProjectForOpenFiles:
+Info 670  [13:44:02.291] After ensureProjectForOpenFiles:
+Info 671  [13:44:02.291] got projects updated in background, updating diagnostics for /home/shath/projects/V_HELP-app/src/app/app.module.ts,/home/shath/projects/V_HELP-app/src/app/app-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/dashboard/dashboard-routing.module.ts,/home/shath/projects/V_HELP-app/src/app/core/core.module.ts,/home/shath/projects/V_HELP-app/src/app/shared/shared.module.ts
+Info 672  [13:44:04.115] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/0.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 673  [13:44:04.115] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/0.pack_
+Info 674  [13:44:04.115] Elapsed:: 0.20230500400066376ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/0.pack_ 0:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 675  [13:44:04.115] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/1.pack_ 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 676  [13:44:04.115] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/1.pack_
+Info 677  [13:44:04.115] Elapsed:: 0.13575001060962677ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/1.pack_ 1:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 678  [13:44:04.115] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/index.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 679  [13:44:04.115] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/index.pack_
+Info 680  [13:44:04.115] Elapsed:: 0.12318500876426697ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/index.pack_ 2:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 681  [13:44:04.116] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/0.pack_ 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 682  [13:44:04.116] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/0.pack_
+Info 683  [13:44:04.116] Elapsed:: 0.11951600015163422ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/0.pack_ 3:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 684  [13:44:04.116] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/0.pack 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 685  [13:44:04.116] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/0.pack
+Info 686  [13:44:04.116] Elapsed:: 0.11777900159358978ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/0.pack 4:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 687  [13:44:04.116] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/1.pack_ 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 688  [13:44:04.116] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/1.pack_
+Info 689  [13:44:04.116] Elapsed:: 0.13037699460983276ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/1.pack_ 5:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 690  [13:44:04.116] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/1.pack 6:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 691  [13:44:04.116] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/1.pack
+Info 692  [13:44:04.116] Elapsed:: 0.11883500218391418ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/1.pack 6:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 693  [13:44:04.117] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/index.pack_ 7:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 694  [13:44:04.169] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/index.pack_
+Info 695  [13:44:04.169] Elapsed:: 0.2676610052585602ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/index.pack_ 7:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 696  [13:44:04.169] DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/index.pack 8:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 697  [13:44:04.170] Project: /home/shath/projects/V_HELP-app/tsconfig.json Detected file add/remove of non supported extension: /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/index.pack
+Info 698  [13:44:04.170] Elapsed:: 0.1450980007648468ms DirectoryWatcher:: Triggered with /home/shath/projects/V_HELP-app/.angular/cache/14.2.6/angular-webpack/0af2c6d4e39e9c9fad1bd5d0068d7d4795b77fa1/index.pack 8:: WatchInfo: /home/shath/projects/V_HELP-app 1 undefined Project: /home/shath/projects/V_HELP-app/tsconfig.json WatchType: Wild card directory
+Info 699  [13:52:48.383] FileWatcher:: Triggered with /home/shath/projects/V_HELP-app/package.json 1:: WatchInfo: /home/shath/projects/V_HELP-app/package.json 250 undefined Project:  WatchType: package.json file for import suggestions
+Info 700  [13:52:48.659] Elapsed:: 275.77593299746513ms FileWatcher:: Triggered with /home/shath/projects/V_HELP-app/package.json 1:: WatchInfo: /home/shath/projects/V_HELP-app/package.json 250 undefined Project:  WatchType: package.json file for import suggestions
